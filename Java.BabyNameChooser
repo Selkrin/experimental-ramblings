@@ -1,0 +1,188 @@
+import java.awt.EventQueue;
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+public class BabyNameChooser {
+	
+	private JFrame frame;
+	public static JTextField textField_Male;
+	public static JTextField textField_Female;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					BabyNameChooser window = new BabyNameChooser();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public BabyNameChooser() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	private void initialize() {
+		frame = new JFrame("Baby Name Chooser");
+		frame.setResizable(false);
+		frame.setBounds(100, 100, 600, 620);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null); //Center on Screen
+		frame.getContentPane().setLayout(null);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"  A", "  B", "  C", "  D", "  E", "  F", "  G", "  H", "  I", "  J", "  K", "  L", "  M", "  N", "  O", "  P", "  Q", "  R", "  S", "  T", "  U", "  V", "  W", "  X", "  Y", "  Z"}));
+		comboBox.setMaximumRowCount(26);
+		comboBox.setToolTipText("Starting Letter of Name");
+		comboBox.setFont(new Font("Arial", Font.BOLD, 14));
+		comboBox.setBounds(90, 530, 50, 30);
+		frame.getContentPane().add(comboBox);
+		
+		JButton btnGenerate = new JButton("Generate Names");
+		btnGenerate.setSelectedIcon(new ImageIcon("C:\\Users\\Michael\\eclipse-workspace\\Test1\\Button2.png"));
+		btnGenerate.setIcon(new ImageIcon("C:\\Users\\Michael\\eclipse-workspace\\Test1\\Button1.png"));
+		btnGenerate.setBorder(BorderFactory.createEmptyBorder(160, 172, 160, 160));
+		btnGenerate.setToolTipText("Generate Names");
+		btnGenerate.setBounds(380, 427, 160, 160);
+		frame.getContentPane().add(btnGenerate);
+		
+		textField_Male = new JTextField();
+		textField_Male.setEditable(false);
+		textField_Male.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_Male.setBounds(46, 310, 180, 30);
+		frame.getContentPane().add(textField_Male);
+		textField_Male.setFont(new Font("Arial", Font.BOLD, 18));
+		textField_Male.setColumns(10);
+		
+		textField_Female = new JTextField();
+		textField_Female.setEditable(false);
+		textField_Female.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_Female.setFont(new Font("Arial", Font.BOLD, 18));
+		textField_Female.setColumns(10);
+		textField_Female.setBounds(342, 310, 180, 30);
+		frame.getContentPane().add(textField_Female);
+		
+		
+		JPanel panel_background = new JPanel();
+		panel_background.setBounds(0, -6, 600, 600);
+		frame.getContentPane().add(panel_background);
+		panel_background.add(new JLabel(new ImageIcon("NameChooser.png")));
+		
+
+		btnGenerate.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            //Execute when Button is Pressed
+            String nameLetter = (String) comboBox.getSelectedItem();
+            
+            	if (nameLetter.equals("  A")) {
+            		MaleNames.A();
+            		FemaleNames.A();
+            	} else if (nameLetter.equals("  B")) {
+            		MaleNames.B();
+            		FemaleNames.B();
+            	} else if (nameLetter.equals("  C")) {
+            		MaleNames.C();
+            		FemaleNames.C();
+            	} else if (nameLetter.equals("  D")) {
+            		MaleNames.D();
+            		FemaleNames.D();
+            	} else if (nameLetter.equals("  E")) {
+            		MaleNames.E();
+            		FemaleNames.E();
+            	} else if (nameLetter.equals("  F")) {
+            		MaleNames.F();
+            		FemaleNames.F();
+            	} else if (nameLetter.equals("  G")) {
+            		MaleNames.G();
+            		FemaleNames.G();
+            	} else if (nameLetter.equals("  H")) {
+            		MaleNames.H();
+            		FemaleNames.H();
+            	} else if (nameLetter.equals("  I")) {
+            		MaleNames.I();
+            		FemaleNames.I();
+            	} else if (nameLetter.equals("  J")) {
+            		MaleNames.J();
+            		FemaleNames.J();
+            	} else if (nameLetter.equals("  K")) {
+            		MaleNames.K();
+            		FemaleNames.K();
+            	} else if (nameLetter.equals("  L")) {
+            		MaleNames.L();
+            		FemaleNames.L();
+            	} else if (nameLetter.equals("  M")) {
+            		MaleNames.M();
+            		FemaleNames.M();
+            	} else if (nameLetter.equals("  N")) {
+            		MaleNames.N();
+            		FemaleNames.N();
+            	} else if (nameLetter.equals("  O")) {
+            		MaleNames.O();
+            		FemaleNames.O();
+            	} else if (nameLetter.equals("  P")) {
+            		MaleNames.P();
+            		FemaleNames.P();
+            	} else if (nameLetter.equals("  Q")) {
+            		MaleNames.Q();
+            		FemaleNames.Q();
+            	} else if (nameLetter.equals("  R")) {
+            		MaleNames.R();
+            		FemaleNames.R();
+            	} else if (nameLetter.equals("  S")) {
+            		MaleNames.S();
+            		FemaleNames.S();
+            	} else if (nameLetter.equals("  T")) {
+            		MaleNames.T();
+            		FemaleNames.T();
+            	} else if (nameLetter.equals("  U")) {
+            		MaleNames.U();
+            		FemaleNames.U();
+            	} else if (nameLetter.equals("  V")) {
+            		MaleNames.V();
+            		FemaleNames.V();
+            	} else if (nameLetter.equals("  W")) {
+            		MaleNames.W();
+            		FemaleNames.W();
+            	} else if (nameLetter.equals("  X")) {
+            		MaleNames.X();
+            		FemaleNames.X();
+            	} else if (nameLetter.equals("  Y")) {
+            		MaleNames.Y();
+            		FemaleNames.Y();
+            	} else  {
+            		MaleNames.Z();
+            		FemaleNames.Z();
+            	}
+            	
+   	
+            }
+		});
+	}
+}
