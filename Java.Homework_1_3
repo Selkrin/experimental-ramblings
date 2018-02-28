@@ -1,0 +1,51 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Homework_1_3{
+	
+    private static List<Integer> even = new ArrayList<>();
+    private static List<Integer> odd = new ArrayList<>();
+
+    public static void classify() throws IOException{
+    	BufferedReader keyb = new BufferedReader(new InputStreamReader(System.in));
+		String numbers1 = keyb.readLine();
+		String[] numbers2 = numbers1.split(" ");
+		System.out.println("You entered " + numbers2.length + " different numbers.");
+		int evenNums = 0;
+		int oddNums = 0;
+		
+		int[] numbers3 = new int[numbers2.length];
+		
+		for(int i = 0; i < numbers2.length; i++) {
+			numbers3[i] = Integer.parseInt(numbers2[i]);
+            if(numbers3[i] % 2 == 0) {
+                even.add(numbers3[i]);
+            	evenNums += numbers3[i];
+            	
+            } else { 
+                odd.add(numbers3[i]);
+                oddNums += numbers3[i];  
+            }
+        }
+        System.out.println("The total for the even numbers is: " + evenNums);
+        System.out.println("The total for the odd numbers is: " + oddNums);
+    }
+
+    public static void display(List<Integer> list){
+        for(Integer i : list)
+            System.out.println(i);
+    }
+
+    public static void main(String[] args) throws IOException{
+
+		
+		System.out.println("Enter several different numbers, with a space between each.");
+		System.out.println("This program will add together the even numbers and odd number seperately.");
+    	
+        classify();
+        
+    }
+}
