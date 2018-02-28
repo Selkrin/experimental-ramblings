@@ -1,0 +1,220 @@
+import java.util.Random;
+
+public class MaleNames extends BabyNameChooser {
+public static String maleName;
+
+	public static void main(String[] args) {
+
+	}
+
+	public static void A() {
+        Random generator = new Random(); //Random Number Generator
+        int num = generator.nextInt(65);
+        String[] myList = {"Aaron","Abe","Abel","Abraham","Abram","Adam","Adrian","Agustin","Al","Alan","Albert","Alden","Aldo","Alec","Alejandro","Alex","Alexander","Alfonso","Alfonzo","Alfred","Alfredo","Allan","Allen","Alonso","Alonzo","Alphonse","Alphonso","Alton","Alva","Alvin","Ambrose","Amos","Andersen","Andre","Andrew","Andy","Angelo","Anthony","Antione","Anton","Antone","Antonio","Antony","Archie","Arden","Arlen","Armand","Armando","Arnold","Arnoldo","Aron","Arron","Art","Arthur","Arturo","Ash","Asher","Aubrey","August","Augustine","Augustus","Aurelio","Austin","Avery","Axel"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+
+	public static void B() {
+        Random generator = new Random();
+        int num = generator.nextInt(64);
+        String[] myList = {"Barney","Barrett","Barry","Bart","Barton","Basil","Beau","Ben","Benedict","Benito","Benjamin","Bennett","Bennie","Benny","Benton","Bernard","Bernardo","Bernie","Bert","Bertram","Bill","Billie","Billy","Blaine","Blair","Blake","Bo","Bob","Bobbie","Bobby","Booker","Boris","Boyd","Brad","Bradford","Bradley","Bradly","Brady","Branden","Brandon","Brent","Brenton","Bret","Brett","Brian","Brice","Brock","Broderick","Brooks","Bruce","Bruno","Bryan","Bryant","Bryce","Bryon","Buck","Bud","Buddy","Buford","Burl","Burt","Burton","Buster","Byron"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+
+	public static void C() {
+        Random generator = new Random();
+        int num = generator.nextInt(54);
+        String[] myList = {"Cadman","Calvert","Caldwell","Caleb","Calvin","Carrick","Carl","Carlton","Carney","Carroll","Carter","Carver","Cary","Casey","Casper","Cecil","Cedric","Chad","Chalmers","Chandler","Channing","Chapman","Charles","Chatwin","Chester","Christian","Christopher","Clarence","Claude","Clayton","Clay","Clifford","Cliff","Clive","Clyde","Coleman","Colin","Collier","Conan","Connell","Connor","Conrad","Conroy","Conway","Corwin","Crispin","Crosby","Culbert","Culver","Curt","Curtis","Cuthbert","Craig","Cyril"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+	
+	public static void D() {
+        Random generator = new Random();
+        int num = generator.nextInt(39);
+        String[] myList = {"Dale","Daley","Dalton","Damon","Daniel","Darian","Darell","Darrel","David","Davin","Dean","Declan","Delmar","Denley","Dennis","Derek","Dermot","Derwin","Des","Desmond","Dexter","Dillon","Dion","Dirk","Dixon","Dominic","Donald","Dorian","Douglas","Doyle","Drake","Drew","Driscoll","Dudley","Duncan","Durwin","Dwayne","Dwight","Dylan"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+	
+	public static void E() {
+        Random generator = new Random();
+        int num = generator.nextInt(50);
+        String[] myList = {"Earl","Eaton","Ebenezer","Edan","Edgar","Edric","Edmond","Edmund","Edward","Eddie","Edwin","Efrain","Egan","Egbert","Egerton","Egil","Elbert","Eldon","Eldwin","Eli","Ely","Elijah","Elias","Eliot","Elliott","Ellery","Elmer","Elroy","Elton","Elvis","Emerson","Emery","Emmanuel","Emmett","Emrick","Enoch","Eric","Erik","Ernest","Errol","Erskine","Erwin","Esmond","Ethan","Ethanael","Ethen","Eugene","Evan","Everett","Ezra"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+	
+	public static void F() {
+        Random generator = new Random();
+        int num = generator.nextInt(26);
+        String[] myList = {"Fabian","Fairfax","Falkner","Farley","Farrell","Felix","Fenton","Ferdinand","Fergal","Fergus","Ferguson","Ferris","Finbar","Fitzgerald","Fleming","Fletcher","Floyd","Forbes","Forrest","Foster","Fox","Francis","Frank","Frasier","Frederick","Freeman"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+	
+	public static void G() {
+        Random generator = new Random();
+        int num = generator.nextInt(18);
+        String[] myList = {"Gabriel","Gage","Galen","Garrett","Gaston","Gavin","George","Gerald","Gideon","Gilbert","Glen","Grady","Graham","Grant","Gray","Gregory","Griffin","Guido"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+	
+	public static void H() {
+        Random generator = new Random();
+        int num = generator.nextInt(21);
+        String[] myList = {"Hadrian","Hall","Hamish","Hamlet","Harold","Harry","Harvey","Heath","Hector","Helmut","Henry","Herbert","Herman","Hershel","Hilaire","Hiram","Homer","Horatio","Howie","Hugo","Hunter"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+	
+	public static void I() {
+        Random generator = new Random();
+        int num = generator.nextInt(16);
+        String[] myList = {"Ian","Ichabod","Ignacio","Igor","Indigo","Ingvar","Inigo","Irwin","Irvin","Irving","Isaac","Isaiah","Italo","Ivan","Iver","Ives"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+	
+	public static void J() {
+        Random generator = new Random();
+        int num = generator.nextInt(24);
+        String[] myList = {"Jack","Jacob","Jaden","Jafar","Jake","Jamal","Jamison","Jarod","Jason","Jasper","Jeremiah","Jett","Jesse","Joachim","John","Jon","Jonah","Jonas","Joseph","Jove","Jubal","Judd","Julio","Justin"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+	
+	public static void K() {
+        Random generator = new Random();
+        int num = generator.nextInt(37);
+        String[] myList = {"Kane","Kato","Keanu","Keaton","Keegan","Keene","Keegan","Keith","Kelsey","Kelvin","Kendall","Kendrick","Ken","Kenneth","Kermit","Kevin","Khalil","Killian","Kipling","Klaus","Knox","Kwame","Kyle","Kent","Kenway","Kerry","Kerwin","Kiefer","Kilian","Kimball","Kingsley","Kirby","Kirk","Kit","Kody","Konrad","Kurt"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);
+	}
+	
+	public static void L() {
+        Random generator = new Random();
+        int num = generator.nextInt(25);
+        String[] myList = {"Lachlan","Lambert","Lane","Lars","Laurence","Lawson","Leif","Lennox","Leo","Leroy","Lester","Lex","Lewis","Liam","Lincoln","Lloyd","Logan","Lorne","Louis","Lowell","Lucius","Lucas","Luke","Luther","Lyndon"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void M() {
+        Random generator = new Random();
+        int num = generator.nextInt(42);
+        String[] myList = {"Maddox","Magnus","Malcolm","Marcus","Mark","Marc","Mario","Marquis","Marshall","Marlon","Martin","Mason","Matt","Matthew","Maurice","Max","Maxwell","Maxim","Melvin","Melville","Merlin","Merrick","Michael","Mickey","Mike","Miles","Millard","Ming","Mitchel","Mithra","Mo","Monroe","Montague","Montgomery","Morgan","Morris","Mort","Morton","Mortimer","Moses","Murray","Myron"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void N() {
+        Random generator = new Random();
+        int num = generator.nextInt(18);
+        String[] myList = {"Nathan","Nathaniel","Neal","Nazario","Neelam","Nemo","Neriah","Nestor","Neville","Nicholas","Nick","Nigel","Noam","Noel","Nolam","Noor","Norman","Norris"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void O() {
+        Random generator = new Random();
+        int num = generator.nextInt(13);
+        String[] myList = {"Octavio","Olaf","Oliver","Omar","Orestes","Othello","Owen","Ozzy","Olin","Orson","Oscar","Oswald","Otis"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void P() {
+        Random generator = new Random();
+        int num = generator.nextInt(25);
+        String[] myList = {"Pablo","Palmer","Paris","Parker","Patrick","Paul","Pavel","Paxton","Percival","Percy","Perry","Pete","Peter","Peyton","Philbert","Phillip","Phineas","Phoenix","Pierce","Placido","Plato","Porfirio","Porter","Pradeep","Presley"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void Q() {
+        Random generator = new Random();
+        int num = generator.nextInt(9);
+        String[] myList = {"Quade","Quenby","Quillan","Quimby","Quentin","Quincy","Quinlan","Quinn","Quinton"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void R() {
+        Random generator = new Random();
+        int num = generator.nextInt(44);
+        String[] myList = {"Ragnar","Rahim","Ralph","Ramsey","Ramses","Randall","Randolph","Raoul","Raphael","Ray","Raymond","Regis","Reginald","Remy","Renfred","Rex","Renato","Rhett","Rhys","Rich","Richard","Ridley","Riley","Rio","Rob","Robert","Robin","Rocky","Roderick","Rodney","Roger","Roland","Rolf","Ronald","Rory","Roswell","Ross","Roy","Royce","Rufus","Rupert","Russell","Ryan","Ryder"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void S() {
+        Random generator = new Random();
+        int num = generator.nextInt(49);
+        String[] myList = {"Salman","Sal","Salvador","Sam","Samir","Samson","Samuel","Saul","Saverio","Scott","Sean","Sebastian","Seymour","Sawyer","Sherwin","Shamus","Shawn","Shelly","Sherard","Sheridan","Sherlock","Sherman","Sherwin","Sidney","Sigmund","Silas","Simon","Sinclair","Sloane","Sky","Solomon","Spencer","Spyridon","Stan","Stacy","Stan","Stanley","Steve","Stephen","Steven","Stefan","Sterling","Stewart","Stuart","Sultan","Sunny","Suzuki","Sven","Sylvester"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void T() {
+        Random generator = new Random();
+        int num = generator.nextInt(30);
+        String[] myList = {"Talbot","Taliesin","Tancred","Tanner","Tasgall","Thaddeus","Theobold","Theodore","Thomas","Thor","Tim","Timothy","Tito","Titus","Tobias","Toby","Todd","Tom","Tony","Travis","Travers","Tray","Trent","Trevor","Trey","Tristan","Truman","Tycho","Tyler","Tyrone"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void U() {
+        Random generator = new Random();
+        int num = generator.nextInt(7);
+        String[] myList = {"Udolf","Ulric","Ulysses","Umberto","Unwin","Urban","Uriah"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void V() {
+        Random generator = new Random();
+        int num = generator.nextInt(13);
+        String[] myList = {"Vance","Vasek","Vasiliy","Vaughn","Vern","Vernon","Viggo","Vijay","Victor","Vincent","Vinny","Virgil","Vitus"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void W() {
+        Random generator = new Random();
+        int num = generator.nextInt(26);
+        String[] myList = {"Wallace","Waldo","Walter","Walton","Ward","Warren","Washington","Wayne","Warwick","Webster","Wes","Wesley","Weston","Whitlock","Wilbur","Wiley","Will","Willard","William","Willis","Winston","Winslow","Wyatt","Wylie","Wyman","Wynn"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void X() {
+        Random generator = new Random();
+        int num = generator.nextInt(4);
+        String[] myList = {"Xander","Xavier","Xenon","Xerxes"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void Y() {
+        Random generator = new Random();
+        int num = generator.nextInt(7);
+        String[] myList = {"Yale","Yasir","Yorick","Yosef","Yule","Yuri","Yves"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+	public static void Z() {
+        Random generator = new Random();
+        int num = generator.nextInt(8);
+        String[] myList = {"Zach","Zachariah","Zachary","Zane","Zebadiah","Zebediah","Zebulon","Zion"};
+        maleName = myList[num];
+		textField_Male.setText(maleName);		
+	}
+	
+
+
+}
