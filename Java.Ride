@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Ride {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		Double age;
+		Double height;
+		
+		System.out.println("How old are you?");
+		age = sc.nextDouble();
+		System.out.println("How tall are you, in inches, please?");
+		height = sc.nextDouble();
+		
+		if ((age >= 9) && (height >= 52 ))
+			System.out.println("You can ride!");
+		else
+			System.out.println("Sorry, but you can't ride.");
+		
+		sc.close();
+		
+	}
+
+}
