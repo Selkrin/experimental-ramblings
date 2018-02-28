@@ -1,0 +1,28 @@
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Purchase {
+
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("0.00");		
+		
+		System.out.println("Price of item purchased?");
+		double price = sc.nextDouble();
+		double tax = (price * .053);
+		//To Round off the price to the correct cents
+		tax = tax*100;
+		tax  = Math.round(tax);
+		tax = tax/100;
+		
+		price = (price + tax);
+		System.out.println("Plus a tax of " + df.format(tax) + ".");
+		System.out.println(tax);
+		System.out.println("Your total comes to $" + (price) + ".");
+		System.out.println(price);
+		sc.close();
+
+	}
+
+}
