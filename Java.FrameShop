@@ -1,0 +1,297 @@
+import java.awt.EventQueue;
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JTextPane;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.NumberFormat;
+import javax.swing.JRadioButton;
+import javax.swing.JPanel;
+import java.awt.Color;
+import javax.swing.JCheckBox;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class FrameShop {
+
+	private JFrame frame;
+	private JTextField txtColor;
+	private JTextField textField_total;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					FrameShop window = new FrameShop();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});	
+		
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public FrameShop() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame("Runa's Picture Frame Shop");
+		frame.setResizable(false);
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		frame.setLocationRelativeTo(null); //Center on Screen
+		
+		JLabel lblPictureSize = new JLabel("Picture Size");
+		lblPictureSize.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPictureSize.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblPictureSize.setBounds(54, 54, 80, 14);
+		frame.getContentPane().add(lblPictureSize);
+		
+		JLabel lblLength = new JLabel("Length");
+		lblLength.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblLength.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLength.setBounds(25, 68, 52, 14);
+		frame.getContentPane().add(lblLength);
+		
+		JLabel lblNewLabel = new JLabel("Height");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(110, 68, 52, 14);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JTextPane textPane_Length = new JTextPane();
+		textPane_Length.setText("0");
+		textPane_Length.setToolTipText("Length in Inches");
+		textPane_Length.setBounds(25, 86, 52, 20);
+		frame.getContentPane().add(textPane_Length);
+		
+		JTextPane textPane_Height = new JTextPane();
+		textPane_Height.setText("0");
+		textPane_Height.setToolTipText("Height in Inches");
+		textPane_Height.setBounds(110, 86, 52, 20);
+		frame.getContentPane().add(textPane_Height);
+		
+		JLabel lblNewLabel_1 = new JLabel("Runa's Picture Frame Shop");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setBounds(10, 8, 414, 24);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblFrameStyle = new JLabel("Frame Style");
+		lblFrameStyle.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblFrameStyle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFrameStyle.setBounds(261, 54, 100, 18);
+		frame.getContentPane().add(lblFrameStyle);
+		
+		JRadioButton rdbtnRegularFrame = new JRadioButton("Regular Frame");
+		rdbtnRegularFrame.setSelected(true);
+		rdbtnRegularFrame.setToolTipText("The Frame Style");
+		rdbtnRegularFrame.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		rdbtnRegularFrame.setBackground(Color.LIGHT_GRAY);
+		rdbtnRegularFrame.setBounds(200, 70, 106, 24);
+		frame.getContentPane().add(rdbtnRegularFrame);
+		
+		JRadioButton rdbtnFancyFrame = new JRadioButton("Fancy Frame");
+		rdbtnFancyFrame.setToolTipText("The Frame Style");
+		rdbtnFancyFrame.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		rdbtnFancyFrame.setBackground(Color.LIGHT_GRAY);
+		rdbtnFancyFrame.setBounds(318, 70, 100, 24);
+		frame.getContentPane().add(rdbtnFancyFrame);
+		
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(rdbtnRegularFrame);
+		bg.add(rdbtnFancyFrame);
+		
+		JLabel lblNewLabel_2 = new JLabel("($0.15 per inch)");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setBounds(218, 92, 80, 14);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		JLabel lblPerInch = new JLabel("($0.25 per inch)");
+		lblPerInch.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblPerInch.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPerInch.setBounds(330, 92, 80, 14);
+		frame.getContentPane().add(lblPerInch);
+		
+		JPanel panel = new JPanel();
+		panel.setToolTipText("Size of the Picture being Framed");
+		panel.setBackground(Color.LIGHT_GRAY);
+		panel.setBounds(10, 50, 168, 60);
+		frame.getContentPane().add(panel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setToolTipText("The Frame Style");
+		panel_1.setBackground(Color.LIGHT_GRAY);
+		panel_1.setBounds(188, 50, 246, 60);
+		frame.getContentPane().add(panel_1);
+		
+		JPanel panel_2_image = new JPanel();
+		panel_2_image.setBounds(0, -6, 444, 56);
+		frame.getContentPane().add(panel_2_image);
+		panel_2_image.add(new JLabel(new ImageIcon("Frame.png")));
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setToolTipText("Optional Crown Corner Mounts");
+		panel_2.setBackground(Color.LIGHT_GRAY);
+		panel_2.setBounds(10, 121, 168, 70);
+		frame.getContentPane().add(panel_2);
+		
+		JLabel lblOptionalCrownsIn = new JLabel("Crown Corner Mounts");
+		panel_2.add(lblOptionalCrownsIn);
+		lblOptionalCrownsIn.setHorizontalAlignment(SwingConstants.CENTER);
+		lblOptionalCrownsIn.setFont(new Font("Tahoma", Font.BOLD, 12));
+		
+		JCheckBox chckbxAddCrowns = new JCheckBox("Add Crowns");
+		chckbxAddCrowns.setToolTipText("Optional Crown Corner Mounts");
+		chckbxAddCrowns.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		chckbxAddCrowns.setBackground(Color.LIGHT_GRAY);
+		panel_2.add(chckbxAddCrowns);
+		chckbxAddCrowns.setSelected(false);
+		
+		JLabel lblPerCrown = new JLabel("($0.35 per crown)");
+		panel_2.add(lblPerCrown);
+		lblPerCrown.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblPerCrown.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		txtColor = new JTextField();
+		txtColor.setHorizontalAlignment(SwingConstants.CENTER);
+		txtColor.setToolTipText("Type in the desired Color");
+		txtColor.setText("White");
+		txtColor.setBounds(261, 148, 100, 20);
+		frame.getContentPane().add(txtColor);
+		txtColor.setColumns(10);
+		
+		JLabel lblcolorsOtherThan = new JLabel("(Colors, other than White, are $0.10 per inch)");
+		lblcolorsOtherThan.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblcolorsOtherThan.setHorizontalAlignment(SwingConstants.CENTER);
+		lblcolorsOtherThan.setBounds(196, 174, 228, 14);
+		frame.getContentPane().add(lblcolorsOtherThan);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setToolTipText("Type in the desired Color");
+		panel_3.setBackground(Color.LIGHT_GRAY);
+		panel_3.setBounds(188, 121, 246, 70);
+		frame.getContentPane().add(panel_3);
+		
+		JLabel lblTotalCostFor = new JLabel("Custom Colors for Frame");
+		panel_3.add(lblTotalCostFor);
+		lblTotalCostFor.setFont(new Font("Tahoma", Font.BOLD, 12));
+		
+		textField_total = new JTextField();
+		textField_total.setEditable(false);
+		textField_total.setBounds(142, 234, 160, 22);
+		frame.getContentPane().add(textField_total);
+		textField_total.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_total.setFont(new Font("Tahoma", Font.BOLD, 14));
+		textField_total.setColumns(10);
+		
+		JPanel panel_4 = new JPanel();
+		panel_4.setBackground(Color.LIGHT_GRAY);
+		panel_4.setBounds(10, 202, 424, 59);
+		frame.getContentPane().add(panel_4);
+		
+		JButton btnCalculateTotalPrice = new JButton("Calculate Total Price");
+		btnCalculateTotalPrice.setToolTipText("Click here to Calculate the Total Price");
+		btnCalculateTotalPrice.setFont(new Font("Tahoma", Font.BOLD, 12));
+		panel_4.add(btnCalculateTotalPrice);
+		btnCalculateTotalPrice.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+				//Execute when Button is Pressed
+            	
+        		/* Frame Size = (Length + Height + 4) * 2
+        		 * Cost of Coloring Frame = $0.10 per inch
+        		 * Cost of Regular Frame = $0.15 per inch
+        		 * Cost of Fancy Frame = $0.25 per inch
+        		 * Cost of Cardboard = $0.02 per square inch
+        		 * Glass on top = $0.07 per square inch
+        		 * Crowns on Corners = $0.35 per Crown
+        		 * 
+        		 * Need:
+        		 * Length & Width of Picture
+        		 * Type of Frame
+        		 * If they want a colored frame, Choice of Color to color the frame?
+        		 * Add crowns?
+        		 */
+            	
+            	double crownPrice = 1.4;
+            	double totalPrice;
+            	String frameColor = txtColor.getText();
+				NumberFormat formatter = NumberFormat.getCurrencyInstance(); //Converts the Double to display as Currency
+				double picLength = Double.parseDouble(textPane_Length.getText()); //Gets the String from the textPane and Converts to Double
+				double picHeight = Double.parseDouble(textPane_Height.getText());
+				double fSize1 = (2 * (picLength + picHeight + 4 )); //The Total Length of the Frame
+				double picArea = (picLength * picHeight);
+				double cardGlass = (picArea * 0.02) + (picArea * 0.07);
+				double regularFrame = (0.15 * fSize1) + cardGlass;
+				double fancyFrame = (0.25 * fSize1) + cardGlass;
+				double frameColorp = (0.10 * fSize1);
+				
+				if (rdbtnRegularFrame.isSelected()){
+					if (chckbxAddCrowns.isSelected()) {
+						totalPrice = crownPrice + regularFrame;
+						
+						if (frameColor.equals("White") || frameColor.equals("white")){
+							textField_total.setText(String.valueOf(formatter.format(totalPrice)));//Sends the Double as a String to the textField
+						} else {
+							totalPrice = totalPrice + frameColorp;
+							textField_total.setText(String.valueOf(formatter.format(totalPrice)));
+						}
+						
+					} else {
+						totalPrice = regularFrame;
+							
+						if (frameColor.equals("White") || frameColor.equals("white")){
+							textField_total.setText(String.valueOf(formatter.format(totalPrice)));
+						} else {
+							totalPrice = totalPrice + frameColorp;
+							textField_total.setText(String.valueOf(formatter.format(totalPrice)));
+						}
+					}
+					
+				} else {
+		
+					if (chckbxAddCrowns.isSelected()) {
+						totalPrice = crownPrice + fancyFrame;
+						
+						if (frameColor.equals("White") || frameColor.equals("white")){
+							textField_total.setText(String.valueOf(formatter.format(totalPrice)));
+						} else {
+							totalPrice = totalPrice + frameColorp;
+							textField_total.setText(String.valueOf(formatter.format(totalPrice)));
+						}
+						
+					} else {
+						totalPrice = fancyFrame;
+						
+						if (frameColor.equals("White") || frameColor.equals("white")){
+							textField_total.setText(String.valueOf(formatter.format(totalPrice)));
+						} else {
+							totalPrice = totalPrice + frameColorp;
+							textField_total.setText(String.valueOf(formatter.format(totalPrice)));
+						}
+						
+					}
+				}
+            }
+        });
+	}
+}
