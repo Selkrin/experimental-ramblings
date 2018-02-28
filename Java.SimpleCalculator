@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class SimpleCalculator {
+
+	public static void main(String[] args) {
+		
+		//Making a Calculator
+		Scanner sc = new Scanner(System.in);
+			System.out.println("Enter and expression similar to 4 + 5");
+			double n1 = sc.nextDouble();
+			String operator = sc.next();
+			double n2 = sc.nextDouble();
+			sc.close();
+			
+			switch (operator) {
+			case "+":
+				System.out.println(n1 + " + " + n2 + " = " + (n1 + n2));
+				break;
+			case "-":
+				System.out.println(n1 + " - " + n2 + " = " + (n1 - n2));
+				break;
+			case "/":
+				System.out.println(n1 + " / " + n2 + " = " + (n1 / n2));
+				break;
+			case "*":
+				System.out.println(n1 + " * " + n2 + " = " + (n1 * n2));
+				break;
+			default:
+				System.out.println("You entered a bad expression.");
+			}
+	}
+
+}
