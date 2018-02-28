@@ -1,0 +1,220 @@
+import java.util.Random;
+
+public class FemaleNames extends BabyNameChooser {
+public static String femaleName;
+
+	public static void main(String[] args) {
+
+	}
+
+	public static void A() {
+        Random generator = new Random(); //Random Number Generator
+        int num = generator.nextInt(44);
+        String[] myList = {"Aaliyah","Abigail","Acantha","Ada","Adelaide","Adrienne","Agatha","Agnes","Aileen","Aimee","Alanna","Alarice","Alannis","Alessandra","Alda","Alexandra","Alice","Alina","Alison","Alma","Amanda","Amaryllis","Amber","Amy","Anastasia","Andrea","Angela","Angelica","Anita","Ann","Anna","Anne","Annbelle","Annette","April","Ari","Ariana","Arielle","Arleen","Asia","Astrid","Athea","Audrey","Autumn"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+
+	public static void B() {
+        Random generator = new Random();
+        int num = generator.nextInt(35);
+        String[] myList = {"Barb","Barbara","Beata","Beatrice","Beatrix","Becky","Belinda","Bella","Belle","Bernadette","Bernice","Bertha","Berta","Bertina","Beryl","Bess","Beth","Bethany","Bettina","Beverly","Bianca","Blair","Blanche","Blythe","Bobbie","Bonita","Bonnie","Brenda","Briana","Brianne","Brigid","Bridget","Brittany","Britney","Brooke"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+
+	public static void C() {
+        Random generator = new Random();
+        int num = generator.nextInt(35);
+        String[] myList = {"Caitlin","Caitlyn","Callista","Camille","Candace","Carissa","Carla","Carly","Carmela","Carmen","Carrie","Carol","Caroline","Cassandra","Catharine","Catherine","Cecilia","Chantal","Charisma","Charity","Chelsea","Cherise","Cheryl","Chloe","Christine","Cindy","Claire","Clare","Clarissa","Clio","Coral","Cosette","Courtney","Crystal","Cynthia"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+	
+	public static void D() {
+        Random generator = new Random();
+        int num = generator.nextInt(24);
+        String[] myList = {"Dacia","Danielle","Daniella","Daphne","Darlene","Davida","Dawn","Deborah","Deirdre","Delilah","Delma","Denise","Diana","Diane","Destiny","Diane","Dolly","Dominica","Dominique","Donna","Dora","Doris","Dorothy","Drucilla"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+	
+	public static void E() {
+        Random generator = new Random();
+        int num = generator.nextInt(46);
+        String[] myList = {"Eartha","Ebony","Eco","Eda","Edana","Edeline","Edith","Edlyn","Edna","Edwina","Effie","Eileen","Elaine","Elena","Eleanor","Elena","Elga","Elianna","Elise","Elisa","Eliza","Elizabeth","Ella","Ellen","Eloise","Elsie","Elyanna","Elvira","Emeline","Emily","Emma","Erika","Ernestine","Enola","Esmeralda","Erin","Estelle","Esther","Estra","Ethel","Eudora","Eugenia","Eunice","Eva","Eve","Evelyn"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+	
+	public static void F() {
+        Random generator = new Random();
+        int num = generator.nextInt(21);
+        String[] myList = {"Faith","Fannie","Fara","Farrah","Fatima","Fawn","Faye","Fedora","Felicia","Femke","Fenella","Fern","Fernanda","Fion","Flora","Flavia","Florence","Francesca","Freda","Frida","Frederica"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+	
+	public static void G() {
+        Random generator = new Random();
+        int num = generator.nextInt(29);
+        String[] myList = {"Gabrielle","Gale","Gaye","Gemma","Geneva","Genevieve","Georgette","Georgia","Georgiana","Geraldine","Germaine","Gertrude","Gilda","Gia","Gillian","Gina","Gisella","Gladys","Glenda","Gloria","Glynnis","Golda","Grace","Gretel","Guinevere","Gwen","Gwendolyn","Gwendolen","Gwynne"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+	
+	public static void H() {
+        Random generator = new Random();
+        int num = generator.nextInt(24);
+        String[] myList = {"Haley","Hayley","Halle","Hanna","Hannah","Harmony","Harriet","Harley","Hattie","Hayley","Hazel","Heather","Hedvig","Helena","Helga","Helen","Henrietta","Hetty","Hero","Hilda","Hillary","Holly","Hope","Hortense"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+	
+	public static void I() {
+        Random generator = new Random();
+        int num = generator.nextInt(16);
+        String[] myList = {"Ida","Idelle","Ilana","Iman","Imogen","Imogene","India","Indira","Ingrid","Innes","Iola","Irene","Iris","Isabel","Ivy","Ivory"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+	
+	public static void J() {
+        Random generator = new Random();
+        int num = generator.nextInt(29);
+        String[] myList = {"Jacqueline","Jade","Jada","Jane","Janet","Janice","Jasmine","Jeanne","Jemima","Jennifer","Jessica","Jessie","Jewel","Jill","Jillian","Joan","Jocelyn","Joyce","Johanna","Josephine","Joy","Judith","Judy","Juliana","Julia","Julie","Juliet","June","Justine"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+	
+	public static void K() {
+        Random generator = new Random();
+        int num = generator.nextInt(25);
+        String[] myList = {"Kacey","Kaitlyn","Kara","Karen","Karena","Kate","Katelyn","Katherine","Kathy","Kathleen","Katrina","Kay","Kayla","Kayleigh","Keely","Kelsey","Kendra","Kerri","Kerry","Kiki","Kim","Kimberley","Kirstyn","Kirsten","Kyla"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);
+	}
+	
+	public static void L() {
+        Random generator = new Random();
+        int num = generator.nextInt(47);
+        String[] myList = {"Lacey","Lane","Lara","Larina","Larissa","Laura","Laurel","Loralie","Lauren","Laverna","Leah","Leigh","Leanna","Lea","Leola","Leslie","Lesley","Leticia","Lilah","Lillian","Lilly","Linda","Linette","Lindsay","Lisa","Liza","Livia","Lizzie","Lois","Lola","Lolita","Lorelei","Lorena","Lorraine","Louisa","Louise","Lucia","Lucinda","Lucille","Lucinda","Lucy","Lulu","Luna","Luz","Lydia","Lynda","Lynn"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void M() {
+        Random generator = new Random();
+        int num = generator.nextInt(61);
+        String[] myList = {"Mabel","Madeline","Madge","Maeve","Magda","Magdalene","Maggie","Maia","Maisie","Magnolia","Makenzie","Mallory","Mandy","Marcia","Margaret","Marge","Margot","Maria","Marie","Marian","Marilyn","Marina","Marissa","Marta","Martha","Martina","Mary","Matilda","Maude","Marua","Maureen","Mavis","Maxine","Megan","Melanie","Melinda","Melissa","Melody","Melvina","Mercy","Meris","Merle","Meredith","Michelle","Mildred","Millicent","Minerva","Mirabelle","Miranda","Miriam","Misty","Moira","Molly","Mona","Monica","Mora","Morgan","Muriel","Mya","Myra","Myrtle"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void N() {
+        Random generator = new Random();
+        int num = generator.nextInt(25);
+        String[] myList = {"Nadia","Nadine","Nancy","Nanette","Naomi","Natalie","Nathania","Nell","Nephele","Nerissa","Nerita","Nessa","Nessia","Nevada","Nicolette","Nicole","Nina","Nigella","Noelle","Nola","Nora","Noreen","Norine","Norma","Nydia"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void O() {
+        Random generator = new Random();
+        int num = generator.nextInt(16);
+        String[] myList = {"Octavia","Odessa","Odette","Olga","Olivia","Olive","Olwen","Opal","Ophelia","Oprah","Oriel","Orlena","Orlanth","Orinda","Orva","Oxana"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void P() {
+        Random generator = new Random();
+        int num = generator.nextInt(31);
+        String[] myList = {"Padma","Page","Paloma","Pamela","Pandora","Pansy","Patience","Patricia","Patty","Patsy","Paula","Paulette","Pearl","Peggy","Peg","Penelope","Philippa","Philomena","Phoebe","Phyllis","Polly","Phaedra","Pilar","Piper","Polly","Portia","Primavera","Primrose","Pricilla","Prudence","Prunella"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void Q() {
+        Random generator = new Random();
+        int num = generator.nextInt(9);
+        String[] myList = {"Queen","Qiana","Queenie","Quenna","Questa","Quinella","Quintana","Quintella","Quintessa"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void R() {
+        Random generator = new Random();
+        int num = generator.nextInt(27);
+        String[] myList = {"Rachel","Rain","Raja","Ramona","Raven","Reba","Rebecca","Regina","Renata","Renee","Rhea","Rhoda","Rita","Roberta","Robin","Rhiannon","Rosa","Rose","Rosalie","Rosalind","Rosanne","Rosemary","Rowena","Roxy","Ruby","Runa","Ruth"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void S() {
+        Random generator = new Random();
+        int num = generator.nextInt(36);
+        String[] myList = {"Sabina","Sacha","Sadie","Salena","Sally","Salome","Sage","Samantha","Sandra","Sandy","Sapphire","Sarah","Savannah","Scarlett","Selena","Selene","Serena","Shana","Scout","Shanice","Shannon","Sharon","Sheila","Shelley","Shirley","Sinead","Sibley","Sibyl","Sybil","Silver","Simona","Simone","Sirena","Sophia","Stacy","Sylvia"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void T() {
+        Random generator = new Random();
+        int num = generator.nextInt(35);
+        String[] myList = {"Tabitha","Talia","Tamara","Tammy","Tamsen","Tanya","Tara","Tasha","Tatum","Tawny","Tegan","Theresa","Teri","Tess","Thalia","Thea","Thelma","Theodora","Thomasina","Thora","Tiffany","Tilda","Timothea","Tina","Tonya","Tracy","Trina","Trista","Trixie","Trix","Tuesday","Trinity","Trula","Twila","Tyne"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void U() {
+        Random generator = new Random();
+        int num = generator.nextInt(9);
+        String[] myList = {"Udele","Ula","Uchenna","Ulrika","Ulva","Una","Unity","Ursa","Ursula"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void V() {
+        Random generator = new Random();
+        int num = generator.nextInt(17);
+        String[] myList = {"Valda","Valerie","Vanessa","Vania","Veleda","Vera","Verda","Veronica","Velma","Verity","Verona","Victoria","Violet","Virginia","Vita","Vivian","Vivianne"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void W() {
+        Random generator = new Random();
+        int num = generator.nextInt(12);
+        String[] myList = {"Wanda","Wendy","Whitney","Winry","Wilda","Willa","Willette","Willow","Wilona","Winifred","Winona","Wynne"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void X() {
+        Random generator = new Random();
+        int num = generator.nextInt(4);
+        String[] myList = {"Xanthe","Xaviera","Xena","Xiomara"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void Y() {
+        Random generator = new Random();
+        int num = generator.nextInt(4);
+        String[] myList = {"Yolanda","Yuki","Yvette","Yvonne"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+	public static void Z() {
+        Random generator = new Random();
+        int num = generator.nextInt(9);
+        String[] myList = {"Zahra","Zea","Zelda","Zelene","Zera","Zenobia","Zinaida","Zoe","Zsazsa"};
+        femaleName = myList[num];
+		textField_Female.setText(femaleName);		
+	}
+	
+
+
+}
