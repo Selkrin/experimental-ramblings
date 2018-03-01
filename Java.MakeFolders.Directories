@@ -1,0 +1,285 @@
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class Directories extends MakeFolders {
+public static String directory;
+public static String maindir;
+public static String folder0;
+public static String folder1;
+public static String folder2;
+public static String folder3;
+public static String folder4;
+public static String folder5;
+public static String folder6;
+public static String folder7;
+public static String folder8;
+public static String folder9;
+public static String folder10;
+public static String folder11;
+public static String folder12;
+
+	public static void main(String[] args) {
+
+	}
+
+public static void dir() {
+	directory = System.getProperty("user.dir");
+	directory = directory + "\\MakeDir.txt";
+	
+	Runtime rs = Runtime.getRuntime();
+
+	   try {
+	      rs.exec("notepad " + directory);
+	    }
+	    catch (IOException e1) {
+	      System.out.println(e1);
+}
+}
+
+public static void editMain() {
+	directory = System.getProperty("user.dir");
+	directory = directory + "\\MainDir.txt";
+	
+	Runtime rs = Runtime.getRuntime();
+
+	   try {
+	      rs.exec("notepad " + directory);
+	    }
+	    catch (IOException e1) {
+	      System.out.println(e1);
+}
+}
+
+public static void newFolders() {
+	String mainDir = System.getProperty("user.dir");
+	mainDir = mainDir + "\\MainDir.txt";
+	String directory = System.getProperty("user.dir");
+	directory = directory + "\\MakeDir.txt";
+	
+	String mainDirec = null;
+	String subFolders = null;
+	try {
+		mainDirec = new String(Files.readAllBytes(Paths.get(mainDir)));
+	} catch (IOException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+	try {
+		subFolders = new String(Files.readAllBytes(Paths.get(directory)));
+	} catch (IOException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+
+	String[] folders = subFolders.split(",");
+	String year = textField_Year.getText();
+	String newFolder = textField_NewFolder.getText();
+	String newFolders = (mainDirec + "\\" + year + "\\DWG\\" + newFolder);
+	
+	if (folders.length == 6) {
+		folder0 = folders[0];
+		folder1 = folders[1];
+		folder2 = folders[2];
+		folder3 = folders[3];
+		folder4 = folders[4];
+		folder5 = folders[5];
+		new File(newFolders + "\\" + folder0).mkdirs();
+		new File(newFolders + "\\" + folder1).mkdirs();
+		new File(newFolders + "\\" + folder2).mkdirs();
+		new File(newFolders + "\\" + folder3).mkdirs();
+		new File(newFolders + "\\" + folder4).mkdirs();
+		new File(newFolders + "\\" + folder5).mkdirs();
+		
+	} else if (folders.length == 7) {
+		folder0 = folders[0];
+		folder1 = folders[1];
+		folder2 = folders[2];
+		folder3 = folders[3];
+		folder4 = folders[4];
+		folder5 = folders[5];
+		folder6 = folders[6];
+		new File(newFolders + "\\" + folder0).mkdirs();
+		new File(newFolders + "\\" + folder1).mkdirs();
+		new File(newFolders + "\\" + folder2).mkdirs();
+		new File(newFolders + "\\" + folder3).mkdirs();
+		new File(newFolders + "\\" + folder4).mkdirs();
+		new File(newFolders + "\\" + folder5).mkdirs();
+		new File(newFolders + "\\" + folder6).mkdirs();
+		
+	} else if (folders.length == 8) {
+		folder0 = folders[0];
+		folder1 = folders[1];
+		folder2 = folders[2];
+		folder3 = folders[3];
+		folder4 = folders[4];
+		folder5 = folders[5];
+		folder6 = folders[6];
+		folder7 = folders[7];
+		new File(newFolders + "\\" + folder0).mkdirs();
+		new File(newFolders + "\\" + folder1).mkdirs();
+		new File(newFolders + "\\" + folder2).mkdirs();
+		new File(newFolders + "\\" + folder3).mkdirs();
+		new File(newFolders + "\\" + folder4).mkdirs();
+		new File(newFolders + "\\" + folder5).mkdirs();
+		new File(newFolders + "\\" + folder6).mkdirs();
+		new File(newFolders + "\\" + folder7).mkdirs();
+		
+	} else if (folders.length == 9) {
+		folder0 = folders[0];
+		folder1 = folders[1];
+		folder2 = folders[2];
+		folder3 = folders[3];
+		folder4 = folders[4];
+		folder5 = folders[5];
+		folder6 = folders[6];
+		folder7 = folders[7];
+		folder8 = folders[8];
+		new File(newFolders + "\\" + folder0).mkdirs();
+		new File(newFolders + "\\" + folder1).mkdirs();
+		new File(newFolders + "\\" + folder2).mkdirs();
+		new File(newFolders + "\\" + folder3).mkdirs();
+		new File(newFolders + "\\" + folder4).mkdirs();
+		new File(newFolders + "\\" + folder5).mkdirs();
+		new File(newFolders + "\\" + folder6).mkdirs();
+		new File(newFolders + "\\" + folder7).mkdirs();
+		new File(newFolders + "\\" + folder8).mkdirs();
+		
+	} else if (folders.length == 10) {
+		folder0 = folders[0];
+		folder1 = folders[1];
+		folder2 = folders[2];
+		folder3 = folders[3];
+		folder4 = folders[4];
+		folder5 = folders[5];
+		folder6 = folders[6];
+		folder7 = folders[7];
+		folder8 = folders[8];
+		folder9 = folders[9];
+		new File(newFolders + "\\" + folder0).mkdirs();
+		new File(newFolders + "\\" + folder1).mkdirs();
+		new File(newFolders + "\\" + folder2).mkdirs();
+		new File(newFolders + "\\" + folder3).mkdirs();
+		new File(newFolders + "\\" + folder4).mkdirs();
+		new File(newFolders + "\\" + folder5).mkdirs();
+		new File(newFolders + "\\" + folder6).mkdirs();
+		new File(newFolders + "\\" + folder7).mkdirs();
+		new File(newFolders + "\\" + folder8).mkdirs();
+		new File(newFolders + "\\" + folder9).mkdirs();
+
+	} else if (folders.length == 11) {
+		folder0 = folders[0];
+		folder1 = folders[1];
+		folder2 = folders[2];
+		folder3 = folders[3];
+		folder4 = folders[4];
+		folder5 = folders[5];
+		folder6 = folders[6];
+		folder7 = folders[7];
+		folder8 = folders[8];
+		folder9 = folders[9];
+		folder10 = folders[10];
+		new File(newFolders + "\\" + folder0).mkdirs();
+		new File(newFolders + "\\" + folder1).mkdirs();
+		new File(newFolders + "\\" + folder2).mkdirs();
+		new File(newFolders + "\\" + folder3).mkdirs();
+		new File(newFolders + "\\" + folder4).mkdirs();
+		new File(newFolders + "\\" + folder5).mkdirs();
+		new File(newFolders + "\\" + folder6).mkdirs();
+		new File(newFolders + "\\" + folder7).mkdirs();
+		new File(newFolders + "\\" + folder8).mkdirs();
+		new File(newFolders + "\\" + folder9).mkdirs();
+		new File(newFolders + "\\" + folder10).mkdirs();
+
+	} else if (folders.length == 12) {
+		folder0 = folders[0];
+		folder1 = folders[1];
+		folder2 = folders[2];
+		folder3 = folders[3];
+		folder4 = folders[4];
+		folder5 = folders[5];
+		folder6 = folders[6];
+		folder7 = folders[7];
+		folder8 = folders[8];
+		folder9 = folders[9];
+		folder10 = folders[10];
+		folder11 = folders[11];
+		new File(newFolders + "\\" + folder0).mkdirs();
+		new File(newFolders + "\\" + folder1).mkdirs();
+		new File(newFolders + "\\" + folder2).mkdirs();
+		new File(newFolders + "\\" + folder3).mkdirs();
+		new File(newFolders + "\\" + folder4).mkdirs();
+		new File(newFolders + "\\" + folder5).mkdirs();
+		new File(newFolders + "\\" + folder6).mkdirs();
+		new File(newFolders + "\\" + folder7).mkdirs();
+		new File(newFolders + "\\" + folder8).mkdirs();
+		new File(newFolders + "\\" + folder9).mkdirs();
+		new File(newFolders + "\\" + folder10).mkdirs();
+		new File(newFolders + "\\" + folder11).mkdirs();
+		
+	} else if (folders.length == 13) {
+		folder0 = folders[0];
+		folder1 = folders[1];
+		folder2 = folders[2];
+		folder3 = folders[3];
+		folder4 = folders[4];
+		folder5 = folders[5];
+		folder6 = folders[6];
+		folder7 = folders[7];
+		folder8 = folders[8];
+		folder9 = folders[9];
+		folder10 = folders[10];
+		folder11 = folders[11];
+		folder12 = folders[12];
+		new File(newFolders + "\\" + folder0).mkdirs();
+		new File(newFolders + "\\" + folder1).mkdirs();
+		new File(newFolders + "\\" + folder2).mkdirs();
+		new File(newFolders + "\\" + folder3).mkdirs();
+		new File(newFolders + "\\" + folder4).mkdirs();
+		new File(newFolders + "\\" + folder5).mkdirs();
+		new File(newFolders + "\\" + folder6).mkdirs();
+		new File(newFolders + "\\" + folder7).mkdirs();
+		new File(newFolders + "\\" + folder8).mkdirs();
+		new File(newFolders + "\\" + folder9).mkdirs();
+		new File(newFolders + "\\" + folder10).mkdirs();
+		new File(newFolders + "\\" + folder11).mkdirs();
+		new File(newFolders + "\\" + folder12).mkdirs();
+
+	} else if (folders.length == 14) {
+		folder0 = folders[0];
+		folder1 = folders[1];
+		folder2 = folders[2];
+		folder3 = folders[3];
+		folder4 = folders[4];
+		folder5 = folders[5];
+		folder6 = folders[6];
+		folder7 = folders[7];
+		folder8 = folders[8];
+		folder9 = folders[9];
+		folder10 = folders[10];
+		folder11 = folders[11];
+		folder12 = folders[12];
+		folder13 = folders[13];
+		new File(newFolders + "\\" + folder0).mkdirs();
+		new File(newFolders + "\\" + folder1).mkdirs();
+		new File(newFolders + "\\" + folder2).mkdirs();
+		new File(newFolders + "\\" + folder3).mkdirs();
+		new File(newFolders + "\\" + folder4).mkdirs();
+		new File(newFolders + "\\" + folder5).mkdirs();
+		new File(newFolders + "\\" + folder6).mkdirs();
+		new File(newFolders + "\\" + folder7).mkdirs();
+		new File(newFolders + "\\" + folder8).mkdirs();
+		new File(newFolders + "\\" + folder9).mkdirs();
+		new File(newFolders + "\\" + folder10).mkdirs();
+		new File(newFolders + "\\" + folder11).mkdirs();
+		new File(newFolders + "\\" + folder12).mkdirs();
+		new File(newFolders + "\\" + folder13).mkdirs();
+		
+	} else {
+		textArea_Folders.setText("Program made for 6 \nto 14 Directories Only");
+	}
+	
+}	
+}
+
