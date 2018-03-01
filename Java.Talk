@@ -1,0 +1,37 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Talk {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader keyb = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.println("Hello, What's your name?");
+		String name = keyb.readLine();
+		if (name.equals("Runa") || (name.equals("runa"))) {
+			System.out.println("Wow, I'm so glad to meet you!\nI've heard many great things about you.");
+		} else {
+		System.out.println("It's nice to meet you.");
+		}
+		
+		System.out.println("----------");
+		System.out.println("How are you today? <Good> or <Bad>");
+		String feel = keyb.readLine();
+		if ((feel.equals("Bad") || (feel.equals("bad"))) && (name.equals("Runa") || (name.equals("runa")))) {
+			System.out.println("Aww, I'm sorry to hear that.");
+			System.out.println("I'm really hope you feel better.");
+		} else if (feel.equals("Bad") || (feel.equals("bad"))) {
+			System.out.println("Aww, I'm sorry to hear that " + name + ".");
+		} else {
+			System.out.println("I'm glad to hear that " + name + ".");
+		}
+		System.out.println("----------");
+		
+		System.out.println("It was nice talking to you.\nI hope you have a great day!");
+		
+		
+
+	}
+
+}
