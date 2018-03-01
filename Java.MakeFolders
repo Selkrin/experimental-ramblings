@@ -1,0 +1,414 @@
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Calendar;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
+
+/*
+ * Written by Michael Clark 2018
+ * For Signature BUilding Systems for making work folders, with sub-folders.
+ */
+
+public class MakeFolders {
+
+	private JFrame frame;
+	public static JTextField textField_Year;
+	private JLabel lblNewLabel;
+	public static JTextField textField_NewFolder;
+	public static JTextArea textArea_Folders;
+	public static String folder0;
+	public static String folder1;
+	public static String folder2;
+	public static String folder3;
+	public static String folder4;
+	public static String folder5;
+	public static String folder6;
+	public static String folder7;
+	public static String folder8;
+	public static String folder9;
+	public static String folder10;
+	public static String folder11;
+	public static String folder12;
+	public static String folder13;
+
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MakeFolders window = new MakeFolders();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public MakeFolders() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame("Make Folders v1.4");
+		frame.setBounds(100, 100, 450, 300);
+		frame.setResizable(false);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null); //Center on Screen
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblCurrentYearFor = new JLabel("Current Year for Folder");
+		lblCurrentYearFor.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblCurrentYearFor.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCurrentYearFor.setBounds(20, 10, 140, 16);
+		frame.getContentPane().add(lblCurrentYearFor);
+		
+		textField_Year = new JTextField();
+		textField_Year.setFont(new Font("Tahoma", Font.BOLD, 12));
+		textField_Year.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_Year.setToolTipText("Current Year");
+		textField_Year.setBounds(50, 30, 80, 20);
+		frame.getContentPane().add(textField_Year);
+		textField_Year.setColumns(10);
+		
+		lblNewLabel = new JLabel("Temporarily edit for a different year");
+		lblNewLabel.setToolTipText("Editable for different year");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		lblNewLabel.setBounds(10, 50, 160, 14);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JTextArea textArea_Folders = new JTextArea();
+		textArea_Folders.setEditable(false);
+		textArea_Folders.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		textArea_Folders.setToolTipText("Current Sub-Folders");
+		textArea_Folders.setBounds(200, 30, 140, 150);
+		frame.getContentPane().add(textArea_Folders);
+		
+		JLabel lblNewLabel_1 = new JLabel("Current Sub-Folders");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setBounds(210, 10, 120, 14);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JButton btnEditList = new JButton("Edit List");
+		btnEditList.setToolTipText("Edit Sub-Folder List");
+		btnEditList.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnEditList.setBounds(346, 30, 80, 24);
+		frame.getContentPane().add(btnEditList);
+		
+		JLabel lblNewFolderName = new JLabel("New Folder Name");
+		lblNewFolderName.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewFolderName.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblNewFolderName.setBounds(20, 180, 140, 16);
+		frame.getContentPane().add(lblNewFolderName);
+		
+		textField_NewFolder = new JTextField();
+		textField_NewFolder.setToolTipText("Enter name of New Folder to be created");
+		textField_NewFolder.setFont(new Font("Tahoma", Font.BOLD, 12));
+		textField_NewFolder.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_NewFolder.setBounds(30, 200, 370, 20);
+		frame.getContentPane().add(textField_NewFolder);
+		textField_NewFolder.setColumns(10);
+		
+		JButton btnCreateFolders = new JButton("Create Folders");
+		btnCreateFolders.setToolTipText("Click to Create New Folders");
+		btnCreateFolders.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnCreateFolders.setBounds(145, 224, 140, 26);
+		frame.getContentPane().add(btnCreateFolders);
+
+		int currentYear1 = Calendar.getInstance().get(Calendar.YEAR);
+		String currentYear2 = String.valueOf(currentYear1);
+		textField_Year.setText(currentYear2);
+		
+		JTextArea textArea_mainDir = new JTextArea();
+		textArea_mainDir.setEditable(false);
+		textArea_mainDir.setToolTipText("Main Directory where the New Folders are made");
+		textArea_mainDir.setWrapStyleWord(true);
+		textArea_mainDir.setLineWrap(true);
+		textArea_mainDir.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		textArea_mainDir.setBounds(10, 90, 160, 40);
+		frame.getContentPane().add(textArea_mainDir);
+		
+		JLabel lblMainDirectory = new JLabel("Main Directory");
+		lblMainDirectory.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMainDirectory.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblMainDirectory.setBounds(20, 70, 140, 16);
+		frame.getContentPane().add(lblMainDirectory);
+		
+		String mainDir = System.getProperty("user.dir");
+		mainDir = mainDir + "\\MainDir.txt";
+    	String directory = System.getProperty("user.dir");
+    	directory = directory + "\\MakeDir.txt";
+    	
+		String mainDirec = null;
+    	String subFolders = null;
+    	try {
+    		mainDirec = new String(Files.readAllBytes(Paths.get(mainDir)));
+    	} catch (IOException e1) {
+    		// TODO Auto-generated catch block
+    		e1.printStackTrace();
+    	}
+    	try {
+			subFolders = new String(Files.readAllBytes(Paths.get(directory)));
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+    	
+    	textArea_mainDir.setText(mainDirec);
+    	
+    	JButton btnEditMain = new JButton("Edit Main");
+    	btnEditMain.setToolTipText("Edit Main Directory");
+    	btnEditMain.setFont(new Font("Tahoma", Font.BOLD, 11));
+    	btnEditMain.setBounds(45, 135, 90, 24);
+    	frame.getContentPane().add(btnEditMain);
+    	
+    	
+    	String[] folders = subFolders.split(",");
+		
+    	if (folders.length == 6) {
+    		folder0 = folders[0];
+    		folder1 = folders[1];
+    		folder2 = folders[2];
+    		folder3 = folders[3];
+    		folder4 = folders[4];
+    		folder5 = folders[5];
+    		textArea_Folders.setText(folder0);
+    		textArea_Folders.append("\n" + folder1);
+    		textArea_Folders.append("\n" + folder2);
+    		textArea_Folders.append("\n" + folder3);
+    		textArea_Folders.append("\n" + folder4);
+    		textArea_Folders.append("\n" + folder5);
+    		
+    	} else if (folders.length == 7) {
+    		folder0 = folders[0];
+    		folder1 = folders[1];
+    		folder2 = folders[2];
+    		folder3 = folders[3];
+    		folder4 = folders[4];
+    		folder5 = folders[5];
+    		folder6 = folders[6];
+    		textArea_Folders.setText(folder0);
+    		textArea_Folders.append("\n" + folder1);
+    		textArea_Folders.append("\n" + folder2);
+    		textArea_Folders.append("\n" + folder3);
+    		textArea_Folders.append("\n" + folder4);
+    		textArea_Folders.append("\n" + folder5);
+    		textArea_Folders.append("\n" + folder6);
+    		
+    	} else if (folders.length == 8) {
+    		folder0 = folders[0];
+    		folder1 = folders[1];
+    		folder2 = folders[2];
+    		folder3 = folders[3];
+    		folder4 = folders[4];
+    		folder5 = folders[5];
+    		folder6 = folders[6];
+    		folder7 = folders[7];
+    		textArea_Folders.setText(folder0);
+    		textArea_Folders.append("\n" + folder1);
+    		textArea_Folders.append("\n" + folder2);
+    		textArea_Folders.append("\n" + folder3);
+    		textArea_Folders.append("\n" + folder4);
+    		textArea_Folders.append("\n" + folder5);
+    		textArea_Folders.append("\n" + folder6);
+    		textArea_Folders.append("\n" + folder7);
+    		
+    	} else if (folders.length == 9) {
+    		folder0 = folders[0];
+    		folder1 = folders[1];
+    		folder2 = folders[2];
+    		folder3 = folders[3];
+    		folder4 = folders[4];
+    		folder5 = folders[5];
+    		folder6 = folders[6];
+    		folder7 = folders[7];
+    		folder8 = folders[8];
+    		textArea_Folders.setText(folder0);
+    		textArea_Folders.append("\n" + folder1);
+    		textArea_Folders.append("\n" + folder2);
+    		textArea_Folders.append("\n" + folder3);
+    		textArea_Folders.append("\n" + folder4);
+    		textArea_Folders.append("\n" + folder5);
+    		textArea_Folders.append("\n" + folder6);
+    		textArea_Folders.append("\n" + folder7);
+    		textArea_Folders.append("\n" + folder8);
+    		
+    	} else if (folders.length == 10) {
+    		folder0 = folders[0];
+    		folder1 = folders[1];
+    		folder2 = folders[2];
+    		folder3 = folders[3];
+    		folder4 = folders[4];
+    		folder5 = folders[5];
+    		folder6 = folders[6];
+    		folder7 = folders[7];
+    		folder8 = folders[8];
+    		folder9 = folders[9];
+    		textArea_Folders.setText(folder0);
+    		textArea_Folders.append("\n" + folder1);
+    		textArea_Folders.append("\n" + folder2);
+    		textArea_Folders.append("\n" + folder3);
+    		textArea_Folders.append("\n" + folder4);
+    		textArea_Folders.append("\n" + folder5);
+    		textArea_Folders.append("\n" + folder6);
+    		textArea_Folders.append("\n" + folder7);
+    		textArea_Folders.append("\n" + folder8);
+    		textArea_Folders.append("\n" + folder9);
+    		
+    	} else if (folders.length == 11) {
+    		folder0 = folders[0];
+    		folder1 = folders[1];
+    		folder2 = folders[2];
+    		folder3 = folders[3];
+    		folder4 = folders[4];
+    		folder5 = folders[5];
+    		folder6 = folders[6];
+    		folder7 = folders[7];
+    		folder8 = folders[8];
+    		folder9 = folders[9];
+    		folder10 = folders[10];
+    		textArea_Folders.setText(folder0);
+    		textArea_Folders.append("\n" + folder1);
+    		textArea_Folders.append("\n" + folder2);
+    		textArea_Folders.append("\n" + folder3);
+    		textArea_Folders.append("\n" + folder4);
+    		textArea_Folders.append("\n" + folder5);
+    		textArea_Folders.append("\n" + folder6);
+    		textArea_Folders.append("\n" + folder7);
+    		textArea_Folders.append("\n" + folder8);
+    		textArea_Folders.append("\n" + folder9);
+    		textArea_Folders.append("\n" + folder10);
+
+    	} else if (folders.length == 12) {
+    		folder0 = folders[0];
+    		folder1 = folders[1];
+    		folder2 = folders[2];
+    		folder3 = folders[3];
+    		folder4 = folders[4];
+    		folder5 = folders[5];
+    		folder6 = folders[6];
+    		folder7 = folders[7];
+    		folder8 = folders[8];
+    		folder9 = folders[9];
+    		folder10 = folders[10];
+    		folder11 = folders[11];
+    		textArea_Folders.setText(folder0);
+    		textArea_Folders.append("\n" + folder1);
+    		textArea_Folders.append("\n" + folder2);
+    		textArea_Folders.append("\n" + folder3);
+    		textArea_Folders.append("\n" + folder4);
+    		textArea_Folders.append("\n" + folder5);
+    		textArea_Folders.append("\n" + folder6);
+    		textArea_Folders.append("\n" + folder7);
+    		textArea_Folders.append("\n" + folder8);
+    		textArea_Folders.append("\n" + folder9);
+    		textArea_Folders.append("\n" + folder10);
+    		textArea_Folders.append("\n" + folder11);
+    		
+    	} else if (folders.length == 13) {
+    		folder0 = folders[0];
+    		folder1 = folders[1];
+    		folder2 = folders[2];
+    		folder3 = folders[3];
+    		folder4 = folders[4];
+    		folder5 = folders[5];
+    		folder6 = folders[6];
+    		folder7 = folders[7];
+    		folder8 = folders[8];
+    		folder9 = folders[9];
+    		folder10 = folders[10];
+    		folder11 = folders[11];
+    		folder12 = folders[12];
+    		textArea_Folders.setText(folder0);
+    		textArea_Folders.append("\n" + folder1);
+    		textArea_Folders.append("\n" + folder2);
+    		textArea_Folders.append("\n" + folder3);
+    		textArea_Folders.append("\n" + folder4);
+    		textArea_Folders.append("\n" + folder5);
+    		textArea_Folders.append("\n" + folder6);
+    		textArea_Folders.append("\n" + folder7);
+    		textArea_Folders.append("\n" + folder8);
+    		textArea_Folders.append("\n" + folder9);
+    		textArea_Folders.append("\n" + folder10);
+    		textArea_Folders.append("\n" + folder11);
+    		textArea_Folders.append("\n" + folder12);
+    		
+    	} else if (folders.length == 14) {
+    		folder0 = folders[0];
+    		folder1 = folders[1];
+    		folder2 = folders[2];
+    		folder3 = folders[3];
+    		folder4 = folders[4];
+    		folder5 = folders[5];
+    		folder6 = folders[6];
+    		folder7 = folders[7];
+    		folder8 = folders[8];
+    		folder9 = folders[9];
+    		folder10 = folders[10];
+    		folder11 = folders[11];
+    		folder12 = folders[12];
+    		folder13 = folders[13];
+    		textArea_Folders.setText(folder0);
+    		textArea_Folders.append("\n" + folder1);
+    		textArea_Folders.append("\n" + folder2);
+    		textArea_Folders.append("\n" + folder3);
+    		textArea_Folders.append("\n" + folder4);
+    		textArea_Folders.append("\n" + folder5);
+    		textArea_Folders.append("\n" + folder6);
+    		textArea_Folders.append("\n" + folder7);
+    		textArea_Folders.append("\n" + folder8);
+    		textArea_Folders.append("\n" + folder9);
+    		textArea_Folders.append("\n" + folder10);
+    		textArea_Folders.append("\n" + folder11);
+    		textArea_Folders.append("\n" + folder12);
+    		textArea_Folders.append("\n" + folder13);
+    		
+    	} else {
+    		textArea_Folders.setText("Program made for 6 \nto 14 Sub-Folders Only");
+    	}
+    	
+    	
+		btnEditList.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+            	Directories.dir();
+            }
+		});
+		
+		btnEditMain.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+            	Directories.editMain();
+            }
+		});
+		
+		btnCreateFolders.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+            	Directories.newFolders();
+            }
+            	         
+		});
+		
+	}
+}
