@@ -1,0 +1,56 @@
+
+import java.util.Scanner;
+
+
+public class Homework_3_3 {
+
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		String[] days = {"Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"};
+		System.out.println("Enter a number for the day of the week: (1 for Sunday thru 7 for Saturday)");
+		int day  = sc.nextInt()-1;
+		
+		if (day <= 6) {
+			System.out.println("The day you chose is " + days[day]);
+		} else {
+			System.out.println("You entered a wrong number.");
+			System.exit(0); //Closes the Program
+		}
+		
+		int day1 = day+1;
+		
+		if (day1 <= 6) {
+		System.out.println("The following day is " + days[day1]);
+		} else {
+			day1 = day1-7;
+			System.out.println("The following day is " + days[day1]);
+		}
+		
+		int day2 = day-1;
+		
+		if (day2 <= 6 && day2 >= 0) {
+		System.out.println("The previous day was " + days[day2]);
+		} else {
+			day2 = day2+7;
+			System.out.println("The previous day was " + days[day2]);
+		}
+		
+		System.out.println("Enter a number to calculate what day it will be, that many day later:");
+		int day3 = sc.nextInt();
+		int day4 = day + (day3%7);
+		
+		if (day4 <= 6) {
+		System.out.println("The day will be " + days[day4]);
+		} else {
+			day4 = day4-7;
+			System.out.println("The day will be " + days[day4]);
+		}
+
+		
+		sc.close();
+	}
+
+}
