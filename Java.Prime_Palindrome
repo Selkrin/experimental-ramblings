@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Prime_Palindrome {
+
+	public static void main(String[] args) {
+
+		boolean isPrime = true;
+		
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Please, enter any number:");
+		int num1=sc.nextInt();
+		
+		int num2 = 2;
+		
+		while (num2 <= num1 / 2) {
+		   if (num1 % num2 == 0) {
+			isPrime = false;
+			break;
+		   }
+		   num2++;
+		}
+		
+		//If isPrime is true then the number is a prime number
+		if(isPrime)
+		   System.out.print(num1 + " is a Prime Number, ");
+		else
+		   System.out.print(num1 + " is not a Prime Number, ");
+		sc.close();
+		
+		int pal1 = num1;    
+		int pal2 = 0;
+		int pal3;
+		
+			while (num1 > 0) {    
+				pal3 = num1%10;
+				pal2 = (pal2*10) + pal3; //    
+				num1 = num1/10;    
+			}
+			
+		 if (pal1 == pal2)    
+			 System.out.print("and it is a Palindrome.");    
+		 else    
+			 System.out.print("and it is not a Palindrome.");   
+		
+		}
+
+}
