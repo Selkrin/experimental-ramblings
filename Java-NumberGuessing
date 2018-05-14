@@ -1,0 +1,316 @@
+package NumberGuessing;
+import java.awt.EventQueue;
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.JCheckBox;
+import javax.swing.JEditorPane;
+
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+import javax.swing.SwingConstants;
+import javax.swing.border.BevelBorder;
+import java.awt.Color;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+
+public class NumberGuessing {
+
+	private JFrame frame;
+	private JTextField textField;
+	@SuppressWarnings("unused")
+	private JLabel lblImage;
+	@SuppressWarnings("unused")
+	private JLabel lblFireworks;
+	private Integer guess;
+	private Integer number;
+	private Integer tries;
+	private Integer difficulty = 0;
+	private JTextField textField_Tries;
+	private ImageIcon numberimg;
+	private ImageIcon toolow;
+	private ImageIcon toohigh;
+	private ImageIcon nomoretries;
+	private ImageIcon correctnumber;
+	private ImageIcon fireworks;
+	private JEditorPane tf_Guesses;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					NumberGuessing window = new NumberGuessing();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public NumberGuessing() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame("Guess the Number");
+		frame.setBounds(100, 100, 600, 600);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null); //Center on Screen
+		frame.getContentPane().setLayout(null);
+		
+		JCheckBox checkBox1 = new JCheckBox("1 - 10");
+		checkBox1.setBackground(new Color(204, 204, 204));
+		checkBox1.setFont(new Font("Tahoma", Font.BOLD, 12));
+		checkBox1.setBounds(464, 40, 80, 24);
+		frame.getContentPane().add(checkBox1);
+		
+		JCheckBox checkBox2 = new JCheckBox("1 - 100");
+		checkBox2.setBackground(new Color(204, 204, 204));
+		checkBox2.setSelected(true);
+		checkBox2.setFont(new Font("Tahoma", Font.BOLD, 12));
+		checkBox2.setBounds(464, 70, 80, 24);
+		frame.getContentPane().add(checkBox2);
+		
+		JCheckBox checkBox3 = new JCheckBox("1 - 1000");
+		checkBox3.setBackground(new Color(204, 204, 204));
+		checkBox3.setFont(new Font("Tahoma", Font.BOLD, 12));
+		checkBox3.setBounds(464, 100, 80, 24);
+		frame.getContentPane().add(checkBox3);
+		
+		JLabel lblSelectTheDifficulty = new JLabel("Select the Difficulty");
+		lblSelectTheDifficulty.setForeground(new Color(255, 204, 0));
+		lblSelectTheDifficulty.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSelectTheDifficulty.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblSelectTheDifficulty.setBounds(434, 12, 140, 24);
+		frame.getContentPane().add(lblSelectTheDifficulty);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(0, 51, 153));
+		panel.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		panel.setBounds(424, 10, 160, 124);
+		frame.getContentPane().add(panel);
+		
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(checkBox1);
+		bg.add(checkBox2);
+		bg.add(checkBox3);
+		
+		JButton btnCheck = new JButton("Check Guess");
+		btnCheck.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnCheck.setBounds(237, 530, 120, 30);
+		frame.getContentPane().add(btnCheck);
+		
+		textField = new JTextField();
+		textField.setToolTipText("Enter Guess here.");
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		textField.setFont(new Font("Tahoma", Font.BOLD, 20));
+		textField.setBounds(237, 480, 120, 40);
+		frame.getContentPane().add(textField);
+		textField.setColumns(1);
+		textField.setText(null);
+		
+		JLabel lblImage = new JLabel("");
+		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
+		lblImage.setBounds(0, 300, 594, 140);
+		frame.getContentPane().add(lblImage);
+		
+		JLabel lblFireworks = new JLabel("");
+		lblFireworks.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFireworks.setBounds(0, 0, 594, 572);
+		frame.getContentPane().add(lblFireworks);
+		
+		JLabel lblTries = new JLabel("Tries left:");
+		lblTries.setToolTipText("The # of guesses remaining.");
+		lblTries.setForeground(new Color(255, 204, 0));
+		lblTries.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblTries.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTries.setBounds(425, 535, 80, 20);
+		frame.getContentPane().add(lblTries);
+		
+		textField_Tries = new JTextField();
+		textField_Tries.setToolTipText("The # of guesses remaining.");
+		textField_Tries.setFont(new Font("Tahoma", Font.BOLD, 14));
+		textField_Tries.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_Tries.setEditable(false);
+		textField_Tries.setBounds(502, 535, 30, 20);
+		frame.getContentPane().add(textField_Tries);
+		textField_Tries.setColumns(10);
+				
+        JButton btnStart = new JButton("START!");
+        btnStart.setToolTipText("Start the Game.");
+        btnStart.setFont(new Font("Tahoma", Font.BOLD, 12));
+        btnStart.setBounds(460, 485, 120, 30);
+        frame.getContentPane().add(btnStart);
+		
+		JScrollPane sp_Guesses = new JScrollPane();
+		sp_Guesses.setBounds(10, 462, 120, 100);
+		frame.getContentPane().add(sp_Guesses);
+
+		tf_Guesses = new JEditorPane("text/html", "");
+		tf_Guesses.setEditable(false);
+		tf_Guesses.setFont(new Font("Tahoma", Font.BOLD, 12));
+		tf_Guesses.setToolTipText("Previous guesses");
+		sp_Guesses.setViewportView(tf_Guesses);
+		
+		JLabel lblGuessHistory = new JLabel(" Previous Guesses");
+		lblGuessHistory.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblGuessHistory.setHorizontalAlignment(SwingConstants.CENTER);
+		sp_Guesses.setColumnHeaderView(lblGuessHistory);
+        
+		//Background Image
+		JPanel panel_background = new JPanel();
+		panel_background.setBounds(0, -6, 600, 600);
+		frame.getContentPane().add(panel_background);
+		panel_background.add(new JLabel(new ImageIcon("NumberGuessing.png")));
+		        
+		//Images
+		numberimg = new ImageIcon("Number.png");
+		toolow = new ImageIcon("TooLow.png");
+		toohigh = new ImageIcon("TooHigh.png");
+		nomoretries = new ImageIcon("NoMoreTries.png");
+    	correctnumber = new ImageIcon("CorrectNumber.png");
+        fireworks = new ImageIcon("Fireworks.gif");
+		
+		Random gen = new Random();
+
+        btnStart.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		//Set Difficulty
+        		if (checkBox1.isSelected()){
+        			difficulty = 1;
+        		} if (checkBox2.isSelected()) {
+        			difficulty = 2;
+        		} if (checkBox3.isSelected()) {
+        			difficulty = 3;
+        		}
+        		
+        		tries = 0;
+                switch (difficulty){
+                case 1: 
+                    number = gen.nextInt(9)+1;
+                    textField_Tries.setText(String.valueOf(3-tries)); //3 Tries
+                    break;
+                case 2: 
+                    number = gen.nextInt(99)+1;
+                    textField_Tries.setText(String.valueOf(6-tries)); //6 Tries
+                    break;
+                case 3: 
+                    number = gen.nextInt(999)+1;
+                    textField_Tries.setText(String.valueOf(10-tries)); //10 Tries
+                	break;
+                default: break;     
+            }
+                tf_Guesses.setText(null);
+                lblFireworks.setIcon(null);
+                lblImage.setIcon(numberimg);
+                //System.out.println(number);
+        	}
+        });
+        
+        
+		btnCheck.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	
+            try {
+				guess = Integer.parseInt(textField.getText());
+				String guess1 = textField.getText();
+				String guess2 = tf_Guesses.getText();
+				tf_Guesses.setText(guess1 + "<br>" + guess2);
+				tf_Guesses.setCaretPosition(0); //Sets ScrollBar to top position
+				//System.out.println(guess);
+			} catch (NumberFormatException e1) {
+				JOptionPane.showMessageDialog(null, "Whole numbers only!", "Integers Only", JOptionPane.WARNING_MESSAGE);
+				e1.printStackTrace();
+			}
+            
+            try {
+            if (difficulty == 1) {
+					if (guess.equals(number)) {
+					    lblImage.setIcon(correctnumber);
+					    lblFireworks.setIcon(fireworks);
+					} if (guess < number) {
+						System.out.println("Too Low!");
+						lblImage.setIcon(toolow);
+						tries++;
+						textField_Tries.setText(String.valueOf(3-tries));
+					} if (guess > number) {
+						System.out.println("Too High!");
+						lblImage.setIcon(toohigh);
+						tries++;
+						textField_Tries.setText(String.valueOf(3-tries));
+					} if (tries == 3) {
+						lblImage.setIcon(nomoretries);
+						textField.setText("# was: " + number);
+						number = null;
+					}
+            }
+            
+            if (difficulty == 2) {
+					if (guess.equals(number)) {
+					    lblImage.setIcon(correctnumber);
+					    lblFireworks.setIcon(fireworks);
+					} if (guess < number) {
+						System.out.println("Too Low!");
+						lblImage.setIcon(toolow);
+						tries++;
+						textField_Tries.setText(String.valueOf(6-tries));
+					} if (guess > number) {
+						System.out.println("Too High!");
+						lblImage.setIcon(toohigh);
+						tries++;
+						textField_Tries.setText(String.valueOf(6-tries));
+					} if (tries == 6) {
+						lblImage.setIcon(nomoretries);
+						textField.setText("# was: " + number);
+						number = null;
+					}
+        	}
+            
+            if (difficulty == 3) {
+					if (guess.equals(number)) {
+					    lblImage.setIcon(correctnumber);
+					    lblFireworks.setIcon(fireworks);
+					} if (guess < number) {
+						System.out.println("Too Low!");
+						lblImage.setIcon(toolow);
+						tries++;
+						textField_Tries.setText(String.valueOf(10-tries));
+					} if (guess > number) {
+						System.out.println("Too High!");
+						lblImage.setIcon(toohigh);
+						tries++;
+						textField_Tries.setText(String.valueOf(10-tries));
+					} if (tries == 10) {
+						lblImage.setIcon(nomoretries);
+						textField.setText("# was: " + number);
+						number = null;
+					}
+					
+            }} catch (Exception e2) {
+					JOptionPane.showMessageDialog(null, "You lost.\nClick 'START!' to begin a new game.", "Game Over", JOptionPane.WARNING_MESSAGE);
+					e2.printStackTrace();
+				}
+            }        
+		});
+        
+        
+        
+	}	
+}
