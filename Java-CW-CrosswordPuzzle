@@ -1,0 +1,2793 @@
+package crosswordPuzzle;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+import javax.swing.JEditorPane;
+import javax.swing.JFormattedTextField;
+import java.awt.Color;
+import javax.swing.JPanel;
+import javax.swing.border.BevelBorder;
+import javax.swing.text.MaskFormatter;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.JLabel;
+
+
+public class CrosswordPuzzle {
+
+	public static JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1_0;
+	private JTextField textField_2_0;
+	private JTextField textField_3_0;
+	private JTextField textField_4_0;
+	private JTextField textField_5_0;
+	private JTextField textField_6_0;
+	private JTextField textField_7_0;
+	private JTextField textField_8_0;
+	private JTextField textField_9_0;
+	private JTextField textField_10_0;
+	private JTextField textField_11_0;
+	private JTextField textField_12_0;
+	private JTextField textField_13_0;
+	private JTextField textField_14_0;
+	private JTextField textField_15_0;
+	private JTextField textField_0_1;
+	private JTextField textField_0_2;
+	private JTextField textField_0_3;
+	private JTextField textField_0_4;
+	private JTextField textField_0_5;
+	private JTextField textField_0_6;
+	private JTextField textField_0_7;
+	private JTextField textField_0_8;
+	private JTextField textField_0_9;
+	private JTextField textField_0_10;
+	private JTextField textField_0_11;
+	private JTextField textField_0_12;
+	private JTextField textField_0_13;
+	private JTextField textField_0_14;
+	private JTextField textField_0_15;
+	public static JFormattedTextField textField_1_1;
+	public static JFormattedTextField textField_2_1;
+	public static JFormattedTextField textField_3_1;
+	public static JFormattedTextField textField_4_1;
+	public static JFormattedTextField textField_5_1;
+	public static JFormattedTextField textField_6_1;
+	public static JFormattedTextField textField_7_1;
+	public static JFormattedTextField textField_8_1;
+	public static JFormattedTextField textField_9_1;
+	public static JFormattedTextField textField_10_1;
+	public static JFormattedTextField textField_11_1;
+	public static JFormattedTextField textField_12_1;
+	public static JFormattedTextField textField_13_1;
+	public static JFormattedTextField textField_14_1;
+	public static JFormattedTextField textField_15_1;
+	public static JFormattedTextField textField_1_2;
+	public static JFormattedTextField textField_2_2;
+	public static JFormattedTextField textField_3_2;
+	public static JFormattedTextField textField_4_2;
+	public static JFormattedTextField textField_5_2;
+	public static JFormattedTextField textField_6_2;
+	public static JFormattedTextField textField_7_2;
+	public static JFormattedTextField textField_8_2;
+	public static JFormattedTextField textField_9_2;
+	public static JFormattedTextField textField_10_2;
+	public static JFormattedTextField textField_11_2;
+	public static JFormattedTextField textField_12_2;
+	public static JFormattedTextField textField_13_2;
+	public static JFormattedTextField textField_14_2;
+	public static JFormattedTextField textField_15_2;
+	public static JFormattedTextField textField_1_3;
+	public static JFormattedTextField textField_2_3;
+	public static JFormattedTextField textField_3_3;
+	public static JFormattedTextField textField_4_3;
+	public static JFormattedTextField textField_5_3;
+	public static JFormattedTextField textField_6_3;
+	public static JFormattedTextField textField_7_3;
+	public static JFormattedTextField textField_8_3;
+	public static JFormattedTextField textField_9_3;
+	public static JFormattedTextField textField_10_3;
+	public static JFormattedTextField textField_11_3;
+	public static JFormattedTextField textField_12_3;
+	public static JFormattedTextField textField_13_3;
+	public static JFormattedTextField textField_14_3;
+	public static JFormattedTextField textField_15_3;
+	public static JFormattedTextField textField_1_4;
+	public static JFormattedTextField textField_2_4;
+	public static JFormattedTextField textField_3_4;
+	public static JFormattedTextField textField_4_4;
+	public static JFormattedTextField textField_5_4;
+	public static JFormattedTextField textField_6_4;
+	public static JFormattedTextField textField_7_4;
+	public static JFormattedTextField textField_8_4;
+	public static JFormattedTextField textField_9_4;
+	public static JFormattedTextField textField_10_4;
+	public static JFormattedTextField textField_11_4;
+	public static JFormattedTextField textField_12_4;
+	public static JFormattedTextField textField_13_4;
+	public static JFormattedTextField textField_14_4;
+	public static JFormattedTextField textField_15_4;
+	public static JFormattedTextField textField_1_5;
+	public static JFormattedTextField textField_2_5;
+	public static JFormattedTextField textField_3_5;
+	public static JFormattedTextField textField_4_5;
+	public static JFormattedTextField textField_5_5;
+	public static JFormattedTextField textField_6_5;
+	public static JFormattedTextField textField_7_5;
+	public static JFormattedTextField textField_8_5;
+	public static JFormattedTextField textField_9_5;
+	public static JFormattedTextField textField_10_5;
+	public static JFormattedTextField textField_11_5;
+	public static JFormattedTextField textField_12_5;
+	public static JFormattedTextField textField_13_5;
+	public static JFormattedTextField textField_14_5;
+	public static JFormattedTextField textField_15_5;
+	public static JFormattedTextField textField_1_6;
+	public static JFormattedTextField textField_2_6;
+	public static JFormattedTextField textField_3_6;
+	public static JFormattedTextField textField_4_6;
+	public static JFormattedTextField textField_5_6;
+	public static JFormattedTextField textField_6_6;
+	public static JFormattedTextField textField_7_6;
+	public static JFormattedTextField textField_8_6;
+	public static JFormattedTextField textField_9_6;
+	public static JFormattedTextField textField_10_6;
+	public static JFormattedTextField textField_11_6;
+	public static JFormattedTextField textField_12_6;
+	public static JFormattedTextField textField_13_6;
+	public static JFormattedTextField textField_14_6;
+	public static JFormattedTextField textField_15_6;
+	public static JFormattedTextField textField_1_7;
+	public static JFormattedTextField textField_2_7;
+	public static JFormattedTextField textField_3_7;
+	public static JFormattedTextField textField_4_7;
+	public static JFormattedTextField textField_5_7;
+	public static JFormattedTextField textField_6_7;
+	public static JFormattedTextField textField_7_7;
+	public static JFormattedTextField textField_8_7;
+	public static JFormattedTextField textField_9_7;
+	public static JFormattedTextField textField_10_7;
+	public static JFormattedTextField textField_11_7;
+	public static JFormattedTextField textField_12_7;
+	public static JFormattedTextField textField_13_7;
+	public static JFormattedTextField textField_14_7;
+	public static JFormattedTextField textField_15_7;
+	public static JFormattedTextField textField_1_8;
+	public static JFormattedTextField textField_2_8;
+	public static JFormattedTextField textField_3_8;
+	public static JFormattedTextField textField_4_8;
+	public static JFormattedTextField textField_5_8;
+	public static JFormattedTextField textField_6_8;
+	public static JFormattedTextField textField_7_8;
+	public static JFormattedTextField textField_8_8;
+	public static JFormattedTextField textField_9_8;
+	public static JFormattedTextField textField_10_8;
+	public static JFormattedTextField textField_11_8;
+	public static JFormattedTextField textField_12_8;
+	public static JFormattedTextField textField_13_8;
+	public static JFormattedTextField textField_14_8;
+	public static JFormattedTextField textField_15_8;
+	public static JFormattedTextField textField_1_9;
+	public static JFormattedTextField textField_2_9;
+	public static JFormattedTextField textField_3_9;
+	public static JFormattedTextField textField_4_9;
+	public static JFormattedTextField textField_5_9;
+	public static JFormattedTextField textField_6_9;
+	public static JFormattedTextField textField_7_9;
+	public static JFormattedTextField textField_8_9;
+	public static JFormattedTextField textField_9_9;
+	public static JFormattedTextField textField_10_9;
+	public static JFormattedTextField textField_11_9;
+	public static JFormattedTextField textField_12_9;
+	public static JFormattedTextField textField_13_9;
+	public static JFormattedTextField textField_14_9;
+	public static JFormattedTextField textField_15_9;
+	public static JFormattedTextField textField_1_10;
+	public static JFormattedTextField textField_2_10;
+	public static JFormattedTextField textField_3_10;
+	public static JFormattedTextField textField_4_10;
+	public static JFormattedTextField textField_5_10;
+	public static JFormattedTextField textField_6_10;
+	public static JFormattedTextField textField_7_10;
+	public static JFormattedTextField textField_8_10;
+	public static JFormattedTextField textField_9_10;
+	public static JFormattedTextField textField_10_10;
+	public static JFormattedTextField textField_11_10;
+	public static JFormattedTextField textField_12_10;
+	public static JFormattedTextField textField_13_10;
+	public static JFormattedTextField textField_14_10;
+	public static JFormattedTextField textField_15_10;
+	public static JFormattedTextField textField_1_11;
+	public static JFormattedTextField textField_2_11;
+	public static JFormattedTextField textField_3_11;
+	public static JFormattedTextField textField_4_11;
+	public static JFormattedTextField textField_5_11;
+	public static JFormattedTextField textField_6_11;
+	public static JFormattedTextField textField_7_11;
+	public static JFormattedTextField textField_8_11;
+	public static JFormattedTextField textField_9_11;
+	public static JFormattedTextField textField_10_11;
+	public static JFormattedTextField textField_11_11;
+	public static JFormattedTextField textField_12_11;
+	public static JFormattedTextField textField_13_11;
+	public static JFormattedTextField textField_14_11;
+	public static JFormattedTextField textField_15_11;
+	public static JFormattedTextField textField_1_12;
+	public static JFormattedTextField textField_2_12;
+	public static JFormattedTextField textField_3_12;
+	public static JFormattedTextField textField_4_12;
+	public static JFormattedTextField textField_5_12;
+	public static JFormattedTextField textField_6_12;
+	public static JFormattedTextField textField_7_12;
+	public static JFormattedTextField textField_8_12;
+	public static JFormattedTextField textField_9_12;
+	public static JFormattedTextField textField_10_12;
+	public static JFormattedTextField textField_11_12;
+	public static JFormattedTextField textField_12_12;
+	public static JFormattedTextField textField_13_12;
+	public static JFormattedTextField textField_14_12;
+	public static JFormattedTextField textField_15_12;
+	public static JFormattedTextField textField_1_13;
+	public static JFormattedTextField textField_2_13;
+	public static JFormattedTextField textField_3_13;
+	public static JFormattedTextField textField_4_13;
+	public static JFormattedTextField textField_5_13;
+	public static JFormattedTextField textField_6_13;
+	public static JFormattedTextField textField_7_13;
+	public static JFormattedTextField textField_8_13;
+	public static JFormattedTextField textField_9_13;
+	public static JFormattedTextField textField_10_13;
+	public static JFormattedTextField textField_11_13;
+	public static JFormattedTextField textField_12_13;
+	public static JFormattedTextField textField_13_13;
+	public static JFormattedTextField textField_14_13;
+	public static JFormattedTextField textField_15_13;
+	public static JFormattedTextField textField_1_14;
+	public static JFormattedTextField textField_2_14;
+	public static JFormattedTextField textField_3_14;
+	public static JFormattedTextField textField_4_14;
+	public static JFormattedTextField textField_5_14;
+	public static JFormattedTextField textField_6_14;
+	public static JFormattedTextField textField_7_14;
+	public static JFormattedTextField textField_8_14;
+	public static JFormattedTextField textField_9_14;
+	public static JFormattedTextField textField_10_14;
+	public static JFormattedTextField textField_11_14;
+	public static JFormattedTextField textField_12_14;
+	public static JFormattedTextField textField_13_14;
+	public static JFormattedTextField textField_14_14;
+	public static JFormattedTextField textField_15_14;
+	public static JFormattedTextField textField_1_15;
+	public static JFormattedTextField textField_2_15;
+	public static JFormattedTextField textField_3_15;
+	public static JFormattedTextField textField_4_15;
+	public static JFormattedTextField textField_5_15;
+	public static JFormattedTextField textField_6_15;
+	public static JFormattedTextField textField_7_15;
+	public static JFormattedTextField textField_8_15;
+	public static JFormattedTextField textField_9_15;
+	public static JFormattedTextField textField_10_15;
+	public static JFormattedTextField textField_11_15;
+	public static JFormattedTextField textField_12_15;
+	public static JFormattedTextField textField_13_15;
+	public static JFormattedTextField textField_14_15;
+	public static JFormattedTextField textField_15_15;
+	public static JEditorPane textArea_Across;
+	public static JEditorPane textArea_Down;
+	private JScrollPane scrollPane;
+	private JScrollPane scrollPane_1;
+	public static int puzNum = 0;
+	private JLabel lblWordsAcross;
+	private JLabel lblWordsDown;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					@SuppressWarnings("unused")
+					CrosswordPuzzle window = new CrosswordPuzzle();
+					CrosswordPuzzle.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public CrosswordPuzzle() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame("Crossword Puzzle");
+		frame.getContentPane().setBackground(Color.GRAY);
+		frame.setBounds(50, 50, 800, 600);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null);
+		frame.getContentPane().setLayout(null);
+		
+		textField = new JTextField();
+		textField.setForeground(Color.WHITE);
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		textField.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField.setBackground(Color.BLACK);
+		textField.setEditable(false);
+		textField.setBounds(10, 11, 30, 30);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		textField_1_0 = new JTextField();
+		textField_1_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_0.setForeground(Color.WHITE);
+		textField_1_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_0.setText("1");
+		textField_1_0.setEditable(false);
+		textField_1_0.setColumns(10);
+		textField_1_0.setBackground(Color.BLACK);
+		textField_1_0.setBounds(42, 11, 30, 30);
+		frame.getContentPane().add(textField_1_0);
+		
+		textField_2_0 = new JTextField();
+		textField_2_0.setText("2");
+		textField_2_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_0.setForeground(Color.WHITE);
+		textField_2_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_0.setEditable(false);
+		textField_2_0.setColumns(10);
+		textField_2_0.setBackground(Color.BLACK);
+		textField_2_0.setBounds(74, 11, 30, 30);
+		frame.getContentPane().add(textField_2_0);
+		
+		textField_3_0 = new JTextField();
+		textField_3_0.setText("3");
+		textField_3_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_0.setForeground(Color.WHITE);
+		textField_3_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_0.setEditable(false);
+		textField_3_0.setColumns(10);
+		textField_3_0.setBackground(Color.BLACK);
+		textField_3_0.setBounds(106, 11, 30, 30);
+		frame.getContentPane().add(textField_3_0);
+		
+		textField_4_0 = new JTextField();
+		textField_4_0.setText("4");
+		textField_4_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_0.setForeground(Color.WHITE);
+		textField_4_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_0.setEditable(false);
+		textField_4_0.setColumns(10);
+		textField_4_0.setBackground(Color.BLACK);
+		textField_4_0.setBounds(138, 11, 30, 30);
+		frame.getContentPane().add(textField_4_0);
+		
+		textField_5_0 = new JTextField();
+		textField_5_0.setText("5");
+		textField_5_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_0.setForeground(Color.WHITE);
+		textField_5_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_0.setEditable(false);
+		textField_5_0.setColumns(10);
+		textField_5_0.setBackground(Color.BLACK);
+		textField_5_0.setBounds(170, 11, 30, 30);
+		frame.getContentPane().add(textField_5_0);
+		
+		textField_6_0 = new JTextField();
+		textField_6_0.setText("6");
+		textField_6_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_0.setForeground(Color.WHITE);
+		textField_6_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_0.setEditable(false);
+		textField_6_0.setColumns(10);
+		textField_6_0.setBackground(Color.BLACK);
+		textField_6_0.setBounds(202, 11, 30, 30);
+		frame.getContentPane().add(textField_6_0);
+		
+		textField_7_0 = new JTextField();
+		textField_7_0.setText("7");
+		textField_7_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_0.setForeground(Color.WHITE);
+		textField_7_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_0.setEditable(false);
+		textField_7_0.setColumns(10);
+		textField_7_0.setBackground(Color.BLACK);
+		textField_7_0.setBounds(234, 11, 30, 30);
+		frame.getContentPane().add(textField_7_0);
+		
+		textField_8_0 = new JTextField();
+		textField_8_0.setText("8");
+		textField_8_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_0.setForeground(Color.WHITE);
+		textField_8_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_0.setEditable(false);
+		textField_8_0.setColumns(10);
+		textField_8_0.setBackground(Color.BLACK);
+		textField_8_0.setBounds(266, 11, 30, 30);
+		frame.getContentPane().add(textField_8_0);
+		
+		textField_9_0 = new JTextField();
+		textField_9_0.setText("9");
+		textField_9_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_0.setForeground(Color.WHITE);
+		textField_9_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_0.setEditable(false);
+		textField_9_0.setColumns(10);
+		textField_9_0.setBackground(Color.BLACK);
+		textField_9_0.setBounds(298, 11, 30, 30);
+		frame.getContentPane().add(textField_9_0);
+		
+		textField_10_0 = new JTextField();
+		textField_10_0.setText("10");
+		textField_10_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_0.setForeground(Color.WHITE);
+		textField_10_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_0.setEditable(false);
+		textField_10_0.setColumns(10);
+		textField_10_0.setBackground(Color.BLACK);
+		textField_10_0.setBounds(330, 11, 30, 30);
+		frame.getContentPane().add(textField_10_0);
+		
+		textField_11_0 = new JTextField();
+		textField_11_0.setText("11");
+		textField_11_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_0.setForeground(Color.WHITE);
+		textField_11_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_0.setEditable(false);
+		textField_11_0.setColumns(10);
+		textField_11_0.setBackground(Color.BLACK);
+		textField_11_0.setBounds(362, 11, 30, 30);
+		frame.getContentPane().add(textField_11_0);
+		
+		textField_12_0 = new JTextField();
+		textField_12_0.setText("12");
+		textField_12_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_0.setForeground(Color.WHITE);
+		textField_12_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_0.setEditable(false);
+		textField_12_0.setColumns(10);
+		textField_12_0.setBackground(Color.BLACK);
+		textField_12_0.setBounds(394, 11, 30, 30);
+		frame.getContentPane().add(textField_12_0);
+		
+		textField_13_0 = new JTextField();
+		textField_13_0.setText("13");
+		textField_13_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_0.setForeground(Color.WHITE);
+		textField_13_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_0.setEditable(false);
+		textField_13_0.setColumns(10);
+		textField_13_0.setBackground(Color.BLACK);
+		textField_13_0.setBounds(426, 11, 30, 30);
+		frame.getContentPane().add(textField_13_0);
+		
+		textField_14_0 = new JTextField();
+		textField_14_0.setText("14");
+		textField_14_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_0.setForeground(Color.WHITE);
+		textField_14_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_0.setEditable(false);
+		textField_14_0.setColumns(10);
+		textField_14_0.setBackground(Color.BLACK);
+		textField_14_0.setBounds(458, 11, 30, 30);
+		frame.getContentPane().add(textField_14_0);
+		
+		textField_15_0 = new JTextField();
+		textField_15_0.setText("15");
+		textField_15_0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_0.setForeground(Color.WHITE);
+		textField_15_0.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_0.setEditable(false);
+		textField_15_0.setColumns(10);
+		textField_15_0.setBackground(Color.BLACK);
+		textField_15_0.setBounds(490, 11, 30, 30);
+		frame.getContentPane().add(textField_15_0);
+		
+		textField_0_1 = new JTextField();
+		textField_0_1.setText("1");
+		textField_0_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_1.setForeground(Color.WHITE);
+		textField_0_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_1.setEditable(false);
+		textField_0_1.setColumns(10);
+		textField_0_1.setBackground(Color.BLACK);
+		textField_0_1.setBounds(10, 43, 30, 30);
+		frame.getContentPane().add(textField_0_1);
+		
+		textField_0_2 = new JTextField();
+		textField_0_2.setText("2");
+		textField_0_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_2.setForeground(Color.WHITE);
+		textField_0_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_2.setEditable(false);
+		textField_0_2.setColumns(10);
+		textField_0_2.setBackground(Color.BLACK);
+		textField_0_2.setBounds(10, 75, 30, 30);
+		frame.getContentPane().add(textField_0_2);
+		
+		textField_0_3 = new JTextField();
+		textField_0_3.setText("3");
+		textField_0_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_3.setForeground(Color.WHITE);
+		textField_0_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_3.setEditable(false);
+		textField_0_3.setColumns(10);
+		textField_0_3.setBackground(Color.BLACK);
+		textField_0_3.setBounds(10, 107, 30, 30);
+		frame.getContentPane().add(textField_0_3);
+		
+		textField_0_4 = new JTextField();
+		textField_0_4.setText("4");
+		textField_0_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_4.setForeground(Color.WHITE);
+		textField_0_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_4.setEditable(false);
+		textField_0_4.setColumns(10);
+		textField_0_4.setBackground(Color.BLACK);
+		textField_0_4.setBounds(10, 139, 30, 30);
+		frame.getContentPane().add(textField_0_4);
+		
+		textField_0_5 = new JTextField();
+		textField_0_5.setText("5");
+		textField_0_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_5.setForeground(Color.WHITE);
+		textField_0_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_5.setEditable(false);
+		textField_0_5.setColumns(10);
+		textField_0_5.setBackground(Color.BLACK);
+		textField_0_5.setBounds(10, 171, 30, 30);
+		frame.getContentPane().add(textField_0_5);
+		
+		textField_0_6 = new JTextField();
+		textField_0_6.setText("6");
+		textField_0_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_6.setForeground(Color.WHITE);
+		textField_0_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_6.setEditable(false);
+		textField_0_6.setColumns(10);
+		textField_0_6.setBackground(Color.BLACK);
+		textField_0_6.setBounds(10, 203, 30, 30);
+		frame.getContentPane().add(textField_0_6);
+		
+		textField_0_7 = new JTextField();
+		textField_0_7.setText("7");
+		textField_0_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_7.setForeground(Color.WHITE);
+		textField_0_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_7.setEditable(false);
+		textField_0_7.setColumns(10);
+		textField_0_7.setBackground(Color.BLACK);
+		textField_0_7.setBounds(10, 235, 30, 30);
+		frame.getContentPane().add(textField_0_7);
+		
+		textField_0_8 = new JTextField();
+		textField_0_8.setText("8");
+		textField_0_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_8.setForeground(Color.WHITE);
+		textField_0_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_8.setEditable(false);
+		textField_0_8.setColumns(10);
+		textField_0_8.setBackground(Color.BLACK);
+		textField_0_8.setBounds(10, 267, 30, 30);
+		frame.getContentPane().add(textField_0_8);
+		
+		textField_0_9 = new JTextField();
+		textField_0_9.setText("9");
+		textField_0_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_9.setForeground(Color.WHITE);
+		textField_0_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_9.setEditable(false);
+		textField_0_9.setColumns(10);
+		textField_0_9.setBackground(Color.BLACK);
+		textField_0_9.setBounds(10, 299, 30, 30);
+		frame.getContentPane().add(textField_0_9);
+		
+		textField_0_10 = new JTextField();
+		textField_0_10.setText("10");
+		textField_0_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_10.setForeground(Color.WHITE);
+		textField_0_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_10.setEditable(false);
+		textField_0_10.setColumns(10);
+		textField_0_10.setBackground(Color.BLACK);
+		textField_0_10.setBounds(10, 331, 30, 30);
+		frame.getContentPane().add(textField_0_10);
+		
+		textField_0_11 = new JTextField();
+		textField_0_11.setText("11");
+		textField_0_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_11.setForeground(Color.WHITE);
+		textField_0_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_11.setEditable(false);
+		textField_0_11.setColumns(10);
+		textField_0_11.setBackground(Color.BLACK);
+		textField_0_11.setBounds(10, 363, 30, 30);
+		frame.getContentPane().add(textField_0_11);
+		
+		textField_0_12 = new JTextField();
+		textField_0_12.setText("12");
+		textField_0_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_12.setForeground(Color.WHITE);
+		textField_0_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_12.setEditable(false);
+		textField_0_12.setColumns(10);
+		textField_0_12.setBackground(Color.BLACK);
+		textField_0_12.setBounds(10, 395, 30, 30);
+		frame.getContentPane().add(textField_0_12);
+		
+		textField_0_13 = new JTextField();
+		textField_0_13.setText("13");
+		textField_0_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_13.setForeground(Color.WHITE);
+		textField_0_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_13.setEditable(false);
+		textField_0_13.setColumns(10);
+		textField_0_13.setBackground(Color.BLACK);
+		textField_0_13.setBounds(10, 427, 30, 30);
+		frame.getContentPane().add(textField_0_13);
+		
+		textField_0_14 = new JTextField();
+		textField_0_14.setText("14");
+		textField_0_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_14.setForeground(Color.WHITE);
+		textField_0_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_14.setEditable(false);
+		textField_0_14.setColumns(10);
+		textField_0_14.setBackground(Color.BLACK);
+		textField_0_14.setBounds(10, 459, 30, 30);
+		frame.getContentPane().add(textField_0_14);
+		
+		textField_0_15 = new JTextField();
+		textField_0_15.setText("15");
+		textField_0_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_0_15.setForeground(Color.WHITE);
+		textField_0_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_0_15.setEditable(false);
+		textField_0_15.setColumns(10);
+		textField_0_15.setBackground(Color.BLACK);
+		textField_0_15.setBounds(10, 491, 30, 30);
+		frame.getContentPane().add(textField_0_15);
+		
+		textField_1_1 = new JFormattedTextField(createFormatter("U"));//Sets textField to accept 1 char and as Uppercase //Method to set Formatter is at bottom
+		textField_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_1.setForeground(Color.BLACK);
+		textField_1_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_1.setColumns(1);
+		textField_1_1.setBackground(Color.WHITE);
+		textField_1_1.setBounds(42, 43, 30, 30);
+		frame.getContentPane().add(textField_1_1);
+		
+		textField_2_1 = new JFormattedTextField(createFormatter("U"));
+		textField_2_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_1.setForeground(Color.BLACK);
+		textField_2_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_1.setColumns(1);
+		textField_2_1.setBackground(Color.WHITE);
+		textField_2_1.setBounds(74, 43, 30, 30);
+		frame.getContentPane().add(textField_2_1);
+		
+		textField_3_1 = new JFormattedTextField(createFormatter("U"));
+		textField_3_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_1.setForeground(Color.BLACK);
+		textField_3_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_1.setColumns(1);
+		textField_3_1.setBackground(Color.WHITE);
+		textField_3_1.setBounds(106, 43, 30, 30);
+		frame.getContentPane().add(textField_3_1);
+		
+		textField_4_1 = new JFormattedTextField(createFormatter("U"));
+		textField_4_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_1.setForeground(Color.BLACK);
+		textField_4_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_1.setColumns(1);
+		textField_4_1.setBackground(Color.WHITE);
+		textField_4_1.setBounds(138, 43, 30, 30);
+		frame.getContentPane().add(textField_4_1);
+		
+		textField_5_1 = new JFormattedTextField(createFormatter("U"));
+		textField_5_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_1.setForeground(Color.BLACK);
+		textField_5_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_1.setColumns(1);
+		textField_5_1.setBackground(Color.WHITE);
+		textField_5_1.setBounds(170, 43, 30, 30);
+		frame.getContentPane().add(textField_5_1);
+		
+		textField_6_1 = new JFormattedTextField(createFormatter("U"));
+		textField_6_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_1.setForeground(Color.BLACK);
+		textField_6_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_1.setColumns(1);
+		textField_6_1.setBackground(Color.WHITE);
+		textField_6_1.setBounds(202, 43, 30, 30);
+		frame.getContentPane().add(textField_6_1);
+		
+		textField_7_1 = new JFormattedTextField(createFormatter("U"));
+		textField_7_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_1.setForeground(Color.BLACK);
+		textField_7_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_1.setColumns(1);
+		textField_7_1.setBackground(Color.WHITE);
+		textField_7_1.setBounds(234, 43, 30, 30);
+		frame.getContentPane().add(textField_7_1);
+		
+		textField_8_1 = new JFormattedTextField(createFormatter("U"));
+		textField_8_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_1.setForeground(Color.BLACK);
+		textField_8_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_1.setColumns(1);
+		textField_8_1.setBackground(Color.WHITE);
+		textField_8_1.setBounds(266, 43, 30, 30);
+		frame.getContentPane().add(textField_8_1);
+		
+		textField_9_1 = new JFormattedTextField(createFormatter("U"));
+		textField_9_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_1.setForeground(Color.BLACK);
+		textField_9_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_1.setColumns(1);
+		textField_9_1.setBackground(Color.WHITE);
+		textField_9_1.setBounds(298, 43, 30, 30);
+		frame.getContentPane().add(textField_9_1);
+		
+		textField_10_1 = new JFormattedTextField(createFormatter("U"));
+		textField_10_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_1.setForeground(Color.BLACK);
+		textField_10_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_1.setColumns(1);
+		textField_10_1.setBackground(Color.WHITE);
+		textField_10_1.setBounds(330, 43, 30, 30);
+		frame.getContentPane().add(textField_10_1);
+		
+		textField_11_1 = new JFormattedTextField(createFormatter("U"));
+		textField_11_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_1.setForeground(Color.BLACK);
+		textField_11_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_1.setColumns(1);
+		textField_11_1.setBackground(Color.WHITE);
+		textField_11_1.setBounds(362, 43, 30, 30);
+		frame.getContentPane().add(textField_11_1);
+		
+		textField_12_1 = new JFormattedTextField(createFormatter("U"));
+		textField_12_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_1.setForeground(Color.BLACK);
+		textField_12_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_1.setColumns(1);
+		textField_12_1.setBackground(Color.WHITE);
+		textField_12_1.setBounds(394, 43, 30, 30);
+		frame.getContentPane().add(textField_12_1);
+		
+		textField_13_1 = new JFormattedTextField(createFormatter("U"));
+		textField_13_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_1.setForeground(Color.BLACK);
+		textField_13_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_1.setColumns(1);
+		textField_13_1.setBackground(Color.WHITE);
+		textField_13_1.setBounds(426, 43, 30, 30);
+		frame.getContentPane().add(textField_13_1);
+		
+		textField_14_1 = new JFormattedTextField(createFormatter("U"));
+		textField_14_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_1.setForeground(Color.BLACK);
+		textField_14_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_1.setColumns(1);
+		textField_14_1.setBackground(Color.WHITE);
+		textField_14_1.setBounds(458, 43, 30, 30);
+		frame.getContentPane().add(textField_14_1);
+		
+		textField_15_1 = new JFormattedTextField(createFormatter("U"));
+		textField_15_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_1.setForeground(Color.BLACK);
+		textField_15_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_1.setColumns(1);
+		textField_15_1.setBackground(Color.WHITE);
+		textField_15_1.setBounds(490, 43, 30, 30);
+		frame.getContentPane().add(textField_15_1);
+		
+		textField_1_2 = new JFormattedTextField(createFormatter("U"));
+		textField_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_2.setForeground(Color.BLACK);
+		textField_1_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_2.setColumns(1);
+		textField_1_2.setBackground(Color.WHITE);
+		textField_1_2.setBounds(42, 75, 30, 30);
+		frame.getContentPane().add(textField_1_2);
+		
+		textField_2_2 = new JFormattedTextField(createFormatter("U"));
+		textField_2_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_2.setForeground(Color.BLACK);
+		textField_2_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_2.setColumns(1);
+		textField_2_2.setBackground(Color.WHITE);
+		textField_2_2.setBounds(74, 75, 30, 30);
+		frame.getContentPane().add(textField_2_2);
+		
+		textField_3_2 = new JFormattedTextField(createFormatter("U"));
+		textField_3_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_2.setForeground(Color.BLACK);
+		textField_3_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_2.setColumns(1);
+		textField_3_2.setBackground(Color.WHITE);
+		textField_3_2.setBounds(106, 75, 30, 30);
+		frame.getContentPane().add(textField_3_2);
+		
+		textField_4_2 = new JFormattedTextField(createFormatter("U"));
+		textField_4_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_2.setForeground(Color.BLACK);
+		textField_4_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_2.setColumns(1);
+		textField_4_2.setBackground(Color.WHITE);
+		textField_4_2.setBounds(138, 75, 30, 30);
+		frame.getContentPane().add(textField_4_2);
+		
+		textField_5_2 = new JFormattedTextField(createFormatter("U"));
+		textField_5_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_2.setForeground(Color.BLACK);
+		textField_5_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_2.setColumns(1);
+		textField_5_2.setBackground(Color.WHITE);
+		textField_5_2.setBounds(170, 75, 30, 30);
+		frame.getContentPane().add(textField_5_2);
+		
+		textField_6_2 = new JFormattedTextField(createFormatter("U"));
+		textField_6_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_2.setForeground(Color.BLACK);
+		textField_6_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_2.setColumns(1);
+		textField_6_2.setBackground(Color.WHITE);
+		textField_6_2.setBounds(202, 75, 30, 30);
+		frame.getContentPane().add(textField_6_2);
+		
+		textField_7_2 = new JFormattedTextField(createFormatter("U"));
+		textField_7_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_2.setForeground(Color.BLACK);
+		textField_7_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_2.setColumns(1);
+		textField_7_2.setBackground(Color.WHITE);
+		textField_7_2.setBounds(234, 75, 30, 30);
+		frame.getContentPane().add(textField_7_2);
+		
+		textField_8_2 = new JFormattedTextField(createFormatter("U"));
+		textField_8_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_2.setForeground(Color.BLACK);
+		textField_8_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_2.setColumns(1);
+		textField_8_2.setBackground(Color.WHITE);
+		textField_8_2.setBounds(266, 75, 30, 30);
+		frame.getContentPane().add(textField_8_2);
+		
+		textField_9_2 = new JFormattedTextField(createFormatter("U"));
+		textField_9_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_2.setForeground(Color.BLACK);
+		textField_9_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_2.setColumns(1);
+		textField_9_2.setBackground(Color.WHITE);
+		textField_9_2.setBounds(298, 75, 30, 30);
+		frame.getContentPane().add(textField_9_2);
+		
+		textField_10_2 = new JFormattedTextField(createFormatter("U"));
+		textField_10_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_2.setForeground(Color.BLACK);
+		textField_10_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_2.setColumns(1);
+		textField_10_2.setBackground(Color.WHITE);
+		textField_10_2.setBounds(330, 75, 30, 30);
+		frame.getContentPane().add(textField_10_2);
+		
+		textField_11_2 = new JFormattedTextField(createFormatter("U"));
+		textField_11_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_2.setForeground(Color.BLACK);
+		textField_11_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_2.setColumns(1);
+		textField_11_2.setBackground(Color.WHITE);
+		textField_11_2.setBounds(362, 75, 30, 30);
+		frame.getContentPane().add(textField_11_2);
+		
+		textField_12_2 = new JFormattedTextField(createFormatter("U"));
+		textField_12_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_2.setForeground(Color.BLACK);
+		textField_12_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_2.setColumns(1);
+		textField_12_2.setBackground(Color.WHITE);
+		textField_12_2.setBounds(394, 75, 30, 30);
+		frame.getContentPane().add(textField_12_2);
+		
+		textField_13_2 = new JFormattedTextField(createFormatter("U"));
+		textField_13_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_2.setForeground(Color.BLACK);
+		textField_13_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_2.setColumns(1);
+		textField_13_2.setBackground(Color.WHITE);
+		textField_13_2.setBounds(426, 75, 30, 30);
+		frame.getContentPane().add(textField_13_2);
+		
+		textField_14_2 = new JFormattedTextField(createFormatter("U"));
+		textField_14_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_2.setForeground(Color.BLACK);
+		textField_14_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_2.setColumns(1);
+		textField_14_2.setBackground(Color.WHITE);
+		textField_14_2.setBounds(458, 75, 30, 30);
+		frame.getContentPane().add(textField_14_2);
+		
+		textField_15_2 = new JFormattedTextField(createFormatter("U"));
+		textField_15_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_2.setForeground(Color.BLACK);
+		textField_15_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_2.setColumns(1);
+		textField_15_2.setBackground(Color.WHITE);
+		textField_15_2.setBounds(490, 75, 30, 30);
+		frame.getContentPane().add(textField_15_2);
+		
+		textField_1_3 = new JFormattedTextField(createFormatter("U"));
+		textField_1_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_3.setForeground(Color.BLACK);
+		textField_1_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_3.setColumns(1);
+		textField_1_3.setBackground(Color.WHITE);
+		textField_1_3.setBounds(42, 107, 30, 30);
+		frame.getContentPane().add(textField_1_3);
+		
+		textField_2_3 = new JFormattedTextField(createFormatter("U"));
+		textField_2_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_3.setForeground(Color.BLACK);
+		textField_2_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_3.setColumns(1);
+		textField_2_3.setBackground(Color.WHITE);
+		textField_2_3.setBounds(74, 107, 30, 30);
+		frame.getContentPane().add(textField_2_3);
+		
+		textField_3_3 = new JFormattedTextField(createFormatter("U"));
+		textField_3_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_3.setForeground(Color.BLACK);
+		textField_3_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_3.setColumns(1);
+		textField_3_3.setBackground(Color.WHITE);
+		textField_3_3.setBounds(106, 107, 30, 30);
+		frame.getContentPane().add(textField_3_3);
+		
+		textField_4_3 = new JFormattedTextField(createFormatter("U"));
+		textField_4_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_3.setForeground(Color.BLACK);
+		textField_4_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_3.setColumns(1);
+		textField_4_3.setBackground(Color.WHITE);
+		textField_4_3.setBounds(138, 107, 30, 30);
+		frame.getContentPane().add(textField_4_3);
+		
+		textField_5_3 = new JFormattedTextField(createFormatter("U"));
+		textField_5_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_3.setForeground(Color.BLACK);
+		textField_5_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_3.setColumns(1);
+		textField_5_3.setBackground(Color.WHITE);
+		textField_5_3.setBounds(170, 107, 30, 30);
+		frame.getContentPane().add(textField_5_3);
+		
+		textField_6_3 = new JFormattedTextField(createFormatter("U"));
+		textField_6_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_3.setForeground(Color.BLACK);
+		textField_6_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_3.setColumns(1);
+		textField_6_3.setBackground(Color.WHITE);
+		textField_6_3.setBounds(202, 107, 30, 30);
+		frame.getContentPane().add(textField_6_3);
+		
+		textField_7_3 = new JFormattedTextField(createFormatter("U"));
+		textField_7_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_3.setForeground(Color.BLACK);
+		textField_7_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_3.setColumns(1);
+		textField_7_3.setBackground(Color.WHITE);
+		textField_7_3.setBounds(234, 107, 30, 30);
+		frame.getContentPane().add(textField_7_3);
+		
+		textField_8_3 = new JFormattedTextField(createFormatter("U"));
+		textField_8_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_3.setForeground(Color.BLACK);
+		textField_8_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_3.setColumns(1);
+		textField_8_3.setBackground(Color.WHITE);
+		textField_8_3.setBounds(266, 107, 30, 30);
+		frame.getContentPane().add(textField_8_3);
+		
+		textField_9_3 = new JFormattedTextField(createFormatter("U"));
+		textField_9_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_3.setForeground(Color.BLACK);
+		textField_9_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_3.setColumns(1);
+		textField_9_3.setBackground(Color.WHITE);
+		textField_9_3.setBounds(298, 107, 30, 30);
+		frame.getContentPane().add(textField_9_3);
+		
+		textField_10_3 = new JFormattedTextField(createFormatter("U"));
+		textField_10_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_3.setForeground(Color.BLACK);
+		textField_10_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_3.setColumns(1);
+		textField_10_3.setBackground(Color.WHITE);
+		textField_10_3.setBounds(330, 107, 30, 30);
+		frame.getContentPane().add(textField_10_3);
+		
+		textField_11_3 = new JFormattedTextField(createFormatter("U"));
+		textField_11_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_3.setForeground(Color.BLACK);
+		textField_11_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_3.setColumns(1);
+		textField_11_3.setBackground(Color.WHITE);
+		textField_11_3.setBounds(362, 107, 30, 30);
+		frame.getContentPane().add(textField_11_3);
+		
+		textField_12_3 = new JFormattedTextField(createFormatter("U"));
+		textField_12_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_3.setForeground(Color.BLACK);
+		textField_12_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_3.setColumns(1);
+		textField_12_3.setBackground(Color.WHITE);
+		textField_12_3.setBounds(394, 107, 30, 30);
+		frame.getContentPane().add(textField_12_3);
+		
+		textField_13_3 = new JFormattedTextField(createFormatter("U"));
+		textField_13_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_3.setForeground(Color.BLACK);
+		textField_13_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_3.setColumns(1);
+		textField_13_3.setBackground(Color.WHITE);
+		textField_13_3.setBounds(426, 107, 30, 30);
+		frame.getContentPane().add(textField_13_3);
+		
+		textField_14_3 = new JFormattedTextField(createFormatter("U"));
+		textField_14_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_3.setForeground(Color.BLACK);
+		textField_14_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_3.setColumns(1);
+		textField_14_3.setBackground(Color.WHITE);
+		textField_14_3.setBounds(458, 107, 30, 30);
+		frame.getContentPane().add(textField_14_3);
+		
+		textField_15_3 = new JFormattedTextField(createFormatter("U"));
+		textField_15_3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_3.setForeground(Color.BLACK);
+		textField_15_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_3.setColumns(1);
+		textField_15_3.setBackground(Color.WHITE);
+		textField_15_3.setBounds(490, 107, 30, 30);
+		frame.getContentPane().add(textField_15_3);
+		
+		textField_1_4 = new JFormattedTextField(createFormatter("U"));
+		textField_1_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_4.setForeground(Color.BLACK);
+		textField_1_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_4.setColumns(1);
+		textField_1_4.setBackground(Color.WHITE);
+		textField_1_4.setBounds(42, 139, 30, 30);
+		frame.getContentPane().add(textField_1_4);
+		
+		textField_2_4 = new JFormattedTextField(createFormatter("U"));
+		textField_2_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_4.setForeground(Color.BLACK);
+		textField_2_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_4.setColumns(1);
+		textField_2_4.setBackground(Color.WHITE);
+		textField_2_4.setBounds(74, 139, 30, 30);
+		frame.getContentPane().add(textField_2_4);
+		
+		textField_3_4 = new JFormattedTextField(createFormatter("U"));
+		textField_3_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_4.setForeground(Color.BLACK);
+		textField_3_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_4.setColumns(1);
+		textField_3_4.setBackground(Color.WHITE);
+		textField_3_4.setBounds(106, 139, 30, 30);
+		frame.getContentPane().add(textField_3_4);
+		
+		textField_4_4 = new JFormattedTextField(createFormatter("U"));
+		textField_4_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_4.setForeground(Color.BLACK);
+		textField_4_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_4.setColumns(1);
+		textField_4_4.setBackground(Color.WHITE);
+		textField_4_4.setBounds(138, 139, 30, 30);
+		frame.getContentPane().add(textField_4_4);
+		
+		textField_5_4 = new JFormattedTextField(createFormatter("U"));
+		textField_5_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_4.setForeground(Color.BLACK);
+		textField_5_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_4.setColumns(1);
+		textField_5_4.setBackground(Color.WHITE);
+		textField_5_4.setBounds(170, 139, 30, 30);
+		frame.getContentPane().add(textField_5_4);
+		
+		textField_6_4 = new JFormattedTextField(createFormatter("U"));
+		textField_6_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_4.setForeground(Color.BLACK);
+		textField_6_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_4.setColumns(1);
+		textField_6_4.setBackground(Color.WHITE);
+		textField_6_4.setBounds(202, 139, 30, 30);
+		frame.getContentPane().add(textField_6_4);
+		
+		textField_7_4 = new JFormattedTextField(createFormatter("U"));
+		textField_7_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_4.setForeground(Color.BLACK);
+		textField_7_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_4.setColumns(1);
+		textField_7_4.setBackground(Color.WHITE);
+		textField_7_4.setBounds(234, 139, 30, 30);
+		frame.getContentPane().add(textField_7_4);
+		
+		textField_8_4 = new JFormattedTextField(createFormatter("U"));
+		textField_8_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_4.setForeground(Color.BLACK);
+		textField_8_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_4.setColumns(1);
+		textField_8_4.setBackground(Color.WHITE);
+		textField_8_4.setBounds(266, 139, 30, 30);
+		frame.getContentPane().add(textField_8_4);
+		
+		textField_9_4 = new JFormattedTextField(createFormatter("U"));
+		textField_9_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_4.setForeground(Color.BLACK);
+		textField_9_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_4.setColumns(1);
+		textField_9_4.setBackground(Color.WHITE);
+		textField_9_4.setBounds(298, 139, 30, 30);
+		frame.getContentPane().add(textField_9_4);
+		
+		textField_10_4 = new JFormattedTextField(createFormatter("U"));
+		textField_10_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_4.setForeground(Color.BLACK);
+		textField_10_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_4.setColumns(1);
+		textField_10_4.setBackground(Color.WHITE);
+		textField_10_4.setBounds(330, 139, 30, 30);
+		frame.getContentPane().add(textField_10_4);
+		
+		textField_11_4 = new JFormattedTextField(createFormatter("U"));
+		textField_11_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_4.setForeground(Color.BLACK);
+		textField_11_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_4.setColumns(1);
+		textField_11_4.setBackground(Color.WHITE);
+		textField_11_4.setBounds(362, 139, 30, 30);
+		frame.getContentPane().add(textField_11_4);
+		
+		textField_12_4 = new JFormattedTextField(createFormatter("U"));
+		textField_12_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_4.setForeground(Color.BLACK);
+		textField_12_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_4.setColumns(1);
+		textField_12_4.setBackground(Color.WHITE);
+		textField_12_4.setBounds(394, 139, 30, 30);
+		frame.getContentPane().add(textField_12_4);
+		
+		textField_13_4 = new JFormattedTextField(createFormatter("U"));
+		textField_13_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_4.setForeground(Color.BLACK);
+		textField_13_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_4.setColumns(1);
+		textField_13_4.setBackground(Color.WHITE);
+		textField_13_4.setBounds(426, 139, 30, 30);
+		frame.getContentPane().add(textField_13_4);
+		
+		textField_14_4 = new JFormattedTextField(createFormatter("U"));
+		textField_14_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_4.setForeground(Color.BLACK);
+		textField_14_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_4.setColumns(1);
+		textField_14_4.setBackground(Color.WHITE);
+		textField_14_4.setBounds(458, 139, 30, 30);
+		frame.getContentPane().add(textField_14_4);
+		
+		textField_15_4 = new JFormattedTextField(createFormatter("U"));
+		textField_15_4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_4.setForeground(Color.BLACK);
+		textField_15_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_4.setColumns(1);
+		textField_15_4.setBackground(Color.WHITE);
+		textField_15_4.setBounds(490, 139, 30, 30);
+		frame.getContentPane().add(textField_15_4);
+		
+		textField_1_5 = new JFormattedTextField(createFormatter("U"));
+		textField_1_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_5.setForeground(Color.BLACK);
+		textField_1_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_5.setColumns(1);
+		textField_1_5.setBackground(Color.WHITE);
+		textField_1_5.setBounds(42, 171, 30, 30);
+		frame.getContentPane().add(textField_1_5);
+		
+		textField_2_5 = new JFormattedTextField(createFormatter("U"));
+		textField_2_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_5.setForeground(Color.BLACK);
+		textField_2_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_5.setColumns(1);
+		textField_2_5.setBackground(Color.WHITE);
+		textField_2_5.setBounds(74, 171, 30, 30);
+		frame.getContentPane().add(textField_2_5);
+		
+		textField_3_5 = new JFormattedTextField(createFormatter("U"));
+		textField_3_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_5.setForeground(Color.BLACK);
+		textField_3_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_5.setColumns(1);
+		textField_3_5.setBackground(Color.WHITE);
+		textField_3_5.setBounds(106, 171, 30, 30);
+		frame.getContentPane().add(textField_3_5);
+		
+		textField_4_5 = new JFormattedTextField(createFormatter("U"));
+		textField_4_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_5.setForeground(Color.BLACK);
+		textField_4_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_5.setColumns(1);
+		textField_4_5.setBackground(Color.WHITE);
+		textField_4_5.setBounds(138, 171, 30, 30);
+		frame.getContentPane().add(textField_4_5);
+		
+		textField_5_5 = new JFormattedTextField(createFormatter("U"));
+		textField_5_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_5.setForeground(Color.BLACK);
+		textField_5_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_5.setColumns(1);
+		textField_5_5.setBackground(Color.WHITE);
+		textField_5_5.setBounds(170, 171, 30, 30);
+		frame.getContentPane().add(textField_5_5);
+		
+		textField_6_5 = new JFormattedTextField(createFormatter("U"));
+		textField_6_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_5.setForeground(Color.BLACK);
+		textField_6_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_5.setColumns(1);
+		textField_6_5.setBackground(Color.WHITE);
+		textField_6_5.setBounds(202, 171, 30, 30);
+		frame.getContentPane().add(textField_6_5);
+		
+		textField_7_5 = new JFormattedTextField(createFormatter("U"));
+		textField_7_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_5.setForeground(Color.BLACK);
+		textField_7_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_5.setColumns(1);
+		textField_7_5.setBackground(Color.WHITE);
+		textField_7_5.setBounds(234, 171, 30, 30);
+		frame.getContentPane().add(textField_7_5);
+		
+		textField_8_5 = new JFormattedTextField(createFormatter("U"));
+		textField_8_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_5.setForeground(Color.BLACK);
+		textField_8_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_5.setColumns(1);
+		textField_8_5.setBackground(Color.WHITE);
+		textField_8_5.setBounds(266, 171, 30, 30);
+		frame.getContentPane().add(textField_8_5);
+		
+		textField_9_5 = new JFormattedTextField(createFormatter("U"));
+		textField_9_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_5.setForeground(Color.BLACK);
+		textField_9_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_5.setColumns(1);
+		textField_9_5.setBackground(Color.WHITE);
+		textField_9_5.setBounds(298, 171, 30, 30);
+		frame.getContentPane().add(textField_9_5);
+		
+		textField_10_5 = new JFormattedTextField(createFormatter("U"));
+		textField_10_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_5.setForeground(Color.BLACK);
+		textField_10_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_5.setColumns(1);
+		textField_10_5.setBackground(Color.WHITE);
+		textField_10_5.setBounds(330, 171, 30, 30);
+		frame.getContentPane().add(textField_10_5);
+		
+		textField_11_5 = new JFormattedTextField(createFormatter("U"));
+		textField_11_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_5.setForeground(Color.BLACK);
+		textField_11_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_5.setColumns(1);
+		textField_11_5.setBackground(Color.WHITE);
+		textField_11_5.setBounds(362, 171, 30, 30);
+		frame.getContentPane().add(textField_11_5);
+		
+		textField_12_5 = new JFormattedTextField(createFormatter("U"));
+		textField_12_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_5.setForeground(Color.BLACK);
+		textField_12_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_5.setColumns(1);
+		textField_12_5.setBackground(Color.WHITE);
+		textField_12_5.setBounds(394, 171, 30, 30);
+		frame.getContentPane().add(textField_12_5);
+		
+		textField_13_5 = new JFormattedTextField(createFormatter("U"));
+		textField_13_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_5.setForeground(Color.BLACK);
+		textField_13_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_5.setColumns(1);
+		textField_13_5.setBackground(Color.WHITE);
+		textField_13_5.setBounds(426, 171, 30, 30);
+		frame.getContentPane().add(textField_13_5);
+		
+		textField_14_5 = new JFormattedTextField(createFormatter("U"));
+		textField_14_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_5.setForeground(Color.BLACK);
+		textField_14_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_5.setColumns(1);
+		textField_14_5.setBackground(Color.WHITE);
+		textField_14_5.setBounds(458, 171, 30, 30);
+		frame.getContentPane().add(textField_14_5);
+		
+		textField_15_5 = new JFormattedTextField(createFormatter("U"));
+		textField_15_5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_5.setForeground(Color.BLACK);
+		textField_15_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_5.setColumns(1);
+		textField_15_5.setBackground(Color.WHITE);
+		textField_15_5.setBounds(490, 171, 30, 30);
+		frame.getContentPane().add(textField_15_5);
+		
+		textField_1_6 = new JFormattedTextField(createFormatter("U"));
+		textField_1_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_6.setForeground(Color.BLACK);
+		textField_1_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_6.setColumns(1);
+		textField_1_6.setBackground(Color.WHITE);
+		textField_1_6.setBounds(42, 203, 30, 30);
+		frame.getContentPane().add(textField_1_6);
+		
+		textField_2_6 = new JFormattedTextField(createFormatter("U"));
+		textField_2_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_6.setForeground(Color.BLACK);
+		textField_2_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_6.setColumns(1);
+		textField_2_6.setBackground(Color.WHITE);
+		textField_2_6.setBounds(74, 203, 30, 30);
+		frame.getContentPane().add(textField_2_6);
+		
+		textField_3_6 = new JFormattedTextField(createFormatter("U"));
+		textField_3_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_6.setForeground(Color.BLACK);
+		textField_3_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_6.setColumns(1);
+		textField_3_6.setBackground(Color.WHITE);
+		textField_3_6.setBounds(106, 203, 30, 30);
+		frame.getContentPane().add(textField_3_6);
+		
+		textField_4_6 = new JFormattedTextField(createFormatter("U"));
+		textField_4_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_6.setForeground(Color.BLACK);
+		textField_4_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_6.setColumns(1);
+		textField_4_6.setBackground(Color.WHITE);
+		textField_4_6.setBounds(138, 203, 30, 30);
+		frame.getContentPane().add(textField_4_6);
+		
+		textField_5_6 = new JFormattedTextField(createFormatter("U"));
+		textField_5_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_6.setForeground(Color.BLACK);
+		textField_5_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_6.setColumns(1);
+		textField_5_6.setBackground(Color.WHITE);
+		textField_5_6.setBounds(170, 203, 30, 30);
+		frame.getContentPane().add(textField_5_6);
+		
+		textField_6_6 = new JFormattedTextField(createFormatter("U"));
+		textField_6_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_6.setForeground(Color.BLACK);
+		textField_6_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_6.setColumns(1);
+		textField_6_6.setBackground(Color.WHITE);
+		textField_6_6.setBounds(202, 203, 30, 30);
+		frame.getContentPane().add(textField_6_6);
+		
+		textField_7_6 = new JFormattedTextField(createFormatter("U"));
+		textField_7_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_6.setForeground(Color.BLACK);
+		textField_7_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_6.setColumns(1);
+		textField_7_6.setBackground(Color.WHITE);
+		textField_7_6.setBounds(234, 203, 30, 30);
+		frame.getContentPane().add(textField_7_6);
+		
+		textField_8_6 = new JFormattedTextField(createFormatter("U"));
+		textField_8_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_6.setForeground(Color.BLACK);
+		textField_8_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_6.setColumns(1);
+		textField_8_6.setBackground(Color.WHITE);
+		textField_8_6.setBounds(266, 203, 30, 30);
+		frame.getContentPane().add(textField_8_6);
+		
+		textField_9_6 = new JFormattedTextField(createFormatter("U"));
+		textField_9_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_6.setForeground(Color.BLACK);
+		textField_9_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_6.setColumns(1);
+		textField_9_6.setBackground(Color.WHITE);
+		textField_9_6.setBounds(298, 203, 30, 30);
+		frame.getContentPane().add(textField_9_6);
+		
+		textField_10_6 = new JFormattedTextField(createFormatter("U"));
+		textField_10_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_6.setForeground(Color.BLACK);
+		textField_10_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_6.setColumns(1);
+		textField_10_6.setBackground(Color.WHITE);
+		textField_10_6.setBounds(330, 203, 30, 30);
+		frame.getContentPane().add(textField_10_6);
+		
+		textField_11_6 = new JFormattedTextField(createFormatter("U"));
+		textField_11_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_6.setForeground(Color.BLACK);
+		textField_11_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_6.setColumns(1);
+		textField_11_6.setBackground(Color.WHITE);
+		textField_11_6.setBounds(362, 203, 30, 30);
+		frame.getContentPane().add(textField_11_6);
+		
+		textField_12_6 = new JFormattedTextField(createFormatter("U"));
+		textField_12_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_6.setForeground(Color.BLACK);
+		textField_12_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_6.setColumns(1);
+		textField_12_6.setBackground(Color.WHITE);
+		textField_12_6.setBounds(394, 203, 30, 30);
+		frame.getContentPane().add(textField_12_6);
+		
+		textField_13_6 = new JFormattedTextField(createFormatter("U"));
+		textField_13_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_6.setForeground(Color.BLACK);
+		textField_13_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_6.setColumns(1);
+		textField_13_6.setBackground(Color.WHITE);
+		textField_13_6.setBounds(426, 203, 30, 30);
+		frame.getContentPane().add(textField_13_6);
+		
+		textField_14_6 = new JFormattedTextField(createFormatter("U"));
+		textField_14_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_6.setForeground(Color.BLACK);
+		textField_14_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_6.setColumns(1);
+		textField_14_6.setBackground(Color.WHITE);
+		textField_14_6.setBounds(458, 203, 30, 30);
+		frame.getContentPane().add(textField_14_6);
+		
+		textField_15_6 = new JFormattedTextField(createFormatter("U"));
+		textField_15_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_6.setForeground(Color.BLACK);
+		textField_15_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_6.setColumns(1);
+		textField_15_6.setBackground(Color.WHITE);
+		textField_15_6.setBounds(490, 203, 30, 30);
+		frame.getContentPane().add(textField_15_6);
+		
+		textField_1_7 = new JFormattedTextField(createFormatter("U"));
+		textField_1_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_7.setForeground(Color.BLACK);
+		textField_1_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_7.setColumns(1);
+		textField_1_7.setBackground(Color.WHITE);
+		textField_1_7.setBounds(42, 235, 30, 30);
+		frame.getContentPane().add(textField_1_7);
+		
+		textField_2_7 = new JFormattedTextField(createFormatter("U"));
+		textField_2_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_7.setForeground(Color.BLACK);
+		textField_2_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_7.setColumns(1);
+		textField_2_7.setBackground(Color.WHITE);
+		textField_2_7.setBounds(74, 235, 30, 30);
+		frame.getContentPane().add(textField_2_7);
+		
+		textField_3_7 = new JFormattedTextField(createFormatter("U"));
+		textField_3_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_7.setForeground(Color.BLACK);
+		textField_3_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_7.setColumns(1);
+		textField_3_7.setBackground(Color.WHITE);
+		textField_3_7.setBounds(106, 235, 30, 30);
+		frame.getContentPane().add(textField_3_7);
+		
+		textField_4_7 = new JFormattedTextField(createFormatter("U"));
+		textField_4_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_7.setForeground(Color.BLACK);
+		textField_4_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_7.setColumns(1);
+		textField_4_7.setBackground(Color.WHITE);
+		textField_4_7.setBounds(138, 235, 30, 30);
+		frame.getContentPane().add(textField_4_7);
+		
+		textField_5_7 = new JFormattedTextField(createFormatter("U"));
+		textField_5_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_7.setForeground(Color.BLACK);
+		textField_5_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_7.setColumns(1);
+		textField_5_7.setBackground(Color.WHITE);
+		textField_5_7.setBounds(170, 235, 30, 30);
+		frame.getContentPane().add(textField_5_7);
+		
+		textField_6_7 = new JFormattedTextField(createFormatter("U"));
+		textField_6_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_7.setForeground(Color.BLACK);
+		textField_6_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_7.setColumns(1);
+		textField_6_7.setBackground(Color.WHITE);
+		textField_6_7.setBounds(202, 235, 30, 30);
+		frame.getContentPane().add(textField_6_7);
+		
+		textField_7_7 = new JFormattedTextField(createFormatter("U"));
+		textField_7_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_7.setForeground(Color.BLACK);
+		textField_7_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_7.setColumns(1);
+		textField_7_7.setBackground(Color.WHITE);
+		textField_7_7.setBounds(234, 235, 30, 30);
+		frame.getContentPane().add(textField_7_7);
+		
+		textField_8_7 = new JFormattedTextField(createFormatter("U"));
+		textField_8_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_7.setForeground(Color.BLACK);
+		textField_8_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_7.setColumns(1);
+		textField_8_7.setBackground(Color.WHITE);
+		textField_8_7.setBounds(266, 235, 30, 30);
+		frame.getContentPane().add(textField_8_7);
+		
+		textField_9_7 = new JFormattedTextField(createFormatter("U"));
+		textField_9_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_7.setForeground(Color.BLACK);
+		textField_9_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_7.setColumns(1);
+		textField_9_7.setBackground(Color.WHITE);
+		textField_9_7.setBounds(298, 235, 30, 30);
+		frame.getContentPane().add(textField_9_7);
+		
+		textField_10_7 = new JFormattedTextField(createFormatter("U"));
+		textField_10_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_7.setForeground(Color.BLACK);
+		textField_10_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_7.setColumns(1);
+		textField_10_7.setBackground(Color.WHITE);
+		textField_10_7.setBounds(330, 235, 30, 30);
+		frame.getContentPane().add(textField_10_7);
+		
+		textField_11_7 = new JFormattedTextField(createFormatter("U"));
+		textField_11_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_7.setForeground(Color.BLACK);
+		textField_11_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_7.setColumns(1);
+		textField_11_7.setBackground(Color.WHITE);
+		textField_11_7.setBounds(362, 235, 30, 30);
+		frame.getContentPane().add(textField_11_7);
+		
+		textField_12_7 = new JFormattedTextField(createFormatter("U"));
+		textField_12_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_7.setForeground(Color.BLACK);
+		textField_12_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_7.setColumns(1);
+		textField_12_7.setBackground(Color.WHITE);
+		textField_12_7.setBounds(394, 235, 30, 30);
+		frame.getContentPane().add(textField_12_7);
+		
+		textField_13_7 = new JFormattedTextField(createFormatter("U"));
+		textField_13_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_7.setForeground(Color.BLACK);
+		textField_13_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_7.setColumns(1);
+		textField_13_7.setBackground(Color.WHITE);
+		textField_13_7.setBounds(426, 235, 30, 30);
+		frame.getContentPane().add(textField_13_7);
+		
+		textField_14_7 = new JFormattedTextField(createFormatter("U"));
+		textField_14_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_7.setForeground(Color.BLACK);
+		textField_14_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_7.setColumns(1);
+		textField_14_7.setBackground(Color.WHITE);
+		textField_14_7.setBounds(458, 235, 30, 30);
+		frame.getContentPane().add(textField_14_7);
+		
+		textField_15_7 = new JFormattedTextField(createFormatter("U"));
+		textField_15_7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_7.setForeground(Color.BLACK);
+		textField_15_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_7.setColumns(1);
+		textField_15_7.setBackground(Color.WHITE);
+		textField_15_7.setBounds(490, 235, 30, 30);
+		frame.getContentPane().add(textField_15_7);
+		
+		textField_1_8 = new JFormattedTextField(createFormatter("U"));
+		textField_1_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_8.setForeground(Color.BLACK);
+		textField_1_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_8.setColumns(1);
+		textField_1_8.setBackground(Color.WHITE);
+		textField_1_8.setBounds(42, 267, 30, 30);
+		frame.getContentPane().add(textField_1_8);
+		
+		textField_2_8 = new JFormattedTextField(createFormatter("U"));
+		textField_2_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_8.setForeground(Color.BLACK);
+		textField_2_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_8.setColumns(1);
+		textField_2_8.setBackground(Color.WHITE);
+		textField_2_8.setBounds(74, 267, 30, 30);
+		frame.getContentPane().add(textField_2_8);
+		
+		textField_3_8 = new JFormattedTextField(createFormatter("U"));
+		textField_3_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_8.setForeground(Color.BLACK);
+		textField_3_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_8.setColumns(1);
+		textField_3_8.setBackground(Color.WHITE);
+		textField_3_8.setBounds(106, 267, 30, 30);
+		frame.getContentPane().add(textField_3_8);
+		
+		textField_4_8 = new JFormattedTextField(createFormatter("U"));
+		textField_4_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_8.setForeground(Color.BLACK);
+		textField_4_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_8.setColumns(1);
+		textField_4_8.setBackground(Color.WHITE);
+		textField_4_8.setBounds(138, 267, 30, 30);
+		frame.getContentPane().add(textField_4_8);
+		
+		textField_5_8 = new JFormattedTextField(createFormatter("U"));
+		textField_5_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_8.setForeground(Color.BLACK);
+		textField_5_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_8.setColumns(1);
+		textField_5_8.setBackground(Color.WHITE);
+		textField_5_8.setBounds(170, 267, 30, 30);
+		frame.getContentPane().add(textField_5_8);
+		
+		textField_6_8 = new JFormattedTextField(createFormatter("U"));
+		textField_6_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_8.setForeground(Color.BLACK);
+		textField_6_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_8.setColumns(1);
+		textField_6_8.setBackground(Color.WHITE);
+		textField_6_8.setBounds(202, 267, 30, 30);
+		frame.getContentPane().add(textField_6_8);
+		
+		textField_7_8 = new JFormattedTextField(createFormatter("U"));
+		textField_7_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_8.setForeground(Color.BLACK);
+		textField_7_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_8.setColumns(1);
+		textField_7_8.setBackground(Color.WHITE);
+		textField_7_8.setBounds(234, 267, 30, 30);
+		frame.getContentPane().add(textField_7_8);
+		
+		textField_8_8 = new JFormattedTextField(createFormatter("U"));
+		textField_8_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_8.setForeground(Color.BLACK);
+		textField_8_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_8.setColumns(1);
+		textField_8_8.setBackground(Color.WHITE);
+		textField_8_8.setBounds(266, 267, 30, 30);
+		frame.getContentPane().add(textField_8_8);
+		
+		textField_9_8 = new JFormattedTextField(createFormatter("U"));
+		textField_9_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_8.setForeground(Color.BLACK);
+		textField_9_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_8.setColumns(1);
+		textField_9_8.setBackground(Color.WHITE);
+		textField_9_8.setBounds(298, 267, 30, 30);
+		frame.getContentPane().add(textField_9_8);
+		
+		textField_10_8 = new JFormattedTextField(createFormatter("U"));
+		textField_10_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_8.setForeground(Color.BLACK);
+		textField_10_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_8.setColumns(1);
+		textField_10_8.setBackground(Color.WHITE);
+		textField_10_8.setBounds(330, 267, 30, 30);
+		frame.getContentPane().add(textField_10_8);
+		
+		textField_11_8 = new JFormattedTextField(createFormatter("U"));
+		textField_11_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_8.setForeground(Color.BLACK);
+		textField_11_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_8.setColumns(1);
+		textField_11_8.setBackground(Color.WHITE);
+		textField_11_8.setBounds(362, 267, 30, 30);
+		frame.getContentPane().add(textField_11_8);
+		
+		textField_12_8 = new JFormattedTextField(createFormatter("U"));
+		textField_12_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_8.setForeground(Color.BLACK);
+		textField_12_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_8.setColumns(1);
+		textField_12_8.setBackground(Color.WHITE);
+		textField_12_8.setBounds(394, 267, 30, 30);
+		frame.getContentPane().add(textField_12_8);
+		
+		textField_13_8 = new JFormattedTextField(createFormatter("U"));
+		textField_13_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_8.setForeground(Color.BLACK);
+		textField_13_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_8.setColumns(1);
+		textField_13_8.setBackground(Color.WHITE);
+		textField_13_8.setBounds(426, 267, 30, 30);
+		frame.getContentPane().add(textField_13_8);
+		
+		textField_14_8 = new JFormattedTextField(createFormatter("U"));
+		textField_14_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_8.setForeground(Color.BLACK);
+		textField_14_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_8.setColumns(1);
+		textField_14_8.setBackground(Color.WHITE);
+		textField_14_8.setBounds(458, 267, 30, 30);
+		frame.getContentPane().add(textField_14_8);
+		
+		textField_15_8 = new JFormattedTextField(createFormatter("U"));
+		textField_15_8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_8.setForeground(Color.BLACK);
+		textField_15_8.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_8.setColumns(1);
+		textField_15_8.setBackground(Color.WHITE);
+		textField_15_8.setBounds(490, 267, 30, 30);
+		frame.getContentPane().add(textField_15_8);
+		
+		textField_1_9 = new JFormattedTextField(createFormatter("U"));
+		textField_1_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_9.setForeground(Color.BLACK);
+		textField_1_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_9.setColumns(1);
+		textField_1_9.setBackground(Color.WHITE);
+		textField_1_9.setBounds(42, 299, 30, 30);
+		frame.getContentPane().add(textField_1_9);
+		
+		textField_2_9 = new JFormattedTextField(createFormatter("U"));
+		textField_2_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_9.setForeground(Color.BLACK);
+		textField_2_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_9.setColumns(1);
+		textField_2_9.setBackground(Color.WHITE);
+		textField_2_9.setBounds(74, 299, 30, 30);
+		frame.getContentPane().add(textField_2_9);
+		
+		textField_3_9 = new JFormattedTextField(createFormatter("U"));
+		textField_3_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_9.setForeground(Color.BLACK);
+		textField_3_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_9.setColumns(1);
+		textField_3_9.setBackground(Color.WHITE);
+		textField_3_9.setBounds(106, 299, 30, 30);
+		frame.getContentPane().add(textField_3_9);
+		
+		textField_4_9 = new JFormattedTextField(createFormatter("U"));
+		textField_4_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_9.setForeground(Color.BLACK);
+		textField_4_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_9.setColumns(1);
+		textField_4_9.setBackground(Color.WHITE);
+		textField_4_9.setBounds(138, 299, 30, 30);
+		frame.getContentPane().add(textField_4_9);
+		
+		textField_5_9 = new JFormattedTextField(createFormatter("U"));
+		textField_5_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_9.setForeground(Color.BLACK);
+		textField_5_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_9.setColumns(1);
+		textField_5_9.setBackground(Color.WHITE);
+		textField_5_9.setBounds(170, 299, 30, 30);
+		frame.getContentPane().add(textField_5_9);
+		
+		textField_6_9 = new JFormattedTextField(createFormatter("U"));
+		textField_6_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_9.setForeground(Color.BLACK);
+		textField_6_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_9.setColumns(1);
+		textField_6_9.setBackground(Color.WHITE);
+		textField_6_9.setBounds(202, 299, 30, 30);
+		frame.getContentPane().add(textField_6_9);
+		
+		textField_7_9 = new JFormattedTextField(createFormatter("U"));
+		textField_7_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_9.setForeground(Color.BLACK);
+		textField_7_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_9.setColumns(1);
+		textField_7_9.setBackground(Color.WHITE);
+		textField_7_9.setBounds(234, 299, 30, 30);
+		frame.getContentPane().add(textField_7_9);
+		
+		textField_8_9 = new JFormattedTextField(createFormatter("U"));
+		textField_8_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_9.setForeground(Color.BLACK);
+		textField_8_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_9.setColumns(1);
+		textField_8_9.setBackground(Color.WHITE);
+		textField_8_9.setBounds(266, 299, 30, 30);
+		frame.getContentPane().add(textField_8_9);
+		
+		textField_9_9 = new JFormattedTextField(createFormatter("U"));
+		textField_9_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_9.setForeground(Color.BLACK);
+		textField_9_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_9.setColumns(1);
+		textField_9_9.setBackground(Color.WHITE);
+		textField_9_9.setBounds(298, 299, 30, 30);
+		frame.getContentPane().add(textField_9_9);
+		
+		textField_10_9 = new JFormattedTextField(createFormatter("U"));
+		textField_10_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_9.setForeground(Color.BLACK);
+		textField_10_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_9.setColumns(1);
+		textField_10_9.setBackground(Color.WHITE);
+		textField_10_9.setBounds(330, 299, 30, 30);
+		frame.getContentPane().add(textField_10_9);
+		
+		textField_11_9 = new JFormattedTextField(createFormatter("U"));
+		textField_11_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_9.setForeground(Color.BLACK);
+		textField_11_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_9.setColumns(1);
+		textField_11_9.setBackground(Color.WHITE);
+		textField_11_9.setBounds(362, 299, 30, 30);
+		frame.getContentPane().add(textField_11_9);
+		
+		textField_12_9 = new JFormattedTextField(createFormatter("U"));
+		textField_12_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_9.setForeground(Color.BLACK);
+		textField_12_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_9.setColumns(1);
+		textField_12_9.setBackground(Color.WHITE);
+		textField_12_9.setBounds(394, 299, 30, 30);
+		frame.getContentPane().add(textField_12_9);
+		
+		textField_13_9 = new JFormattedTextField(createFormatter("U"));
+		textField_13_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_9.setForeground(Color.BLACK);
+		textField_13_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_9.setColumns(1);
+		textField_13_9.setBackground(Color.WHITE);
+		textField_13_9.setBounds(426, 299, 30, 30);
+		frame.getContentPane().add(textField_13_9);
+		
+		textField_14_9 = new JFormattedTextField(createFormatter("U"));
+		textField_14_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_9.setForeground(Color.BLACK);
+		textField_14_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_9.setColumns(1);
+		textField_14_9.setBackground(Color.WHITE);
+		textField_14_9.setBounds(458, 299, 30, 30);
+		frame.getContentPane().add(textField_14_9);
+		
+		textField_15_9 = new JFormattedTextField(createFormatter("U"));
+		textField_15_9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_9.setForeground(Color.BLACK);
+		textField_15_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_9.setColumns(1);
+		textField_15_9.setBackground(Color.WHITE);
+		textField_15_9.setBounds(490, 299, 30, 30);
+		frame.getContentPane().add(textField_15_9);
+		
+		textField_1_10 = new JFormattedTextField(createFormatter("U"));
+		textField_1_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_10.setForeground(Color.BLACK);
+		textField_1_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_10.setColumns(1);
+		textField_1_10.setBackground(Color.WHITE);
+		textField_1_10.setBounds(42, 331, 30, 30);
+		frame.getContentPane().add(textField_1_10);
+		
+		textField_2_10 = new JFormattedTextField(createFormatter("U"));
+		textField_2_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_10.setForeground(Color.BLACK);
+		textField_2_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_10.setColumns(1);
+		textField_2_10.setBackground(Color.WHITE);
+		textField_2_10.setBounds(74, 331, 30, 30);
+		frame.getContentPane().add(textField_2_10);
+		
+		textField_3_10 = new JFormattedTextField(createFormatter("U"));
+		textField_3_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_10.setForeground(Color.BLACK);
+		textField_3_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_10.setColumns(1);
+		textField_3_10.setBackground(Color.WHITE);
+		textField_3_10.setBounds(106, 331, 30, 30);
+		frame.getContentPane().add(textField_3_10);
+		
+		textField_4_10 = new JFormattedTextField(createFormatter("U"));
+		textField_4_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_10.setForeground(Color.BLACK);
+		textField_4_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_10.setColumns(1);
+		textField_4_10.setBackground(Color.WHITE);
+		textField_4_10.setBounds(138, 331, 30, 30);
+		frame.getContentPane().add(textField_4_10);
+		
+		textField_5_10 = new JFormattedTextField(createFormatter("U"));
+		textField_5_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_10.setForeground(Color.BLACK);
+		textField_5_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_10.setColumns(1);
+		textField_5_10.setBackground(Color.WHITE);
+		textField_5_10.setBounds(170, 331, 30, 30);
+		frame.getContentPane().add(textField_5_10);
+		
+		textField_6_10 = new JFormattedTextField(createFormatter("U"));
+		textField_6_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_10.setForeground(Color.BLACK);
+		textField_6_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_10.setColumns(1);
+		textField_6_10.setBackground(Color.WHITE);
+		textField_6_10.setBounds(202, 331, 30, 30);
+		frame.getContentPane().add(textField_6_10);
+		
+		textField_7_10 = new JFormattedTextField(createFormatter("U"));
+		textField_7_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_10.setForeground(Color.BLACK);
+		textField_7_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_10.setColumns(1);
+		textField_7_10.setBackground(Color.WHITE);
+		textField_7_10.setBounds(234, 331, 30, 30);
+		frame.getContentPane().add(textField_7_10);
+		
+		textField_8_10 = new JFormattedTextField(createFormatter("U"));
+		textField_8_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_10.setForeground(Color.BLACK);
+		textField_8_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_10.setColumns(1);
+		textField_8_10.setBackground(Color.WHITE);
+		textField_8_10.setBounds(266, 331, 30, 30);
+		frame.getContentPane().add(textField_8_10);
+		
+		textField_9_10 = new JFormattedTextField(createFormatter("U"));
+		textField_9_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_10.setForeground(Color.BLACK);
+		textField_9_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_10.setColumns(1);
+		textField_9_10.setBackground(Color.WHITE);
+		textField_9_10.setBounds(298, 331, 30, 30);
+		frame.getContentPane().add(textField_9_10);
+		
+		textField_10_10 = new JFormattedTextField(createFormatter("U"));
+		textField_10_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_10.setForeground(Color.BLACK);
+		textField_10_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_10.setColumns(1);
+		textField_10_10.setBackground(Color.WHITE);
+		textField_10_10.setBounds(330, 331, 30, 30);
+		frame.getContentPane().add(textField_10_10);
+		
+		textField_11_10 = new JFormattedTextField(createFormatter("U"));
+		textField_11_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_10.setForeground(Color.BLACK);
+		textField_11_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_10.setColumns(1);
+		textField_11_10.setBackground(Color.WHITE);
+		textField_11_10.setBounds(362, 331, 30, 30);
+		frame.getContentPane().add(textField_11_10);
+		
+		textField_12_10 = new JFormattedTextField(createFormatter("U"));
+		textField_12_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_10.setForeground(Color.BLACK);
+		textField_12_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_10.setColumns(1);
+		textField_12_10.setBackground(Color.WHITE);
+		textField_12_10.setBounds(394, 331, 30, 30);
+		frame.getContentPane().add(textField_12_10);
+		
+		textField_13_10 = new JFormattedTextField(createFormatter("U"));
+		textField_13_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_10.setForeground(Color.BLACK);
+		textField_13_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_10.setColumns(1);
+		textField_13_10.setBackground(Color.WHITE);
+		textField_13_10.setBounds(426, 331, 30, 30);
+		frame.getContentPane().add(textField_13_10);
+		
+		textField_14_10 = new JFormattedTextField(createFormatter("U"));
+		textField_14_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_10.setForeground(Color.BLACK);
+		textField_14_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_10.setColumns(1);
+		textField_14_10.setBackground(Color.WHITE);
+		textField_14_10.setBounds(458, 331, 30, 30);
+		frame.getContentPane().add(textField_14_10);
+		
+		textField_15_10 = new JFormattedTextField(createFormatter("U"));
+		textField_15_10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_10.setForeground(Color.BLACK);
+		textField_15_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_10.setColumns(1);
+		textField_15_10.setBackground(Color.WHITE);
+		textField_15_10.setBounds(490, 331, 30, 30);
+		frame.getContentPane().add(textField_15_10);
+		
+		textField_1_11 = new JFormattedTextField(createFormatter("U"));
+		textField_1_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_11.setForeground(Color.BLACK);
+		textField_1_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_11.setColumns(1);
+		textField_1_11.setBackground(Color.WHITE);
+		textField_1_11.setBounds(42, 363, 30, 30);
+		frame.getContentPane().add(textField_1_11);
+		
+		textField_2_11 = new JFormattedTextField(createFormatter("U"));
+		textField_2_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_11.setForeground(Color.BLACK);
+		textField_2_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_11.setColumns(1);
+		textField_2_11.setBackground(Color.WHITE);
+		textField_2_11.setBounds(74, 363, 30, 30);
+		frame.getContentPane().add(textField_2_11);
+		
+		textField_3_11 = new JFormattedTextField(createFormatter("U"));
+		textField_3_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_11.setForeground(Color.BLACK);
+		textField_3_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_11.setColumns(1);
+		textField_3_11.setBackground(Color.WHITE);
+		textField_3_11.setBounds(106, 363, 30, 30);
+		frame.getContentPane().add(textField_3_11);
+		
+		textField_4_11 = new JFormattedTextField(createFormatter("U"));
+		textField_4_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_11.setForeground(Color.BLACK);
+		textField_4_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_11.setColumns(1);
+		textField_4_11.setBackground(Color.WHITE);
+		textField_4_11.setBounds(138, 363, 30, 30);
+		frame.getContentPane().add(textField_4_11);
+		
+		textField_5_11 = new JFormattedTextField(createFormatter("U"));
+		textField_5_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_11.setForeground(Color.BLACK);
+		textField_5_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_11.setColumns(1);
+		textField_5_11.setBackground(Color.WHITE);
+		textField_5_11.setBounds(170, 363, 30, 30);
+		frame.getContentPane().add(textField_5_11);
+		
+		textField_6_11 = new JFormattedTextField(createFormatter("U"));
+		textField_6_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_11.setForeground(Color.BLACK);
+		textField_6_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_11.setColumns(1);
+		textField_6_11.setBackground(Color.WHITE);
+		textField_6_11.setBounds(202, 363, 30, 30);
+		frame.getContentPane().add(textField_6_11);
+		
+		textField_7_11 = new JFormattedTextField(createFormatter("U"));
+		textField_7_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_11.setForeground(Color.BLACK);
+		textField_7_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_11.setColumns(1);
+		textField_7_11.setBackground(Color.WHITE);
+		textField_7_11.setBounds(234, 363, 30, 30);
+		frame.getContentPane().add(textField_7_11);
+		
+		textField_8_11 = new JFormattedTextField(createFormatter("U"));
+		textField_8_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_11.setForeground(Color.BLACK);
+		textField_8_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_11.setColumns(1);
+		textField_8_11.setBackground(Color.WHITE);
+		textField_8_11.setBounds(266, 363, 30, 30);
+		frame.getContentPane().add(textField_8_11);
+		
+		textField_9_11 = new JFormattedTextField(createFormatter("U"));
+		textField_9_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_11.setForeground(Color.BLACK);
+		textField_9_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_11.setColumns(1);
+		textField_9_11.setBackground(Color.WHITE);
+		textField_9_11.setBounds(298, 363, 30, 30);
+		frame.getContentPane().add(textField_9_11);
+		
+		textField_10_11 = new JFormattedTextField(createFormatter("U"));
+		textField_10_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_11.setForeground(Color.BLACK);
+		textField_10_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_11.setColumns(1);
+		textField_10_11.setBackground(Color.WHITE);
+		textField_10_11.setBounds(330, 363, 30, 30);
+		frame.getContentPane().add(textField_10_11);
+		
+		textField_11_11 = new JFormattedTextField(createFormatter("U"));
+		textField_11_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_11.setForeground(Color.BLACK);
+		textField_11_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_11.setColumns(1);
+		textField_11_11.setBackground(Color.WHITE);
+		textField_11_11.setBounds(362, 363, 30, 30);
+		frame.getContentPane().add(textField_11_11);
+		
+		textField_12_11 = new JFormattedTextField(createFormatter("U"));
+		textField_12_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_11.setForeground(Color.BLACK);
+		textField_12_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_11.setColumns(1);
+		textField_12_11.setBackground(Color.WHITE);
+		textField_12_11.setBounds(394, 363, 30, 30);
+		frame.getContentPane().add(textField_12_11);
+		
+		textField_13_11 = new JFormattedTextField(createFormatter("U"));
+		textField_13_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_11.setForeground(Color.BLACK);
+		textField_13_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_11.setColumns(1);
+		textField_13_11.setBackground(Color.WHITE);
+		textField_13_11.setBounds(426, 363, 30, 30);
+		frame.getContentPane().add(textField_13_11);
+		
+		textField_14_11 = new JFormattedTextField(createFormatter("U"));
+		textField_14_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_11.setForeground(Color.BLACK);
+		textField_14_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_11.setColumns(1);
+		textField_14_11.setBackground(Color.WHITE);
+		textField_14_11.setBounds(458, 363, 30, 30);
+		frame.getContentPane().add(textField_14_11);
+		
+		textField_15_11 = new JFormattedTextField(createFormatter("U"));
+		textField_15_11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_11.setForeground(Color.BLACK);
+		textField_15_11.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_11.setColumns(1);
+		textField_15_11.setBackground(Color.WHITE);
+		textField_15_11.setBounds(490, 363, 30, 30);
+		frame.getContentPane().add(textField_15_11);
+		
+		textField_1_12 = new JFormattedTextField(createFormatter("U"));
+		textField_1_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_12.setForeground(Color.BLACK);
+		textField_1_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_12.setColumns(1);
+		textField_1_12.setBackground(Color.WHITE);
+		textField_1_12.setBounds(42, 395, 30, 30);
+		frame.getContentPane().add(textField_1_12);
+		
+		textField_2_12 = new JFormattedTextField(createFormatter("U"));
+		textField_2_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_12.setForeground(Color.BLACK);
+		textField_2_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_12.setColumns(1);
+		textField_2_12.setBackground(Color.WHITE);
+		textField_2_12.setBounds(74, 395, 30, 30);
+		frame.getContentPane().add(textField_2_12);
+		
+		textField_3_12 = new JFormattedTextField(createFormatter("U"));
+		textField_3_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_12.setForeground(Color.BLACK);
+		textField_3_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_12.setColumns(1);
+		textField_3_12.setBackground(Color.WHITE);
+		textField_3_12.setBounds(106, 395, 30, 30);
+		frame.getContentPane().add(textField_3_12);
+		
+		textField_4_12 = new JFormattedTextField(createFormatter("U"));
+		textField_4_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_12.setForeground(Color.BLACK);
+		textField_4_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_12.setColumns(1);
+		textField_4_12.setBackground(Color.WHITE);
+		textField_4_12.setBounds(138, 395, 30, 30);
+		frame.getContentPane().add(textField_4_12);
+		
+		textField_5_12 = new JFormattedTextField(createFormatter("U"));
+		textField_5_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_12.setForeground(Color.BLACK);
+		textField_5_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_12.setColumns(1);
+		textField_5_12.setBackground(Color.WHITE);
+		textField_5_12.setBounds(170, 395, 30, 30);
+		frame.getContentPane().add(textField_5_12);
+		
+		textField_6_12 = new JFormattedTextField(createFormatter("U"));
+		textField_6_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_12.setForeground(Color.BLACK);
+		textField_6_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_12.setColumns(1);
+		textField_6_12.setBackground(Color.WHITE);
+		textField_6_12.setBounds(202, 395, 30, 30);
+		frame.getContentPane().add(textField_6_12);
+		
+		textField_7_12 = new JFormattedTextField(createFormatter("U"));
+		textField_7_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_12.setForeground(Color.BLACK);
+		textField_7_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_12.setColumns(1);
+		textField_7_12.setBackground(Color.WHITE);
+		textField_7_12.setBounds(234, 395, 30, 30);
+		frame.getContentPane().add(textField_7_12);
+		
+		textField_8_12 = new JFormattedTextField(createFormatter("U"));
+		textField_8_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_12.setForeground(Color.BLACK);
+		textField_8_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_12.setColumns(1);
+		textField_8_12.setBackground(Color.WHITE);
+		textField_8_12.setBounds(266, 395, 30, 30);
+		frame.getContentPane().add(textField_8_12);
+		
+		textField_9_12 = new JFormattedTextField(createFormatter("U"));
+		textField_9_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_12.setForeground(Color.BLACK);
+		textField_9_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_12.setColumns(1);
+		textField_9_12.setBackground(Color.WHITE);
+		textField_9_12.setBounds(298, 395, 30, 30);
+		frame.getContentPane().add(textField_9_12);
+		
+		textField_10_12 = new JFormattedTextField(createFormatter("U"));
+		textField_10_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_12.setForeground(Color.BLACK);
+		textField_10_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_12.setColumns(1);
+		textField_10_12.setBackground(Color.WHITE);
+		textField_10_12.setBounds(330, 395, 30, 30);
+		frame.getContentPane().add(textField_10_12);
+		
+		textField_11_12 = new JFormattedTextField(createFormatter("U"));
+		textField_11_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_12.setForeground(Color.BLACK);
+		textField_11_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_12.setColumns(1);
+		textField_11_12.setBackground(Color.WHITE);
+		textField_11_12.setBounds(362, 395, 30, 30);
+		frame.getContentPane().add(textField_11_12);
+		
+		textField_12_12 = new JFormattedTextField(createFormatter("U"));
+		textField_12_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_12.setForeground(Color.BLACK);
+		textField_12_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_12.setColumns(1);
+		textField_12_12.setBackground(Color.WHITE);
+		textField_12_12.setBounds(394, 395, 30, 30);
+		frame.getContentPane().add(textField_12_12);
+		
+		textField_13_12 = new JFormattedTextField(createFormatter("U"));
+		textField_13_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_12.setForeground(Color.BLACK);
+		textField_13_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_12.setColumns(1);
+		textField_13_12.setBackground(Color.WHITE);
+		textField_13_12.setBounds(426, 395, 30, 30);
+		frame.getContentPane().add(textField_13_12);
+		
+		textField_14_12 = new JFormattedTextField(createFormatter("U"));
+		textField_14_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_12.setForeground(Color.BLACK);
+		textField_14_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_12.setColumns(1);
+		textField_14_12.setBackground(Color.WHITE);
+		textField_14_12.setBounds(458, 395, 30, 30);
+		frame.getContentPane().add(textField_14_12);
+		
+		textField_15_12 = new JFormattedTextField(createFormatter("U"));
+		textField_15_12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_12.setForeground(Color.BLACK);
+		textField_15_12.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_12.setColumns(1);
+		textField_15_12.setBackground(Color.WHITE);
+		textField_15_12.setBounds(490, 395, 30, 30);
+		frame.getContentPane().add(textField_15_12);
+		
+		textField_1_13 = new JFormattedTextField(createFormatter("U"));
+		textField_1_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_13.setForeground(Color.BLACK);
+		textField_1_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_13.setColumns(1);
+		textField_1_13.setBackground(Color.WHITE);
+		textField_1_13.setBounds(42, 427, 30, 30);
+		frame.getContentPane().add(textField_1_13);
+		
+		textField_2_13 = new JFormattedTextField(createFormatter("U"));
+		textField_2_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_13.setForeground(Color.BLACK);
+		textField_2_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_13.setColumns(1);
+		textField_2_13.setBackground(Color.WHITE);
+		textField_2_13.setBounds(74, 427, 30, 30);
+		frame.getContentPane().add(textField_2_13);
+		
+		textField_3_13 = new JFormattedTextField(createFormatter("U"));
+		textField_3_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_13.setForeground(Color.BLACK);
+		textField_3_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_13.setColumns(1);
+		textField_3_13.setBackground(Color.WHITE);
+		textField_3_13.setBounds(106, 427, 30, 30);
+		frame.getContentPane().add(textField_3_13);
+		
+		textField_4_13 = new JFormattedTextField(createFormatter("U"));
+		textField_4_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_13.setForeground(Color.BLACK);
+		textField_4_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_13.setColumns(1);
+		textField_4_13.setBackground(Color.WHITE);
+		textField_4_13.setBounds(138, 427, 30, 30);
+		frame.getContentPane().add(textField_4_13);
+		
+		textField_5_13 = new JFormattedTextField(createFormatter("U"));
+		textField_5_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_13.setForeground(Color.BLACK);
+		textField_5_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_13.setColumns(1);
+		textField_5_13.setBackground(Color.WHITE);
+		textField_5_13.setBounds(170, 427, 30, 30);
+		frame.getContentPane().add(textField_5_13);
+		
+		textField_6_13 = new JFormattedTextField(createFormatter("U"));
+		textField_6_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_13.setForeground(Color.BLACK);
+		textField_6_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_13.setColumns(1);
+		textField_6_13.setBackground(Color.WHITE);
+		textField_6_13.setBounds(202, 427, 30, 30);
+		frame.getContentPane().add(textField_6_13);
+		
+		textField_7_13 = new JFormattedTextField(createFormatter("U"));
+		textField_7_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_13.setForeground(Color.BLACK);
+		textField_7_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_13.setColumns(1);
+		textField_7_13.setBackground(Color.WHITE);
+		textField_7_13.setBounds(234, 427, 30, 30);
+		frame.getContentPane().add(textField_7_13);
+		
+		textField_8_13 = new JFormattedTextField(createFormatter("U"));
+		textField_8_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_13.setForeground(Color.BLACK);
+		textField_8_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_13.setColumns(1);
+		textField_8_13.setBackground(Color.WHITE);
+		textField_8_13.setBounds(266, 427, 30, 30);
+		frame.getContentPane().add(textField_8_13);
+		
+		textField_9_13 = new JFormattedTextField(createFormatter("U"));
+		textField_9_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_13.setForeground(Color.BLACK);
+		textField_9_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_13.setColumns(1);
+		textField_9_13.setBackground(Color.WHITE);
+		textField_9_13.setBounds(298, 427, 30, 30);
+		frame.getContentPane().add(textField_9_13);
+		
+		textField_10_13 = new JFormattedTextField(createFormatter("U"));
+		textField_10_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_13.setForeground(Color.BLACK);
+		textField_10_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_13.setColumns(1);
+		textField_10_13.setBackground(Color.WHITE);
+		textField_10_13.setBounds(330, 427, 30, 30);
+		frame.getContentPane().add(textField_10_13);
+		
+		textField_11_13 = new JFormattedTextField(createFormatter("U"));
+		textField_11_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_13.setForeground(Color.BLACK);
+		textField_11_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_13.setColumns(1);
+		textField_11_13.setBackground(Color.WHITE);
+		textField_11_13.setBounds(362, 427, 30, 30);
+		frame.getContentPane().add(textField_11_13);
+		
+		textField_12_13 = new JFormattedTextField(createFormatter("U"));
+		textField_12_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_13.setForeground(Color.BLACK);
+		textField_12_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_13.setColumns(1);
+		textField_12_13.setBackground(Color.WHITE);
+		textField_12_13.setBounds(394, 427, 30, 30);
+		frame.getContentPane().add(textField_12_13);
+		
+		textField_13_13 = new JFormattedTextField(createFormatter("U"));
+		textField_13_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_13.setForeground(Color.BLACK);
+		textField_13_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_13.setColumns(1);
+		textField_13_13.setBackground(Color.WHITE);
+		textField_13_13.setBounds(426, 427, 30, 30);
+		frame.getContentPane().add(textField_13_13);
+		
+		textField_14_13 = new JFormattedTextField(createFormatter("U"));
+		textField_14_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_13.setForeground(Color.BLACK);
+		textField_14_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_13.setColumns(1);
+		textField_14_13.setBackground(Color.WHITE);
+		textField_14_13.setBounds(458, 427, 30, 30);
+		frame.getContentPane().add(textField_14_13);
+		
+		textField_15_13 = new JFormattedTextField(createFormatter("U"));
+		textField_15_13.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_13.setForeground(Color.BLACK);
+		textField_15_13.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_13.setColumns(1);
+		textField_15_13.setBackground(Color.WHITE);
+		textField_15_13.setBounds(490, 427, 30, 30);
+		frame.getContentPane().add(textField_15_13);
+		
+		textField_1_14 = new JFormattedTextField(createFormatter("U"));
+		textField_1_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_14.setForeground(Color.BLACK);
+		textField_1_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_14.setColumns(1);
+		textField_1_14.setBackground(Color.WHITE);
+		textField_1_14.setBounds(42, 459, 30, 30);
+		frame.getContentPane().add(textField_1_14);
+		
+		textField_2_14 = new JFormattedTextField(createFormatter("U"));
+		textField_2_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_14.setForeground(Color.BLACK);
+		textField_2_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_14.setColumns(1);
+		textField_2_14.setBackground(Color.WHITE);
+		textField_2_14.setBounds(74, 459, 30, 30);
+		frame.getContentPane().add(textField_2_14);
+		
+		textField_3_14 = new JFormattedTextField(createFormatter("U"));
+		textField_3_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_14.setForeground(Color.BLACK);
+		textField_3_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_14.setColumns(1);
+		textField_3_14.setBackground(Color.WHITE);
+		textField_3_14.setBounds(106, 459, 30, 30);
+		frame.getContentPane().add(textField_3_14);
+		
+		textField_4_14 = new JFormattedTextField(createFormatter("U"));
+		textField_4_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_14.setForeground(Color.BLACK);
+		textField_4_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_14.setColumns(1);
+		textField_4_14.setBackground(Color.WHITE);
+		textField_4_14.setBounds(138, 459, 30, 30);
+		frame.getContentPane().add(textField_4_14);
+		
+		textField_5_14 = new JFormattedTextField(createFormatter("U"));
+		textField_5_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_14.setForeground(Color.BLACK);
+		textField_5_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_14.setColumns(1);
+		textField_5_14.setBackground(Color.WHITE);
+		textField_5_14.setBounds(170, 459, 30, 30);
+		frame.getContentPane().add(textField_5_14);
+		
+		textField_6_14 = new JFormattedTextField(createFormatter("U"));
+		textField_6_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_14.setForeground(Color.BLACK);
+		textField_6_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_14.setColumns(1);
+		textField_6_14.setBackground(Color.WHITE);
+		textField_6_14.setBounds(202, 459, 30, 30);
+		frame.getContentPane().add(textField_6_14);
+		
+		textField_7_14 = new JFormattedTextField(createFormatter("U"));
+		textField_7_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_14.setForeground(Color.BLACK);
+		textField_7_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_14.setColumns(1);
+		textField_7_14.setBackground(Color.WHITE);
+		textField_7_14.setBounds(234, 459, 30, 30);
+		frame.getContentPane().add(textField_7_14);
+		
+		textField_8_14 = new JFormattedTextField(createFormatter("U"));
+		textField_8_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_14.setForeground(Color.BLACK);
+		textField_8_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_14.setColumns(1);
+		textField_8_14.setBackground(Color.WHITE);
+		textField_8_14.setBounds(266, 459, 30, 30);
+		frame.getContentPane().add(textField_8_14);
+		
+		textField_9_14 = new JFormattedTextField(createFormatter("U"));
+		textField_9_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_14.setForeground(Color.BLACK);
+		textField_9_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_14.setColumns(1);
+		textField_9_14.setBackground(Color.WHITE);
+		textField_9_14.setBounds(298, 459, 30, 30);
+		frame.getContentPane().add(textField_9_14);
+		
+		textField_10_14 = new JFormattedTextField(createFormatter("U"));
+		textField_10_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_14.setForeground(Color.BLACK);
+		textField_10_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_14.setColumns(1);
+		textField_10_14.setBackground(Color.WHITE);
+		textField_10_14.setBounds(330, 459, 30, 30);
+		frame.getContentPane().add(textField_10_14);
+		
+		textField_11_14 = new JFormattedTextField(createFormatter("U"));
+		textField_11_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_14.setForeground(Color.BLACK);
+		textField_11_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_14.setColumns(1);
+		textField_11_14.setBackground(Color.WHITE);
+		textField_11_14.setBounds(362, 459, 30, 30);
+		frame.getContentPane().add(textField_11_14);
+		
+		textField_12_14 = new JFormattedTextField(createFormatter("U"));
+		textField_12_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_14.setForeground(Color.BLACK);
+		textField_12_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_14.setColumns(1);
+		textField_12_14.setBackground(Color.WHITE);
+		textField_12_14.setBounds(394, 459, 30, 30);
+		frame.getContentPane().add(textField_12_14);
+		
+		textField_13_14 = new JFormattedTextField(createFormatter("U"));
+		textField_13_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_14.setForeground(Color.BLACK);
+		textField_13_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_14.setColumns(1);
+		textField_13_14.setBackground(Color.WHITE);
+		textField_13_14.setBounds(426, 459, 30, 30);
+		frame.getContentPane().add(textField_13_14);
+		
+		textField_14_14 = new JFormattedTextField(createFormatter("U"));
+		textField_14_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_14.setForeground(Color.BLACK);
+		textField_14_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_14.setColumns(1);
+		textField_14_14.setBackground(Color.WHITE);
+		textField_14_14.setBounds(458, 459, 30, 30);
+		frame.getContentPane().add(textField_14_14);
+		
+		textField_15_14 = new JFormattedTextField(createFormatter("U"));
+		textField_15_14.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_14.setForeground(Color.BLACK);
+		textField_15_14.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_14.setColumns(1);
+		textField_15_14.setBackground(Color.WHITE);
+		textField_15_14.setBounds(490, 459, 30, 30);
+		frame.getContentPane().add(textField_15_14);
+		
+		textField_1_15 = new JFormattedTextField(createFormatter("U"));
+		textField_1_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1_15.setForeground(Color.BLACK);
+		textField_1_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1_15.setColumns(1);
+		textField_1_15.setBackground(Color.WHITE);
+		textField_1_15.setBounds(42, 491, 30, 30);
+		frame.getContentPane().add(textField_1_15);
+		
+		textField_2_15 = new JFormattedTextField(createFormatter("U"));
+		textField_2_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2_15.setForeground(Color.BLACK);
+		textField_2_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2_15.setColumns(1);
+		textField_2_15.setBackground(Color.WHITE);
+		textField_2_15.setBounds(74, 491, 30, 30);
+		frame.getContentPane().add(textField_2_15);
+		
+		textField_3_15 = new JFormattedTextField(createFormatter("U"));
+		textField_3_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_3_15.setForeground(Color.BLACK);
+		textField_3_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_3_15.setColumns(1);
+		textField_3_15.setBackground(Color.WHITE);
+		textField_3_15.setBounds(106, 491, 30, 30);
+		frame.getContentPane().add(textField_3_15);
+		
+		textField_4_15 = new JFormattedTextField(createFormatter("U"));
+		textField_4_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_4_15.setForeground(Color.BLACK);
+		textField_4_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_4_15.setColumns(1);
+		textField_4_15.setBackground(Color.WHITE);
+		textField_4_15.setBounds(138, 491, 30, 30);
+		frame.getContentPane().add(textField_4_15);
+		
+		textField_5_15 = new JFormattedTextField(createFormatter("U"));
+		textField_5_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_5_15.setForeground(Color.BLACK);
+		textField_5_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_5_15.setColumns(1);
+		textField_5_15.setBackground(Color.WHITE);
+		textField_5_15.setBounds(170, 491, 30, 30);
+		frame.getContentPane().add(textField_5_15);
+		
+		textField_6_15 = new JFormattedTextField(createFormatter("U"));
+		textField_6_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6_15.setForeground(Color.BLACK);
+		textField_6_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_6_15.setColumns(1);
+		textField_6_15.setBackground(Color.WHITE);
+		textField_6_15.setBounds(202, 491, 30, 30);
+		frame.getContentPane().add(textField_6_15);
+		
+		textField_7_15 = new JFormattedTextField(createFormatter("U"));
+		textField_7_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_7_15.setForeground(Color.BLACK);
+		textField_7_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_7_15.setColumns(1);
+		textField_7_15.setBackground(Color.WHITE);
+		textField_7_15.setBounds(234, 491, 30, 30);
+		frame.getContentPane().add(textField_7_15);
+		
+		textField_8_15 = new JFormattedTextField(createFormatter("U"));
+		textField_8_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_8_15.setForeground(Color.BLACK);
+		textField_8_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_8_15.setColumns(1);
+		textField_8_15.setBackground(Color.WHITE);
+		textField_8_15.setBounds(266, 491, 30, 30);
+		frame.getContentPane().add(textField_8_15);
+		
+		textField_9_15 = new JFormattedTextField(createFormatter("U"));
+		textField_9_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_9_15.setForeground(Color.BLACK);
+		textField_9_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_9_15.setColumns(1);
+		textField_9_15.setBackground(Color.WHITE);
+		textField_9_15.setBounds(298, 491, 30, 30);
+		frame.getContentPane().add(textField_9_15);
+		
+		textField_10_15 = new JFormattedTextField(createFormatter("U"));
+		textField_10_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_10_15.setForeground(Color.BLACK);
+		textField_10_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_10_15.setColumns(1);
+		textField_10_15.setBackground(Color.WHITE);
+		textField_10_15.setBounds(330, 491, 30, 30);
+		frame.getContentPane().add(textField_10_15);
+		
+		textField_11_15 = new JFormattedTextField(createFormatter("U"));
+		textField_11_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_11_15.setForeground(Color.BLACK);
+		textField_11_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_11_15.setColumns(1);
+		textField_11_15.setBackground(Color.WHITE);
+		textField_11_15.setBounds(362, 491, 30, 30);
+		frame.getContentPane().add(textField_11_15);
+		
+		textField_12_15 = new JFormattedTextField(createFormatter("U"));
+		textField_12_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_12_15.setForeground(Color.BLACK);
+		textField_12_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_12_15.setColumns(1);
+		textField_12_15.setBackground(Color.WHITE);
+		textField_12_15.setBounds(394, 491, 30, 30);
+		frame.getContentPane().add(textField_12_15);
+		
+		textField_13_15 = new JFormattedTextField(createFormatter("U"));
+		textField_13_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_13_15.setForeground(Color.BLACK);
+		textField_13_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_13_15.setColumns(1);
+		textField_13_15.setBackground(Color.WHITE);
+		textField_13_15.setBounds(426, 491, 30, 30);
+		frame.getContentPane().add(textField_13_15);
+		
+		textField_14_15 = new JFormattedTextField(createFormatter("U"));
+		textField_14_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_14_15.setForeground(Color.BLACK);
+		textField_14_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_14_15.setColumns(1);
+		textField_14_15.setBackground(Color.WHITE);
+		textField_14_15.setBounds(458, 491, 30, 30);
+		frame.getContentPane().add(textField_14_15);
+		
+		textField_15_15 = new JFormattedTextField(createFormatter("U"));
+		textField_15_15.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_15_15.setForeground(Color.BLACK);
+		textField_15_15.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_15_15.setColumns(1);
+		textField_15_15.setBackground(Color.WHITE);
+		textField_15_15.setBounds(490, 491, 30, 30);
+		frame.getContentPane().add(textField_15_15);
+				
+		JPanel panel = new JPanel();
+		panel.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		panel.setBounds(5, 6, 522, 522);
+		frame.getContentPane().add(panel);
+		
+		JButton checkButton = new JButton("Check Puzzle");
+		checkButton.setToolTipText("Click to check if puzzle is correct.");
+		checkButton.setFont(new Font("Tahoma", Font.BOLD, 14));
+		checkButton.setBounds(60, 536, 140, 26);
+		frame.getContentPane().add(checkButton);
+		
+		JButton newButton = new JButton("New Puzzle");
+		newButton.setToolTipText("Click to generate a new puzzle.");
+		newButton.setFont(new Font("Tahoma", Font.BOLD, 14));
+		newButton.setBounds(320, 536, 140, 26);
+		frame.getContentPane().add(newButton);
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPane.setBounds(536, 8, 248, 274);
+		frame.getContentPane().add(scrollPane);
+		
+		textArea_Across = new JEditorPane("text/html", "");
+		textArea_Across.setBackground(Color.WHITE);
+		textArea_Across.setEditable(false);
+		textArea_Across.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		scrollPane.setViewportView(textArea_Across);
+		
+		lblWordsAcross = new JLabel("Words Across:");
+		lblWordsAcross.setFont(new Font("Tahoma", Font.BOLD, 14));
+		scrollPane.setColumnHeaderView(lblWordsAcross);
+		
+		scrollPane_1 = new JScrollPane();
+		scrollPane_1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPane_1.setBounds(536, 290, 248, 274);
+		frame.getContentPane().add(scrollPane_1);
+		
+		textArea_Down = new JEditorPane("text/html", "");
+		textArea_Down.setBackground(Color.WHITE);
+		textArea_Down.setEditable(false);
+		textArea_Down.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		scrollPane_1.setViewportView(textArea_Down);
+		
+		lblWordsDown = new JLabel("Words Down:");
+		lblWordsDown.setFont(new Font("Tahoma", Font.BOLD, 14));
+		scrollPane_1.setColumnHeaderView(lblWordsDown);
+
+		//TransferFocus from one textField to another, after hitting Enter
+		Transfer.transfer();
+        
+		
+		checkButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	CheckPuzzle.checkpuz();        	
+            }
+		});
+		
+		newButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	Random generator = new Random(); //Random Number Generator to choose a Random Puzzle
+                int num = generator.nextInt(1)+1;
+                switch (num){
+                    case 1: 
+                    	Puzzles.blankpuz();
+                    	Puzzles.puzzle1();
+                    	Puzzles.clues1();
+                    	break;
+                    case 2: 
+                    	Puzzles.blankpuz();
+                    	//Puzzles.puzzle2();
+                    	//Puzzles.clues2();
+                    	break;
+                    case 3: 
+                    	Puzzles.blankpuz();
+                    	//Puzzles.puzzle3();
+                    	//Puzzles.clues3();
+                    	break;
+                    case 4: 
+                    	Puzzles.blankpuz();
+                    	//Puzzles.puzzle4();
+                    	//Puzzles.clues4();
+                    	break;
+                    default:
+                    	break;
+                }
+            	
+            }
+		});
+		
+	}
+
+	private MaskFormatter createFormatter(String s) {
+		MaskFormatter formatter = null;
+	    try {
+	        formatter = new MaskFormatter(s);
+	    } catch (java.text.ParseException exc) {
+	        System.err.println("formatter is bad: " + exc.getMessage());
+	        System.exit(-1);
+	    }
+	    return formatter;
+	}
+}
