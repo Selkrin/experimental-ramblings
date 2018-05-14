@@ -1,0 +1,1305 @@
+package crosswordPuzzle;
+
+import java.awt.Color;
+
+import javax.swing.JOptionPane;
+
+public class CheckPuzzle extends CrosswordPuzzle {
+
+public static String letter_1_1;
+public static String letter_2_1;
+public static String letter_3_1;
+public static String letter_4_1;
+public static String letter_5_1;
+public static String letter_6_1;
+public static String letter_7_1;
+public static String letter_8_1;
+public static String letter_9_1;
+public static String letter_10_1;
+public static String letter_11_1;
+public static String letter_12_1;
+public static String letter_13_1;
+public static String letter_14_1;
+public static String letter_15_1;
+public static String letter_1_2;
+public static String letter_2_2;
+public static String letter_3_2;
+public static String letter_4_2;
+public static String letter_5_2;
+public static String letter_6_2;
+public static String letter_7_2;
+public static String letter_8_2;
+public static String letter_9_2;
+public static String letter_10_2;
+public static String letter_11_2;
+public static String letter_12_2;
+public static String letter_13_2;
+public static String letter_14_2;
+public static String letter_15_2;
+public static String letter_1_3;
+public static String letter_2_3;
+public static String letter_3_3;
+public static String letter_4_3;
+public static String letter_5_3;
+public static String letter_6_3;
+public static String letter_7_3;
+public static String letter_8_3;
+public static String letter_9_3;
+public static String letter_10_3;
+public static String letter_11_3;
+public static String letter_12_3;
+public static String letter_13_3;
+public static String letter_14_3;
+public static String letter_15_3;
+public static String letter_1_4;
+public static String letter_2_4;
+public static String letter_3_4;
+public static String letter_4_4;
+public static String letter_5_4;
+public static String letter_6_4;
+public static String letter_7_4;
+public static String letter_8_4;
+public static String letter_9_4;
+public static String letter_10_4;
+public static String letter_11_4;
+public static String letter_12_4;
+public static String letter_13_4;
+public static String letter_14_4;
+public static String letter_15_4;
+public static String letter_1_5;
+public static String letter_2_5;
+public static String letter_3_5;
+public static String letter_4_5;
+public static String letter_5_5;
+public static String letter_6_5;
+public static String letter_7_5;
+public static String letter_8_5;
+public static String letter_9_5;
+public static String letter_10_5;
+public static String letter_11_5;
+public static String letter_12_5;
+public static String letter_13_5;
+public static String letter_14_5;
+public static String letter_15_5;
+public static String letter_1_6;
+public static String letter_2_6;
+public static String letter_3_6;
+public static String letter_4_6;
+public static String letter_5_6;
+public static String letter_6_6;
+public static String letter_7_6;
+public static String letter_8_6;
+public static String letter_9_6;
+public static String letter_10_6;
+public static String letter_11_6;
+public static String letter_12_6;
+public static String letter_13_6;
+public static String letter_14_6;
+public static String letter_15_6;
+public static String letter_1_7;
+public static String letter_2_7;
+public static String letter_3_7;
+public static String letter_4_7;
+public static String letter_5_7;
+public static String letter_6_7;
+public static String letter_7_7;
+public static String letter_8_7;
+public static String letter_9_7;
+public static String letter_10_7;
+public static String letter_11_7;
+public static String letter_12_7;
+public static String letter_13_7;
+public static String letter_14_7;
+public static String letter_15_7;
+public static String letter_1_8;
+public static String letter_2_8;
+public static String letter_3_8;
+public static String letter_4_8;
+public static String letter_5_8;
+public static String letter_6_8;
+public static String letter_7_8;
+public static String letter_8_8;
+public static String letter_9_8;
+public static String letter_10_8;
+public static String letter_11_8;
+public static String letter_12_8;
+public static String letter_13_8;
+public static String letter_14_8;
+public static String letter_15_8;
+public static String letter_1_9;
+public static String letter_2_9;
+public static String letter_3_9;
+public static String letter_4_9;
+public static String letter_5_9;
+public static String letter_6_9;
+public static String letter_7_9;
+public static String letter_8_9;
+public static String letter_9_9;
+public static String letter_10_9;
+public static String letter_11_9;
+public static String letter_12_9;
+public static String letter_13_9;
+public static String letter_14_9;
+public static String letter_15_9;
+public static String letter_1_10;
+public static String letter_2_10;
+public static String letter_3_10;
+public static String letter_4_10;
+public static String letter_5_10;
+public static String letter_6_10;
+public static String letter_7_10;
+public static String letter_8_10;
+public static String letter_9_10;
+public static String letter_10_10;
+public static String letter_11_10;
+public static String letter_12_10;
+public static String letter_13_10;
+public static String letter_14_10;
+public static String letter_15_10;
+public static String letter_1_11;
+public static String letter_2_11;
+public static String letter_3_11;
+public static String letter_4_11;
+public static String letter_5_11;
+public static String letter_6_11;
+public static String letter_7_11;
+public static String letter_8_11;
+public static String letter_9_11;
+public static String letter_10_11;
+public static String letter_11_11;
+public static String letter_12_11;
+public static String letter_13_11;
+public static String letter_14_11;
+public static String letter_15_11;
+public static String letter_1_12;
+public static String letter_2_12;
+public static String letter_3_12;
+public static String letter_4_12;
+public static String letter_5_12;
+public static String letter_6_12;
+public static String letter_7_12;
+public static String letter_8_12;
+public static String letter_9_12;
+public static String letter_10_12;
+public static String letter_11_12;
+public static String letter_12_12;
+public static String letter_13_12;
+public static String letter_14_12;
+public static String letter_15_12;
+public static String letter_1_13;
+public static String letter_2_13;
+public static String letter_3_13;
+public static String letter_4_13;
+public static String letter_5_13;
+public static String letter_6_13;
+public static String letter_7_13;
+public static String letter_8_13;
+public static String letter_9_13;
+public static String letter_10_13;
+public static String letter_11_13;
+public static String letter_12_13;
+public static String letter_13_13;
+public static String letter_14_13;
+public static String letter_15_13;
+public static String letter_1_14;
+public static String letter_2_14;
+public static String letter_3_14;
+public static String letter_4_14;
+public static String letter_5_14;
+public static String letter_6_14;
+public static String letter_7_14;
+public static String letter_8_14;
+public static String letter_9_14;
+public static String letter_10_14;
+public static String letter_11_14;
+public static String letter_12_14;
+public static String letter_13_14;
+public static String letter_14_14;
+public static String letter_15_14;
+public static String letter_1_15;
+public static String letter_2_15;
+public static String letter_3_15;
+public static String letter_4_15;
+public static String letter_5_15;
+public static String letter_6_15;
+public static String letter_7_15;
+public static String letter_8_15;
+public static String letter_9_15;
+public static String letter_10_15;
+public static String letter_11_15;
+public static String letter_12_15;
+public static String letter_13_15;
+public static String letter_14_15;
+public static String letter_15_15;
+
+	public static void checkpuz() {
+		
+		if (puzNum == 0) {
+			JOptionPane.showMessageDialog(null, "No Puzzle Found.\nClick the 'New Puzzle' button.", "NO PUZZLE", JOptionPane.ERROR_MESSAGE);
+		} else if (puzNum==1){
+			//JJOptionPane.showMessageDialog(null, "Puzzle #1","Puzzle #1", JOptionPane.CLOSED_OPTION);
+			//Row 1
+    		letter_1_1 = textField_1_1.getText();
+    		letter_2_1 = textField_2_1.getText();
+    		letter_3_1 = textField_3_1.getText();
+    		letter_4_1 = textField_4_1.getText();
+    		letter_5_1 = textField_5_1.getText();
+    		//letter_6_1 = textField_6_1.getText();
+    		letter_7_1 = textField_7_1.getText();
+    		letter_8_1 = textField_8_1.getText();
+    		letter_9_1 = textField_9_1.getText();
+    		letter_10_1 = textField_10_1.getText();
+    		letter_11_1 = textField_11_1.getText();
+    		//letter_12_1 = textField_12_1.getText();
+    		letter_13_1 = textField_13_1.getText();
+    		letter_14_1 = textField_14_1.getText();
+    		letter_15_1 = textField_15_1.getText();
+    		//Row 2
+    		letter_1_2 = textField_1_2.getText();
+    		letter_2_2 = textField_2_2.getText();
+    		letter_3_2 = textField_3_2.getText();
+    		letter_4_2 = textField_4_2.getText();
+    		letter_5_2 = textField_5_2.getText();
+    		//letter_6_2 = textField_6_2.getText();
+    		letter_7_2 = textField_7_2.getText();
+    		letter_8_2 = textField_8_2.getText();
+    		letter_9_2 = textField_9_2.getText();
+    		letter_10_2 = textField_10_2.getText();
+    		letter_11_2 = textField_11_2.getText();
+    		//letter_12_2 = textField_12_2.getText();
+    		letter_13_2 = textField_13_2.getText();
+    		letter_14_2 = textField_14_2.getText();
+    		letter_15_2 = textField_15_2.getText();
+			//Row 3
+    		letter_1_3 = textField_1_3.getText();
+    		letter_2_3 = textField_2_3.getText();
+    		letter_3_3 = textField_3_3.getText();
+    		letter_4_3 = textField_4_3.getText();
+    		letter_5_3 = textField_5_3.getText();
+    		letter_6_3 = textField_6_3.getText();
+    		letter_7_3 = textField_7_3.getText();
+    		letter_8_3 = textField_8_3.getText();
+    		letter_9_3 = textField_9_3.getText();
+    		letter_10_3 = textField_10_3.getText();
+    		letter_11_3 = textField_11_3.getText();
+    		letter_12_3 = textField_12_3.getText();
+    		letter_13_3 = textField_13_3.getText();
+    		letter_14_3 = textField_14_3.getText();
+    		letter_15_3 = textField_15_3.getText();
+			//Row 4
+    		letter_1_4 = textField_1_4.getText();
+    		letter_2_4 = textField_2_4.getText();
+    		letter_3_4 = textField_3_4.getText();
+    		//letter_4_4 = textField_4_4.getText();
+    		letter_5_4 = textField_5_4.getText();
+    		letter_6_4 = textField_6_4.getText();
+    		letter_7_4 = textField_7_4.getText();
+    		letter_8_4 = textField_8_4.getText();
+    		letter_9_4 = textField_9_4.getText();
+    		//letter_10_4 = textField_10_4.getText();
+    		//letter_11_4 = textField_11_4.getText();
+    		letter_12_4 = textField_12_4.getText();
+    		letter_13_4 = textField_13_4.getText();
+    		letter_14_4 = textField_14_4.getText();
+    		letter_15_4 = textField_15_4.getText();
+			//Row 5
+    		//letter_1_5 = textField_1_5.getText();
+    		//letter_2_5 = textField_2_5.getText();
+    		//letter_3_5 = textField_3_5.getText();
+    		letter_4_5 = textField_4_5.getText();
+    		letter_5_5 = textField_5_5.getText();
+    		letter_6_5 = textField_6_5.getText();
+    		//letter_7_5 = textField_7_5.getText();
+    		letter_8_5 = textField_8_5.getText();
+    		letter_9_5 = textField_9_5.getText();
+    		letter_10_5 = textField_10_5.getText();
+    		letter_11_5 = textField_11_5.getText();
+    		letter_12_5 = textField_12_5.getText();
+    		letter_13_5 = textField_13_5.getText();
+    		letter_14_5 = textField_14_5.getText();
+    		letter_15_5 = textField_15_5.getText();
+			//Row 6
+    		letter_1_6 = textField_1_6.getText();
+    		letter_2_6 = textField_2_6.getText();
+    		letter_3_6 = textField_3_6.getText();
+    		letter_4_6 = textField_4_6.getText();
+    		letter_5_6 = textField_5_6.getText();
+    		letter_6_6 = textField_6_6.getText();
+    		letter_7_6 = textField_7_6.getText();
+    		//letter_8_6 = textField_8_6.getText();
+    		//letter_9_6 = textField_9_6.getText();
+    		letter_10_6 = textField_10_6.getText();
+    		letter_11_6 = textField_11_6.getText();
+    		letter_12_6 = textField_12_6.getText();
+    		letter_13_6 = textField_13_6.getText();
+    		//letter_14_6 = textField_14_6.getText();
+    		//letter_15_6 = textField_15_6.getText();
+			//Row 7
+    		letter_1_7 = textField_1_7.getText();
+    		letter_2_7 = textField_2_7.getText();
+    		letter_3_7 = textField_3_7.getText();
+    		letter_4_7 = textField_4_7.getText();
+    		//letter_5_7 = textField_5_7.getText();
+    		//letter_6_7 = textField_6_7.getText();
+    		letter_7_7 = textField_7_7.getText();
+    		letter_8_7 = textField_8_7.getText();
+    		letter_9_7 = textField_9_7.getText();
+    		letter_10_7 = textField_10_7.getText();
+    		letter_11_7 = textField_11_7.getText();
+    		//letter_12_7 = textField_12_7.getText();
+    		letter_13_7 = textField_13_7.getText();
+    		letter_14_7 = textField_14_7.getText();
+    		letter_15_7 = textField_15_7.getText();
+			//Row 8
+    		letter_1_8 = textField_1_8.getText();
+    		letter_2_8 = textField_2_8.getText();
+    		letter_3_8 = textField_3_8.getText();
+    		letter_4_8 = textField_4_8.getText();
+    		letter_5_8 = textField_5_8.getText();
+    		letter_6_8 = textField_6_8.getText();
+    		letter_7_8 = textField_7_8.getText();
+    		letter_8_8 = textField_8_8.getText();
+    		letter_9_8 = textField_9_8.getText();
+    		letter_10_8 = textField_10_8.getText();
+    		letter_11_8 = textField_11_8.getText();
+    		letter_12_8 = textField_12_8.getText();
+    		letter_13_8 = textField_13_8.getText();
+    		letter_14_8 = textField_14_8.getText();
+    		letter_15_8 = textField_15_8.getText();
+			//Row 9
+    		letter_1_9 = textField_1_9.getText();
+    		letter_2_9 = textField_2_9.getText();
+    		letter_3_9 = textField_3_9.getText();
+    		//letter_4_9 = textField_4_9.getText();
+    		letter_5_9 = textField_5_9.getText();
+    		letter_6_9 = textField_6_9.getText();
+    		letter_7_9 = textField_7_9.getText();
+    		letter_8_9 = textField_8_9.getText();
+    		letter_9_9 = textField_9_9.getText();
+    		//letter_10_9 = textField_10_9.getText();
+    		//letter_11_9 = textField_11_9.getText();
+    		letter_12_9 = textField_12_9.getText();
+    		letter_13_9 = textField_13_9.getText();
+    		letter_14_9 = textField_14_9.getText();
+    		letter_15_9 = textField_15_9.getText();
+			//Row 10
+    		//letter_1_10 = textField_1_10.getText();
+    		//letter_2_10 = textField_2_10.getText();
+    		letter_3_10 = textField_3_10.getText();
+    		letter_4_10 = textField_4_10.getText();
+    		letter_5_10 = textField_5_10.getText();
+    		letter_6_10 = textField_6_10.getText();
+    		//letter_7_10 = textField_7_10.getText();
+    		//letter_8_10 = textField_8_10.getText();
+    		letter_9_10 = textField_9_10.getText();
+    		letter_10_10 = textField_10_10.getText();
+    		letter_11_10 = textField_11_10.getText();
+    		letter_12_10 = textField_12_10.getText();
+    		letter_13_10 = textField_13_10.getText();
+    		letter_14_10 = textField_14_10.getText();
+    		letter_15_10 = textField_15_10.getText();
+			//Row 11
+    		letter_1_11 = textField_1_11.getText();
+    		letter_2_11 = textField_2_11.getText();
+    		letter_3_11 = textField_3_11.getText();
+    		letter_4_11 = textField_4_11.getText();
+    		letter_5_11 = textField_5_11.getText();
+    		letter_6_11 = textField_6_11.getText();
+    		letter_7_11 = textField_7_11.getText();
+    		letter_8_11 = textField_8_11.getText();
+    		//letter_9_11 = textField_9_11.getText();
+    		letter_10_11 = textField_10_11.getText();
+    		letter_11_11 = textField_11_11.getText();
+    		letter_12_11 = textField_12_11.getText();
+    		//letter_13_11 = textField_13_11.getText();
+    		//letter_14_11 = textField_14_11.getText();
+    		//letter_15_11 = textField_15_11.getText();
+			//Row 12
+    		letter_1_12 = textField_1_12.getText();
+    		letter_2_12 = textField_2_12.getText();
+    		letter_3_12 = textField_3_12.getText();
+    		letter_4_12 = textField_4_12.getText();
+    		//letter_5_12 = textField_5_12.getText();
+    		//letter_6_12 = textField_6_12.getText();
+    		letter_7_12 = textField_7_12.getText();
+    		letter_8_12 = textField_8_12.getText();
+    		letter_9_12 = textField_9_12.getText();
+    		letter_10_12 = textField_10_12.getText();
+    		letter_11_12 = textField_11_12.getText();
+    		//letter_12_12 = textField_12_12.getText();
+    		letter_13_12 = textField_13_12.getText();
+    		letter_14_12 = textField_14_12.getText();
+    		letter_15_12 = textField_15_12.getText();
+			//Row 13
+    		letter_1_13 = textField_1_13.getText();
+    		letter_2_13 = textField_2_13.getText();
+    		letter_3_13 = textField_3_13.getText();
+    		letter_4_13 = textField_4_13.getText();
+    		letter_5_13 = textField_5_13.getText();
+    		letter_6_13 = textField_6_13.getText();
+    		letter_7_13 = textField_7_13.getText();
+    		letter_8_13 = textField_8_13.getText();
+    		letter_9_13 = textField_9_13.getText();
+    		letter_10_13 = textField_10_13.getText();
+    		letter_11_13 = textField_11_13.getText();
+    		letter_12_13 = textField_12_13.getText();
+    		letter_13_13 = textField_13_13.getText();
+    		letter_14_13 = textField_14_13.getText();
+    		letter_15_13 = textField_15_13.getText();
+			//Row 14
+    		letter_1_14 = textField_1_14.getText();
+    		letter_2_14 = textField_2_14.getText();
+    		letter_3_14 = textField_3_14.getText();
+    		//letter_4_14 = textField_4_14.getText();
+    		letter_5_14 = textField_5_14.getText();
+    		letter_6_14 = textField_6_14.getText();
+    		letter_7_14 = textField_7_14.getText();
+    		letter_8_14 = textField_8_14.getText();
+    		letter_9_14 = textField_9_14.getText();
+    		//letter_10_14 = textField_10_14.getText();
+    		letter_11_14 = textField_11_14.getText();
+    		letter_12_14 = textField_12_14.getText();
+    		letter_13_14 = textField_13_14.getText();
+    		letter_14_14 = textField_14_14.getText();
+    		letter_15_14 = textField_15_14.getText();
+			//Row 15
+    		letter_1_15 = textField_1_15.getText();
+    		letter_2_15 = textField_2_15.getText();
+    		letter_3_15 = textField_3_15.getText();
+    		//letter_4_15 = textField_4_15.getText();
+    		letter_5_15 = textField_5_15.getText();
+    		letter_6_15 = textField_6_15.getText();
+    		letter_7_15 = textField_7_15.getText();
+    		letter_8_15 = textField_8_15.getText();
+    		letter_9_15 = textField_9_15.getText();
+    		//letter_10_15 = textField_10_15.getText();
+    		letter_11_15 = textField_11_15.getText();
+    		letter_12_15 = textField_12_15.getText();
+    		letter_13_15 = textField_13_15.getText();
+    		letter_14_15 = textField_14_15.getText();
+    		letter_15_15 = textField_15_15.getText();
+			
+    		String puzzle1 = (letter_1_1 + letter_2_1 + letter_3_1 + letter_4_1 + letter_5_1 + letter_7_1 + letter_8_1 + letter_9_1 + letter_10_1 + letter_11_1 + letter_13_1 + letter_14_1 + letter_15_1 +
+    				letter_1_2 + letter_2_2 + letter_3_2 + letter_4_2 + letter_5_2 + letter_7_2 + letter_8_2 + letter_9_2 + letter_10_2 + letter_11_2 + letter_13_2 + letter_14_2 + letter_15_2 +
+    				letter_1_3 + letter_2_3 + letter_3_3 + letter_4_3 + letter_5_3 + letter_6_3 + letter_7_3 + letter_8_3 + letter_9_3 + letter_10_3 + letter_11_3 + letter_12_3 + letter_13_3 + letter_14_3 + letter_15_3 +
+    				letter_1_4 + letter_2_4 + letter_3_4 + letter_5_4 + letter_6_4 + letter_7_4 + letter_8_4 + letter_9_4 + letter_12_4 + letter_13_4 + letter_14_4 + letter_15_4 +
+    				letter_4_5 + letter_5_5 + letter_6_5 + letter_8_5 + letter_9_5 + letter_10_5 + letter_11_5 + letter_12_5 + letter_13_5 + letter_14_5 + letter_15_5 +
+    				letter_1_6 + letter_2_6 + letter_3_6 + letter_4_6 + letter_5_6 + letter_6_6 + letter_7_6 + letter_10_6 + letter_11_6 + letter_12_6 + letter_13_6 +
+    				letter_1_7 + letter_2_7 + letter_3_7 + letter_4_7 + letter_7_7 + letter_8_7 + letter_9_7 + letter_10_7 + letter_11_7 + letter_13_7 + letter_14_7 + letter_15_7 +
+    				letter_1_8 + letter_2_8 + letter_3_8 + letter_4_8 + letter_5_8 + letter_6_8 + letter_7_8 + letter_8_8 + letter_9_8 + letter_10_8 + letter_11_8 + letter_12_8 + letter_13_8 + letter_14_8 + letter_15_8 +
+    				letter_1_9 + letter_2_9 + letter_3_9 + letter_5_9 + letter_6_9 + letter_7_9 + letter_8_9 + letter_9_9 + letter_12_9 + letter_13_9 + letter_14_9 + letter_15_9 +
+    				letter_3_10 + letter_4_10 + letter_5_10 + letter_6_10 + letter_9_10 + letter_10_10 + letter_11_10 + letter_12_10 + letter_13_10 + letter_14_10 + letter_15_10 +
+    				letter_1_11 + letter_2_11 + letter_3_11 + letter_4_11 + letter_5_11 + letter_6_11 + letter_7_11 + letter_8_11 + letter_10_11 + letter_11_11 + letter_12_11 +
+    				letter_1_12 + letter_2_12 + letter_3_12 + letter_4_12 + letter_7_12 + letter_8_12 + letter_9_12 + letter_10_12 + letter_11_12 + letter_13_12 + letter_14_12 + letter_15_12 +
+    				letter_1_13 + letter_2_13 + letter_3_13 + letter_4_13 + letter_5_13 + letter_6_13 + letter_7_13 + letter_8_13 + letter_9_13 + letter_10_13 + letter_11_13 + letter_12_13 + letter_13_13 + letter_14_13 + letter_15_13 +
+    				letter_1_14 + letter_2_14 + letter_3_14 + letter_5_14 + letter_6_14 + letter_7_14 + letter_8_14 + letter_9_14 + letter_11_14 + letter_12_14 + letter_13_14 + letter_14_14 + letter_15_14 +
+    				letter_1_15 + letter_2_15 + letter_3_15 + letter_5_15 + letter_6_15 + letter_7_15 + letter_8_15 + letter_9_15 + letter_11_15 + letter_12_15 + letter_13_15 + letter_14_15 + letter_15_15);
+    		
+    		if (puzzle1.equals("CRUMBSLAINSTYOATERAORTAPRESINGINGBOTHWAYSIDEBOSOMERSEWETSAPMEETSAVOIDEDSEPTLIPSAREASICUSEEPUNDERTHERUGOWNROASTREELHANSEMBASSYSEATSHOPERSULNAMACAOSMUSADDLINGCLOTHESATEAVIANDOUSENEDMEANYSWISS")) {
+    			JOptionPane.showMessageDialog(null, "All the words are correct. YOU WIN!","!!!! YOU WIN !!!!", JOptionPane.CLOSED_OPTION);
+    		} else {
+    			checkpuz1();
+    			//JOptionPane.showMessageDialog(null, "Some words are incorrect.", "INCORRECT WORDS", JOptionPane.WARNING_MESSAGE);
+    		}
+    		
+			
+		} else if (puzNum==2) {
+			//JOptionPane.showMessageDialog(null, "Puzzle #2","Puzzle #2", JOptionPane.CLOSED_OPTION);
+			//Row 1
+    		letter_1_1 = textField_1_1.getText();
+    		letter_2_1 = textField_2_1.getText();
+    		letter_3_1 = textField_3_1.getText();
+    		letter_4_1 = textField_4_1.getText();
+    		letter_5_1 = textField_5_1.getText();
+    		letter_6_1 = textField_6_1.getText();
+    		letter_7_1 = textField_7_1.getText();
+    		letter_8_1 = textField_8_1.getText();
+    		letter_9_1 = textField_9_1.getText();
+    		letter_10_1 = textField_10_1.getText();
+    		letter_11_1 = textField_11_1.getText();
+    		letter_12_1 = textField_12_1.getText();
+    		letter_13_1 = textField_13_1.getText();
+    		letter_14_1 = textField_14_1.getText();
+    		letter_15_1 = textField_15_1.getText();
+    		//Row 2
+    		letter_1_2 = textField_1_2.getText();
+    		letter_2_2 = textField_2_2.getText();
+    		letter_3_2 = textField_3_2.getText();
+    		letter_4_2 = textField_4_2.getText();
+    		letter_5_2 = textField_5_2.getText();
+    		letter_6_2 = textField_6_2.getText();
+    		letter_7_2 = textField_7_2.getText();
+    		letter_8_2 = textField_8_2.getText();
+    		letter_9_2 = textField_9_2.getText();
+    		letter_10_2 = textField_10_2.getText();
+    		letter_11_2 = textField_11_2.getText();
+    		letter_12_2 = textField_12_2.getText();
+    		letter_13_2 = textField_13_2.getText();
+    		letter_14_2 = textField_14_2.getText();
+    		letter_15_2 = textField_15_2.getText();
+			//Row 3
+    		letter_1_3 = textField_1_3.getText();
+    		letter_2_3 = textField_2_3.getText();
+    		letter_3_3 = textField_3_3.getText();
+    		letter_4_3 = textField_4_3.getText();
+    		letter_5_3 = textField_5_3.getText();
+    		letter_6_3 = textField_6_3.getText();
+    		letter_7_3 = textField_7_3.getText();
+    		letter_8_3 = textField_8_3.getText();
+    		letter_9_3 = textField_9_3.getText();
+    		letter_10_3 = textField_10_3.getText();
+    		letter_11_3 = textField_11_3.getText();
+    		letter_12_3 = textField_12_3.getText();
+    		letter_13_3 = textField_13_3.getText();
+    		letter_14_3 = textField_14_3.getText();
+    		letter_15_3 = textField_15_3.getText();
+			//Row 4
+    		letter_1_4 = textField_1_4.getText();
+    		letter_2_4 = textField_2_4.getText();
+    		letter_3_4 = textField_3_4.getText();
+    		letter_4_4 = textField_4_4.getText();
+    		letter_5_4 = textField_5_4.getText();
+    		letter_6_4 = textField_6_4.getText();
+    		letter_7_4 = textField_7_4.getText();
+    		letter_8_4 = textField_8_4.getText();
+    		letter_9_4 = textField_9_4.getText();
+    		letter_10_4 = textField_10_4.getText();
+    		letter_11_4 = textField_11_4.getText();
+    		letter_12_4 = textField_12_4.getText();
+    		letter_13_4 = textField_13_4.getText();
+    		letter_14_4 = textField_14_4.getText();
+    		letter_15_4 = textField_15_4.getText();
+			//Row 5
+    		letter_1_5 = textField_1_5.getText();
+    		letter_2_5 = textField_2_5.getText();
+    		letter_3_5 = textField_3_5.getText();
+    		letter_4_5 = textField_4_5.getText();
+    		letter_5_5 = textField_5_5.getText();
+    		letter_6_5 = textField_6_5.getText();
+    		letter_7_5 = textField_7_5.getText();
+    		letter_8_5 = textField_8_5.getText();
+    		letter_9_5 = textField_9_5.getText();
+    		letter_10_5 = textField_10_5.getText();
+    		letter_11_5 = textField_11_5.getText();
+    		letter_12_5 = textField_12_5.getText();
+    		letter_13_5 = textField_13_5.getText();
+    		letter_14_5 = textField_14_5.getText();
+    		letter_15_5 = textField_15_5.getText();
+			//Row 6
+    		letter_1_6 = textField_1_6.getText();
+    		letter_2_6 = textField_2_6.getText();
+    		letter_3_6 = textField_3_6.getText();
+    		letter_4_6 = textField_4_6.getText();
+    		letter_5_6 = textField_5_6.getText();
+    		letter_6_6 = textField_6_6.getText();
+    		letter_7_6 = textField_7_6.getText();
+    		letter_8_6 = textField_8_6.getText();
+    		letter_9_6 = textField_9_6.getText();
+    		letter_10_6 = textField_10_6.getText();
+    		letter_11_6 = textField_11_6.getText();
+    		letter_12_6 = textField_12_6.getText();
+    		letter_13_6 = textField_13_6.getText();
+    		letter_14_6 = textField_14_6.getText();
+    		letter_15_6 = textField_15_6.getText();
+			//Row 7
+    		letter_1_7 = textField_1_7.getText();
+    		letter_2_7 = textField_2_7.getText();
+    		letter_3_7 = textField_3_7.getText();
+    		letter_4_7 = textField_4_7.getText();
+    		letter_5_7 = textField_5_7.getText();
+    		letter_6_7 = textField_6_7.getText();
+    		letter_7_7 = textField_7_7.getText();
+    		letter_8_7 = textField_8_7.getText();
+    		letter_9_7 = textField_9_7.getText();
+    		letter_10_7 = textField_10_7.getText();
+    		letter_11_7 = textField_11_7.getText();
+    		letter_12_7 = textField_12_7.getText();
+    		letter_13_7 = textField_13_7.getText();
+    		letter_14_7 = textField_14_7.getText();
+    		letter_15_7 = textField_15_7.getText();
+			//Row 8
+    		letter_1_8 = textField_1_8.getText();
+    		letter_2_8 = textField_2_8.getText();
+    		letter_3_8 = textField_3_8.getText();
+    		letter_4_8 = textField_4_8.getText();
+    		letter_5_8 = textField_5_8.getText();
+    		letter_6_8 = textField_6_8.getText();
+    		letter_7_8 = textField_7_8.getText();
+    		letter_8_8 = textField_8_8.getText();
+    		letter_9_8 = textField_9_8.getText();
+    		letter_10_8 = textField_10_8.getText();
+    		letter_11_8 = textField_11_8.getText();
+    		letter_12_8 = textField_12_8.getText();
+    		letter_13_8 = textField_13_8.getText();
+    		letter_14_8 = textField_14_8.getText();
+    		letter_15_8 = textField_15_8.getText();
+			//Row 9
+    		letter_1_9 = textField_1_9.getText();
+    		letter_2_9 = textField_2_9.getText();
+    		letter_3_9 = textField_3_9.getText();
+    		letter_4_9 = textField_4_9.getText();
+    		letter_5_9 = textField_5_9.getText();
+    		letter_6_9 = textField_6_9.getText();
+    		letter_7_9 = textField_7_9.getText();
+    		letter_8_9 = textField_8_9.getText();
+    		letter_9_9 = textField_9_9.getText();
+    		letter_10_9 = textField_10_9.getText();
+    		letter_11_9 = textField_11_9.getText();
+    		letter_12_9 = textField_12_9.getText();
+    		letter_13_9 = textField_13_9.getText();
+    		letter_14_9 = textField_14_9.getText();
+    		letter_15_9 = textField_15_9.getText();
+			//Row 10
+    		letter_1_10 = textField_1_10.getText();
+    		letter_2_10 = textField_2_10.getText();
+    		letter_3_10 = textField_3_10.getText();
+    		letter_4_10 = textField_4_10.getText();
+    		letter_5_10 = textField_5_10.getText();
+    		letter_6_10 = textField_6_10.getText();
+    		letter_7_10 = textField_7_10.getText();
+    		letter_8_10 = textField_8_10.getText();
+    		letter_9_10 = textField_9_10.getText();
+    		letter_10_10 = textField_10_10.getText();
+    		letter_11_10 = textField_11_10.getText();
+    		letter_12_10 = textField_12_10.getText();
+    		letter_13_10 = textField_13_10.getText();
+    		letter_14_10 = textField_14_10.getText();
+    		letter_15_10 = textField_15_10.getText();
+			//Row 11
+    		letter_1_11 = textField_1_11.getText();
+    		letter_2_11 = textField_2_11.getText();
+    		letter_3_11 = textField_3_11.getText();
+    		letter_4_11 = textField_4_11.getText();
+    		letter_5_11 = textField_5_11.getText();
+    		letter_6_11 = textField_6_11.getText();
+    		letter_7_11 = textField_7_11.getText();
+    		letter_8_11 = textField_8_11.getText();
+    		letter_9_11 = textField_9_11.getText();
+    		letter_10_11 = textField_10_11.getText();
+    		letter_11_11 = textField_11_11.getText();
+    		letter_12_11 = textField_12_11.getText();
+    		letter_13_11 = textField_13_11.getText();
+    		letter_14_11 = textField_14_11.getText();
+    		letter_15_11 = textField_15_11.getText();
+			//Row 12
+    		letter_1_12 = textField_1_12.getText();
+    		letter_2_12 = textField_2_12.getText();
+    		letter_3_12 = textField_3_12.getText();
+    		letter_4_12 = textField_4_12.getText();
+    		letter_5_12 = textField_5_12.getText();
+    		letter_6_12 = textField_6_12.getText();
+    		letter_7_12 = textField_7_12.getText();
+    		letter_8_12 = textField_8_12.getText();
+    		letter_9_12 = textField_9_12.getText();
+    		letter_10_12 = textField_10_12.getText();
+    		letter_11_12 = textField_11_12.getText();
+    		letter_12_12 = textField_12_12.getText();
+    		letter_13_12 = textField_13_12.getText();
+    		letter_14_12 = textField_14_12.getText();
+    		letter_15_12 = textField_15_12.getText();
+			//Row 13
+    		letter_1_13 = textField_1_13.getText();
+    		letter_2_13 = textField_2_13.getText();
+    		letter_3_13 = textField_3_13.getText();
+    		letter_4_13 = textField_4_13.getText();
+    		letter_5_13 = textField_5_13.getText();
+    		letter_6_13 = textField_6_13.getText();
+    		letter_7_13 = textField_7_13.getText();
+    		letter_8_13 = textField_8_13.getText();
+    		letter_9_13 = textField_9_13.getText();
+    		letter_10_13 = textField_10_13.getText();
+    		letter_11_13 = textField_11_13.getText();
+    		letter_12_13 = textField_12_13.getText();
+    		letter_13_13 = textField_13_13.getText();
+    		letter_14_13 = textField_14_13.getText();
+    		letter_15_13 = textField_15_13.getText();
+			//Row 14
+    		letter_1_14 = textField_1_14.getText();
+    		letter_2_14 = textField_2_14.getText();
+    		letter_3_14 = textField_3_14.getText();
+    		letter_4_14 = textField_4_14.getText();
+    		letter_5_14 = textField_5_14.getText();
+    		letter_6_14 = textField_6_14.getText();
+    		letter_7_14 = textField_7_14.getText();
+    		letter_8_14 = textField_8_14.getText();
+    		letter_9_14 = textField_9_14.getText();
+    		letter_10_14 = textField_10_14.getText();
+    		letter_11_14 = textField_11_14.getText();
+    		letter_12_14 = textField_12_14.getText();
+    		letter_13_14 = textField_13_14.getText();
+    		letter_14_14 = textField_14_14.getText();
+    		letter_15_14 = textField_15_14.getText();
+			//Row 15
+    		letter_1_15 = textField_1_15.getText();
+    		letter_2_15 = textField_2_15.getText();
+    		letter_3_15 = textField_3_15.getText();
+    		letter_4_15 = textField_4_15.getText();
+    		letter_5_15 = textField_5_15.getText();
+    		letter_6_15 = textField_6_15.getText();
+    		letter_7_15 = textField_7_15.getText();
+    		letter_8_15 = textField_8_15.getText();
+    		letter_9_15 = textField_9_15.getText();
+    		letter_10_15 = textField_10_15.getText();
+    		letter_11_15 = textField_11_15.getText();
+    		letter_12_15 = textField_12_15.getText();
+    		letter_13_15 = textField_13_15.getText();
+    		letter_14_15 = textField_14_15.getText();
+    		letter_15_15 = textField_15_15.getText();
+    		
+			
+		}
+		
+//////
+	}
+	
+	public static void checkpuz1() {
+		//Across Words
+		Puzzles.whiteb(); //Sets background back to white
+		Puzzles.puzzle1(); //Resets backgrounds to Puzzle1
+		
+		String a_1_1 = letter_1_1 + letter_2_1 + letter_3_1 + letter_4_1 + letter_5_1;
+		String a_7_1 = letter_7_1 + letter_8_1 + letter_9_1 + letter_10_1 + letter_11_1;
+		String a_13_1 = letter_13_1 + letter_14_1 + letter_15_1;
+		String a_1_2 = letter_1_2 + letter_2_2 + letter_3_2 + letter_4_2 + letter_5_2;
+		String a_7_2 = letter_7_2 + letter_8_2 + letter_9_2 + letter_10_2 + letter_11_2;
+		String a_13_2 = letter_13_2 + letter_14_2 + letter_15_2;
+		String a_1_3 = letter_1_3 + letter_2_3 + letter_3_3 + letter_4_3 + letter_5_3 + letter_6_3 + letter_7_3 + letter_8_3 + letter_9_3 + letter_10_3 + letter_11_3 + letter_12_3 + letter_13_3 + letter_14_3 + letter_15_3;
+		String a_1_4 = letter_1_4 + letter_2_4 + letter_3_4;
+		String a_5_4 = letter_5_4 + letter_6_4 + letter_7_4 + letter_8_4 + letter_9_4;
+		String a_12_4 = letter_12_4 + letter_13_4 + letter_14_4 + letter_15_4;
+		String a_4_5 = letter_4_5 + letter_5_5 + letter_6_5;
+		String a_8_5 = letter_8_5 + letter_9_5 + letter_10_5 + letter_11_5 + letter_12_5 + letter_13_5 + letter_14_5 + letter_15_5;
+		String a_1_6 = letter_1_6 + letter_2_6 + letter_3_6 + letter_4_6 + letter_5_6 + letter_6_6 + letter_7_6;
+		String a_10_6 = letter_10_6 + letter_11_6 + letter_12_6 + letter_13_6;
+		String a_1_7 = letter_1_7 + letter_2_7 + letter_3_7 + letter_4_7;
+		String a_7_7 = letter_7_7 + letter_8_7 + letter_9_7 + letter_10_7 + letter_11_7;
+		String a_13_7 = letter_13_7 + letter_14_7 + letter_15_7;
+		String a_1_8 = letter_1_8 + letter_2_8 + letter_3_8 + letter_4_8 + letter_5_8 + letter_6_8 + letter_7_8 + letter_8_8 + letter_9_8 + letter_10_8 + letter_11_8 + letter_12_8 + letter_13_8 + letter_14_8 + letter_15_8;
+		String a_1_9 = letter_1_9 + letter_2_9 + letter_3_9;
+		String a_5_9 = letter_5_9 + letter_6_9 + letter_7_9 + letter_8_9 + letter_9_9;
+		String a_12_9 = letter_12_9 + letter_13_9 + letter_14_9 + letter_15_9;
+		String a_3_10 = letter_3_10 + letter_4_10 + letter_5_10 + letter_6_10;
+		String a_9_10 = letter_9_10 + letter_10_10 + letter_11_10 + letter_12_10 + letter_13_10 + letter_14_10 + letter_15_10;
+		String a_1_11 = letter_1_11 + letter_2_11 + letter_3_11 + letter_4_11 + letter_5_11 + letter_6_11 + letter_7_11 + letter_8_11;
+		String a_10_11 = letter_10_11 + letter_11_11 + letter_12_11;
+		String a_1_12 = letter_1_12 + letter_2_12 + letter_3_12 + letter_4_12;
+		String a_7_12 = letter_7_12 + letter_8_12 + letter_9_12 + letter_10_12 + letter_11_12;
+		String a_13_12 = letter_13_12 + letter_14_12 + letter_15_12;
+		String a_1_13 = letter_1_13 + letter_2_13 + letter_3_13 + letter_4_13 + letter_5_13 + letter_6_13 + letter_7_13 + letter_8_13 + letter_9_13 + letter_10_13 + letter_11_13 + letter_12_13 + letter_13_13 + letter_14_13 + letter_15_13;
+		String a_1_14 = letter_1_14 + letter_2_14 + letter_3_14;
+		String a_5_14 = letter_5_14 + letter_6_14 + letter_7_14 + letter_8_14 + letter_9_14;
+		String a_11_14 = letter_11_14 + letter_12_14 + letter_13_14 + letter_14_14 + letter_15_14;
+		String a_1_15 = letter_1_15 + letter_2_15 + letter_3_15;
+		String a_5_15 = letter_5_15 + letter_6_15 + letter_7_15 + letter_8_15 + letter_9_15;
+		String a_11_15 = letter_11_15 + letter_12_15 + letter_13_15 + letter_14_15 + letter_15_15;
+		//Down Words
+		String d_1_1 = letter_1_1 + letter_1_2 + letter_1_3 + letter_1_4;
+		String d_1_6 = letter_1_6 + letter_1_7 + letter_1_8 + letter_1_9;
+		String d_1_11 = letter_1_11 + letter_1_12 + letter_1_13 + letter_1_14 + letter_1_15;
+		String d_2_1 = letter_2_1 + letter_2_2 + letter_2_3 + letter_2_4;
+		String d_2_6 = letter_2_6 + letter_2_7 + letter_2_8 + letter_2_9;
+		String d_2_11 = letter_2_11 + letter_2_12 + letter_2_13 + letter_2_14 + letter_2_15;
+		String d_3_1 = letter_3_1 + letter_3_2 + letter_3_3 + letter_3_4;
+		String d_3_6 = letter_3_6 + letter_3_7 + letter_3_8 + letter_3_9 + letter_3_10 + letter_3_11 + letter_3_12 + letter_3_13 + letter_3_14 + letter_3_15;
+		String d_4_1 = letter_4_1 + letter_4_2 + letter_4_3;
+		String d_4_5 = letter_4_5 + letter_4_6 + letter_4_7 + letter_4_8;
+		String d_4_10 = letter_4_10 + letter_4_11 + letter_4_12 + letter_4_13;
+		String d_5_1 = letter_5_1 + letter_5_2 + letter_5_3 + letter_5_4 + letter_5_5 + letter_5_6;
+		String d_5_8 = letter_5_8 + letter_5_9 + letter_5_10 + letter_5_11;
+		String d_5_13 = letter_5_13 + letter_5_14 + letter_5_15;
+		String d_6_3 = letter_6_3 + letter_6_4 + letter_6_5 + letter_6_6;
+		String d_6_8 = letter_6_8 + letter_6_9 + letter_6_10 + letter_6_11;
+		String d_6_13 = letter_6_13 + letter_6_14 + letter_6_15;
+		String d_7_1 = letter_7_1 + letter_7_2 + letter_7_3 + letter_7_4;
+		String d_7_6 = letter_7_6 + letter_7_7 + letter_7_8 + letter_7_9;
+		String d_7_11 = letter_7_11 + letter_7_12 + letter_7_13 + letter_7_14 + letter_7_15;
+		String d_8_1 = letter_8_1 + letter_8_2 + letter_8_3 + letter_8_4 + letter_8_5;
+		String d_8_7 = letter_8_7 + letter_8_8 + letter_8_9;
+		String d_8_11 = letter_8_11 + letter_8_12 + letter_8_13 + letter_8_14 + letter_8_15;
+		String d_9_1 = letter_9_1 + letter_9_2 + letter_9_3 + letter_9_4 + letter_9_5;
+		String d_9_7 = letter_9_7 + letter_9_8 + letter_9_9 + letter_9_10;
+		String d_9_12 = letter_9_12 + letter_9_13 + letter_9_14 + letter_9_15;
+		String d_10_1 = letter_10_1 + letter_10_2 + letter_10_3;
+		String d_10_5 = letter_10_5 + letter_10_6 + letter_10_7 + letter_10_8;
+		String d_10_10 = letter_10_10 + letter_10_11 + letter_10_12 + letter_10_13;
+		String d_11_1 = letter_11_1 + letter_11_2 + letter_11_3;
+		String d_11_5 = letter_11_5 + letter_11_6 + letter_11_7 + letter_11_8;
+		String d_11_10 = letter_11_10 + letter_11_11 + letter_11_12 + letter_11_13 + letter_11_14 + letter_11_15;
+		String d_12_3 = letter_12_3 + letter_12_4 + letter_12_5 + letter_12_6;
+		String d_12_8 = letter_12_8 + letter_12_9 + letter_12_10 + letter_12_11;
+		String d_12_13 = letter_12_13 + letter_12_14 + letter_12_15;
+		String d_13_1 = letter_13_1 + letter_13_2 + letter_13_3 + letter_13_4 + letter_13_5 + letter_13_6 + letter_13_7 + letter_13_8 + letter_13_9 + letter_13_10;
+		String d_13_12 = letter_13_12 + letter_13_13 + letter_13_14 + letter_13_15;
+		String d_14_1 = letter_14_1 + letter_14_2 + letter_14_3 + letter_14_4 + letter_14_5;
+		String d_14_7 = letter_14_7 + letter_14_8 + letter_14_9 + letter_14_10;
+		String d_14_12 = letter_14_12 + letter_14_13 + letter_14_14 + letter_14_15;
+		String d_15_1 = letter_15_1 + letter_15_2 + letter_15_3 + letter_15_4 + letter_15_5;
+		String d_15_7 = letter_15_7 + letter_15_8 + letter_15_9 + letter_15_10;
+		String d_15_12 = letter_15_12 + letter_15_13 + letter_15_14 + letter_15_15;	
+		
+		if (a_1_1.equals("CRUMB")) {
+			//textField_1_1.setBackground(new Color(0, 128, 0));
+			textField_1_1.setBackground(new Color(153, 255, 204));
+			textField_2_1.setBackground(new Color(153, 255, 204));
+			textField_3_1.setBackground(new Color(153, 255, 204));
+			textField_4_1.setBackground(new Color(153, 255, 204));
+			textField_5_1.setBackground(new Color(153, 255, 204));
+		} if (a_7_1.equals("SLAIN")) {
+			textField_7_1.setBackground(new Color(153, 255, 204));
+			textField_8_1.setBackground(new Color(153, 255, 204));
+			textField_9_1.setBackground(new Color(153, 255, 204));
+			textField_10_1.setBackground(new Color(153, 255, 204));
+			textField_11_1.setBackground(new Color(153, 255, 204));
+		} if (a_13_1.equals("STY")) {
+			textField_13_1.setBackground(new Color(153, 255, 204));
+			textField_14_1.setBackground(new Color(153, 255, 204));
+			textField_15_1.setBackground(new Color(153, 255, 204));
+		} if (a_1_2.equals("OATER")) {
+			textField_1_2.setBackground(new Color(153, 255, 204));
+			textField_2_2.setBackground(new Color(153, 255, 204));
+			textField_3_2.setBackground(new Color(153, 255, 204));
+			textField_4_2.setBackground(new Color(153, 255, 204));
+			textField_5_2.setBackground(new Color(153, 255, 204));
+		} if (a_7_2.equals("AORTA")) {
+			textField_7_2.setBackground(new Color(153, 255, 204));
+			textField_8_2.setBackground(new Color(153, 255, 204));
+			textField_9_2.setBackground(new Color(153, 255, 204));
+			textField_10_2.setBackground(new Color(153, 255, 204));
+			textField_11_2.setBackground(new Color(153, 255, 204));
+		} if (a_13_2.equals("PRE")) {
+			textField_13_2.setBackground(new Color(153, 255, 204));
+			textField_14_2.setBackground(new Color(153, 255, 204));
+			textField_15_2.setBackground(new Color(153, 255, 204));
+		} if (a_1_3.equals("SINGINGBOTHWAYS")) {
+			textField_1_3.setBackground(new Color(153, 255, 204));
+			textField_2_3.setBackground(new Color(153, 255, 204));
+			textField_3_3.setBackground(new Color(153, 255, 204));
+			textField_4_3.setBackground(new Color(153, 255, 204));
+			textField_5_3.setBackground(new Color(153, 255, 204));
+			textField_6_3.setBackground(new Color(153, 255, 204));
+			textField_7_3.setBackground(new Color(153, 255, 204));
+			textField_8_3.setBackground(new Color(153, 255, 204));
+			textField_9_3.setBackground(new Color(153, 255, 204));
+			textField_10_3.setBackground(new Color(153, 255, 204));
+			textField_11_3.setBackground(new Color(153, 255, 204));
+			textField_12_3.setBackground(new Color(153, 255, 204));
+			textField_13_3.setBackground(new Color(153, 255, 204));
+			textField_14_3.setBackground(new Color(153, 255, 204));
+			textField_15_3.setBackground(new Color(153, 255, 204));
+		} if (a_1_4.equals("IDE")) {
+			textField_1_4.setBackground(new Color(153, 255, 204));
+			textField_2_4.setBackground(new Color(153, 255, 204));
+			textField_3_4.setBackground(new Color(153, 255, 204));
+		} if (a_5_4.equals("BOSOM")) {
+			textField_5_4.setBackground(new Color(153, 255, 204));
+			textField_6_4.setBackground(new Color(153, 255, 204));
+			textField_7_4.setBackground(new Color(153, 255, 204));
+			textField_8_4.setBackground(new Color(153, 255, 204));
+			textField_9_4.setBackground(new Color(153, 255, 204));
+		} if (a_12_4.equals("ERSE")) {
+			textField_12_4.setBackground(new Color(153, 255, 204));
+			textField_13_4.setBackground(new Color(153, 255, 204));
+			textField_14_4.setBackground(new Color(153, 255, 204));
+			textField_15_4.setBackground(new Color(153, 255, 204));
+		} if (a_4_5.equals("WET")) {
+			textField_4_5.setBackground(new Color(153, 255, 204));
+			textField_5_5.setBackground(new Color(153, 255, 204));
+			textField_6_5.setBackground(new Color(153, 255, 204));
+		} if (a_8_5.equals("SAPMEETS")) {
+			textField_8_5.setBackground(new Color(153, 255, 204));
+			textField_9_5.setBackground(new Color(153, 255, 204));
+			textField_10_5.setBackground(new Color(153, 255, 204));
+			textField_11_5.setBackground(new Color(153, 255, 204));
+			textField_12_5.setBackground(new Color(153, 255, 204));
+			textField_13_5.setBackground(new Color(153, 255, 204));
+			textField_14_5.setBackground(new Color(153, 255, 204));
+			textField_15_5.setBackground(new Color(153, 255, 204));
+		} if (a_1_6.equals("AVOIDED")) {
+			textField_1_6.setBackground(new Color(153, 255, 204));
+			textField_2_6.setBackground(new Color(153, 255, 204));
+			textField_3_6.setBackground(new Color(153, 255, 204));
+			textField_4_6.setBackground(new Color(153, 255, 204));
+			textField_5_6.setBackground(new Color(153, 255, 204));
+			textField_6_6.setBackground(new Color(153, 255, 204));
+			textField_7_6.setBackground(new Color(153, 255, 204));
+		} if (a_10_6.equals("SEPT")) {
+			textField_10_6.setBackground(new Color(153, 255, 204));
+			textField_11_6.setBackground(new Color(153, 255, 204));
+			textField_12_6.setBackground(new Color(153, 255, 204));
+			textField_13_6.setBackground(new Color(153, 255, 204));
+		} if (a_1_7.equals("LIPS")) {
+			textField_1_7.setBackground(new Color(153, 255, 204));
+			textField_2_7.setBackground(new Color(153, 255, 204));
+			textField_3_7.setBackground(new Color(153, 255, 204));
+			textField_4_7.setBackground(new Color(153, 255, 204));
+		} if (a_7_7.equals("AREAS")) {
+			textField_7_7.setBackground(new Color(153, 255, 204));
+			textField_8_7.setBackground(new Color(153, 255, 204));
+			textField_9_7.setBackground(new Color(153, 255, 204));
+			textField_10_7.setBackground(new Color(153, 255, 204));
+			textField_11_7.setBackground(new Color(153, 255, 204));
+		} if (a_13_7.equals("ICU")) {
+			textField_13_7.setBackground(new Color(153, 255, 204));
+			textField_14_7.setBackground(new Color(153, 255, 204));
+			textField_15_7.setBackground(new Color(153, 255, 204));
+		} if (a_1_8.equals("SEEPUNDERTHERUG")) {
+			textField_1_8.setBackground(new Color(153, 255, 204));
+			textField_2_8.setBackground(new Color(153, 255, 204));
+			textField_3_8.setBackground(new Color(153, 255, 204));
+			textField_4_8.setBackground(new Color(153, 255, 204));
+			textField_5_8.setBackground(new Color(153, 255, 204));
+			textField_6_8.setBackground(new Color(153, 255, 204));
+			textField_7_8.setBackground(new Color(153, 255, 204));
+			textField_8_8.setBackground(new Color(153, 255, 204));
+			textField_9_8.setBackground(new Color(153, 255, 204));
+			textField_10_8.setBackground(new Color(153, 255, 204));
+			textField_11_8.setBackground(new Color(153, 255, 204));
+			textField_12_8.setBackground(new Color(153, 255, 204));
+			textField_13_8.setBackground(new Color(153, 255, 204));
+			textField_14_8.setBackground(new Color(153, 255, 204));
+			textField_15_8.setBackground(new Color(153, 255, 204));
+		} if (a_1_9.equals("OWN")) {
+			textField_1_9.setBackground(new Color(153, 255, 204));
+			textField_2_9.setBackground(new Color(153, 255, 204));
+			textField_3_9.setBackground(new Color(153, 255, 204));
+		} if (a_5_9.equals("ROAST")) {
+			textField_5_9.setBackground(new Color(153, 255, 204));
+			textField_6_9.setBackground(new Color(153, 255, 204));
+			textField_7_9.setBackground(new Color(153, 255, 204));
+			textField_8_9.setBackground(new Color(153, 255, 204));
+			textField_9_9.setBackground(new Color(153, 255, 204));
+		} if (a_12_9.equals("REEL")) {
+			textField_12_9.setBackground(new Color(153, 255, 204));
+			textField_13_9.setBackground(new Color(153, 255, 204));
+			textField_14_9.setBackground(new Color(153, 255, 204));
+			textField_15_9.setBackground(new Color(153, 255, 204));
+		} if (a_3_10.equals("HANS")) {
+			textField_3_10.setBackground(new Color(153, 255, 204));
+			textField_4_10.setBackground(new Color(153, 255, 204));
+			textField_5_10.setBackground(new Color(153, 255, 204));
+			textField_6_10.setBackground(new Color(153, 255, 204));
+		} if (a_9_10.equals("EMBASSY")) {
+			textField_9_10.setBackground(new Color(153, 255, 204));
+			textField_10_10.setBackground(new Color(153, 255, 204));
+			textField_11_10.setBackground(new Color(153, 255, 204));
+			textField_12_10.setBackground(new Color(153, 255, 204));
+			textField_13_10.setBackground(new Color(153, 255, 204));
+			textField_14_10.setBackground(new Color(153, 255, 204));
+			textField_15_10.setBackground(new Color(153, 255, 204));
+		} if (a_1_11.equals("SEATSHOP")) {
+			textField_1_11.setBackground(new Color(153, 255, 204));
+			textField_2_11.setBackground(new Color(153, 255, 204));
+			textField_3_11.setBackground(new Color(153, 255, 204));
+			textField_4_11.setBackground(new Color(153, 255, 204));
+			textField_5_11.setBackground(new Color(153, 255, 204));
+			textField_6_11.setBackground(new Color(153, 255, 204));
+			textField_7_11.setBackground(new Color(153, 255, 204));
+			textField_8_11.setBackground(new Color(153, 255, 204));
+		} if (a_10_11.equals("ERS")) {
+			textField_10_11.setBackground(new Color(153, 255, 204));
+			textField_11_11.setBackground(new Color(153, 255, 204));
+			textField_12_11.setBackground(new Color(153, 255, 204));
+		} if (a_1_12.equals("ULNA")) {
+			textField_1_12.setBackground(new Color(153, 255, 204));
+			textField_2_12.setBackground(new Color(153, 255, 204));
+			textField_3_12.setBackground(new Color(153, 255, 204));
+			textField_4_12.setBackground(new Color(153, 255, 204));
+		} if (a_7_12.equals("MACAO")) {
+			textField_7_12.setBackground(new Color(153, 255, 204));
+			textField_8_12.setBackground(new Color(153, 255, 204));
+			textField_9_12.setBackground(new Color(153, 255, 204));
+			textField_10_12.setBackground(new Color(153, 255, 204));
+			textField_11_12.setBackground(new Color(153, 255, 204));
+		} if (a_13_12.equals("SMU")) {
+			textField_13_12.setBackground(new Color(153, 255, 204));
+			textField_14_12.setBackground(new Color(153, 255, 204));
+			textField_15_12.setBackground(new Color(153, 255, 204));
+		} if (a_1_13.equals("SADDLINGCLOTHES")) {
+			textField_1_13.setBackground(new Color(153, 255, 204));
+			textField_2_13.setBackground(new Color(153, 255, 204));
+			textField_3_13.setBackground(new Color(153, 255, 204));
+			textField_4_13.setBackground(new Color(153, 255, 204));
+			textField_5_13.setBackground(new Color(153, 255, 204));
+			textField_6_13.setBackground(new Color(153, 255, 204));
+			textField_7_13.setBackground(new Color(153, 255, 204));
+			textField_8_13.setBackground(new Color(153, 255, 204));
+			textField_9_13.setBackground(new Color(153, 255, 204));
+			textField_10_13.setBackground(new Color(153, 255, 204));
+			textField_11_13.setBackground(new Color(153, 255, 204));
+			textField_12_13.setBackground(new Color(153, 255, 204));
+			textField_13_13.setBackground(new Color(153, 255, 204));
+			textField_14_13.setBackground(new Color(153, 255, 204));
+			textField_15_13.setBackground(new Color(153, 255, 204));
+		} if (a_1_14.equals("ATE")) {
+			textField_1_14.setBackground(new Color(153, 255, 204));
+			textField_2_14.setBackground(new Color(153, 255, 204));
+			textField_3_14.setBackground(new Color(153, 255, 204));
+		} if (a_5_14.equals("AVIAN")) {
+			textField_5_14.setBackground(new Color(153, 255, 204));
+			textField_6_14.setBackground(new Color(153, 255, 204));
+			textField_7_14.setBackground(new Color(153, 255, 204));
+			textField_8_14.setBackground(new Color(153, 255, 204));
+			textField_9_14.setBackground(new Color(153, 255, 204));
+		} if (a_11_14.equals("DOUSE")) {
+			textField_11_14.setBackground(new Color(153, 255, 204));
+			textField_12_14.setBackground(new Color(153, 255, 204));
+			textField_13_14.setBackground(new Color(153, 255, 204));
+			textField_14_14.setBackground(new Color(153, 255, 204));
+			textField_15_14.setBackground(new Color(153, 255, 204));
+		} if (a_1_15.equals("NED")) {
+			textField_1_15.setBackground(new Color(153, 255, 204));
+			textField_2_15.setBackground(new Color(153, 255, 204));
+			textField_3_15.setBackground(new Color(153, 255, 204));
+		} if (a_5_15.equals("MEANY")) {
+			textField_5_15.setBackground(new Color(153, 255, 204));
+			textField_6_15.setBackground(new Color(153, 255, 204));
+			textField_7_15.setBackground(new Color(153, 255, 204));
+			textField_8_15.setBackground(new Color(153, 255, 204));
+			textField_9_15.setBackground(new Color(153, 255, 204));
+		} if (a_11_15.equals("SWISS")) {
+			textField_11_15.setBackground(new Color(153, 255, 204));
+			textField_12_15.setBackground(new Color(153, 255, 204));
+			textField_13_15.setBackground(new Color(153, 255, 204));
+			textField_14_15.setBackground(new Color(153, 255, 204));
+			textField_15_15.setBackground(new Color(153, 255, 204));
+		} if (d_1_1.equals("COSI")) {
+			textField_1_1.setBackground(new Color(153, 255, 204));
+			textField_1_2.setBackground(new Color(153, 255, 204));
+			textField_1_3.setBackground(new Color(153, 255, 204));
+			textField_1_4.setBackground(new Color(153, 255, 204));
+		} if (d_1_6.equals("ALSO")) {
+			textField_1_6.setBackground(new Color(153, 255, 204));
+			textField_1_7.setBackground(new Color(153, 255, 204));
+			textField_1_8.setBackground(new Color(153, 255, 204));
+			textField_1_9.setBackground(new Color(153, 255, 204));
+		} if (d_1_11.equals("SUSAN")) {
+			textField_1_11.setBackground(new Color(153, 255, 204));
+			textField_1_12.setBackground(new Color(153, 255, 204));
+			textField_1_13.setBackground(new Color(153, 255, 204));
+			textField_1_14.setBackground(new Color(153, 255, 204));
+			textField_1_15.setBackground(new Color(153, 255, 204));
+		} if (d_2_1.equals("RAID")) {
+			textField_2_1.setBackground(new Color(153, 255, 204));
+			textField_2_2.setBackground(new Color(153, 255, 204));
+			textField_2_3.setBackground(new Color(153, 255, 204));
+			textField_2_4.setBackground(new Color(153, 255, 204));
+		} if (d_2_6.equals("VIEW")) {
+			textField_2_6.setBackground(new Color(153, 255, 204));
+			textField_2_7.setBackground(new Color(153, 255, 204));
+			textField_2_8.setBackground(new Color(153, 255, 204));
+			textField_2_9.setBackground(new Color(153, 255, 204));
+		} if (d_2_11.equals("ELATE")) {
+			textField_2_11.setBackground(new Color(153, 255, 204));
+			textField_2_12.setBackground(new Color(153, 255, 204));
+			textField_2_13.setBackground(new Color(153, 255, 204));
+			textField_2_14.setBackground(new Color(153, 255, 204));
+			textField_2_15.setBackground(new Color(153, 255, 204));
+		} if (d_3_1.equals("UTNE")) {
+			textField_3_1.setBackground(new Color(153, 255, 204));
+			textField_3_2.setBackground(new Color(153, 255, 204));
+			textField_3_3.setBackground(new Color(153, 255, 204));
+			textField_3_4.setBackground(new Color(153, 255, 204));
+		} if (d_3_6.equals("OPENHANDED")) {
+			textField_3_6.setBackground(new Color(153, 255, 204));
+			textField_3_7.setBackground(new Color(153, 255, 204));
+			textField_3_8.setBackground(new Color(153, 255, 204));
+			textField_3_9.setBackground(new Color(153, 255, 204));
+			textField_3_10.setBackground(new Color(153, 255, 204));
+			textField_3_11.setBackground(new Color(153, 255, 204));
+			textField_3_12.setBackground(new Color(153, 255, 204));
+			textField_3_13.setBackground(new Color(153, 255, 204));
+			textField_3_14.setBackground(new Color(153, 255, 204));
+			textField_3_15.setBackground(new Color(153, 255, 204));
+		} if (d_4_1.equals("MEG")) {
+			textField_4_1.setBackground(new Color(153, 255, 204));
+			textField_4_2.setBackground(new Color(153, 255, 204));
+			textField_4_3.setBackground(new Color(153, 255, 204));
+		} if (d_4_5.equals("WISP")) {
+			textField_4_5.setBackground(new Color(153, 255, 204));
+			textField_4_6.setBackground(new Color(153, 255, 204));
+			textField_4_7.setBackground(new Color(153, 255, 204));
+			textField_4_8.setBackground(new Color(153, 255, 204));
+		} if (d_4_10.equals("ATAD")) {
+			textField_4_10.setBackground(new Color(153, 255, 204));
+			textField_4_11.setBackground(new Color(153, 255, 204));
+			textField_4_12.setBackground(new Color(153, 255, 204));
+			textField_4_13.setBackground(new Color(153, 255, 204));
+		} if (d_5_1.equals("BRIBED")) {
+			textField_5_1.setBackground(new Color(153, 255, 204));
+			textField_5_2.setBackground(new Color(153, 255, 204));
+			textField_5_3.setBackground(new Color(153, 255, 204));
+			textField_5_4.setBackground(new Color(153, 255, 204));
+			textField_5_5.setBackground(new Color(153, 255, 204));
+			textField_5_6.setBackground(new Color(153, 255, 204));
+		} if (d_5_8.equals("URNS")) {
+			textField_5_8.setBackground(new Color(153, 255, 204));
+			textField_5_9.setBackground(new Color(153, 255, 204));
+			textField_5_10.setBackground(new Color(153, 255, 204));
+			textField_5_11.setBackground(new Color(153, 255, 204));
+		} if (d_5_13.equals("LAM")) {
+			textField_5_13.setBackground(new Color(153, 255, 204));
+			textField_5_14.setBackground(new Color(153, 255, 204));
+			textField_5_15.setBackground(new Color(153, 255, 204));
+		} if (d_6_3.equals("NOTE")) {
+			textField_6_3.setBackground(new Color(153, 255, 204));
+			textField_6_4.setBackground(new Color(153, 255, 204));
+			textField_6_5.setBackground(new Color(153, 255, 204));
+			textField_6_6.setBackground(new Color(153, 255, 204));
+		} if (d_6_8.equals("NOSH")) {
+			textField_6_8.setBackground(new Color(153, 255, 204));
+			textField_6_9.setBackground(new Color(153, 255, 204));
+			textField_6_10.setBackground(new Color(153, 255, 204));
+			textField_6_11.setBackground(new Color(153, 255, 204));
+		} if (d_6_13.equals("IVE")) {
+			textField_6_13.setBackground(new Color(153, 255, 204));
+			textField_6_14.setBackground(new Color(153, 255, 204));
+			textField_6_15.setBackground(new Color(153, 255, 204));
+		} if (d_7_1.equals("SAGS")) {
+			textField_7_1.setBackground(new Color(153, 255, 204));
+			textField_7_2.setBackground(new Color(153, 255, 204));
+			textField_7_3.setBackground(new Color(153, 255, 204));
+			textField_7_4.setBackground(new Color(153, 255, 204));
+		} if (d_7_6.equals("DADA")) {
+			textField_7_6.setBackground(new Color(153, 255, 204));
+			textField_7_7.setBackground(new Color(153, 255, 204));
+			textField_7_8.setBackground(new Color(153, 255, 204));
+			textField_7_9.setBackground(new Color(153, 255, 204));
+		} if (d_7_11.equals("OMNIA")) {
+			textField_7_11.setBackground(new Color(153, 255, 204));
+			textField_7_12.setBackground(new Color(153, 255, 204));
+			textField_7_13.setBackground(new Color(153, 255, 204));
+			textField_7_14.setBackground(new Color(153, 255, 204));
+			textField_7_15.setBackground(new Color(153, 255, 204));
+		} if (d_8_1.equals("LOBOS")) {
+			textField_8_1.setBackground(new Color(153, 255, 204));
+			textField_8_2.setBackground(new Color(153, 255, 204));
+			textField_8_3.setBackground(new Color(153, 255, 204));
+			textField_8_4.setBackground(new Color(153, 255, 204));
+			textField_8_5.setBackground(new Color(153, 255, 204));
+		} if (d_8_7.equals("RES")) {
+			textField_8_7.setBackground(new Color(153, 255, 204));
+			textField_8_8.setBackground(new Color(153, 255, 204));
+			textField_8_9.setBackground(new Color(153, 255, 204));
+		} if (d_8_11.equals("PAGAN")) {
+			textField_8_11.setBackground(new Color(153, 255, 204));
+			textField_8_12.setBackground(new Color(153, 255, 204));
+			textField_8_13.setBackground(new Color(153, 255, 204));
+			textField_8_14.setBackground(new Color(153, 255, 204));
+			textField_8_15.setBackground(new Color(153, 255, 204));
+		} if (d_9_1.equals("AROMA")) {
+			textField_9_1.setBackground(new Color(153, 255, 204));
+			textField_9_2.setBackground(new Color(153, 255, 204));
+			textField_9_3.setBackground(new Color(153, 255, 204));
+			textField_9_4.setBackground(new Color(153, 255, 204));
+			textField_9_5.setBackground(new Color(153, 255, 204));
+		} if (d_9_7.equals("ERTE")) {
+			textField_9_7.setBackground(new Color(153, 255, 204));
+			textField_9_8.setBackground(new Color(153, 255, 204));
+			textField_9_9.setBackground(new Color(153, 255, 204));
+			textField_9_10.setBackground(new Color(153, 255, 204));
+		} if (d_9_12.equals("CCNY")) {
+			textField_9_12.setBackground(new Color(153, 255, 204));
+			textField_9_13.setBackground(new Color(153, 255, 204));
+			textField_9_14.setBackground(new Color(153, 255, 204));
+			textField_9_15.setBackground(new Color(153, 255, 204));
+		} if (d_10_1.equals("ITT")) {
+			textField_10_1.setBackground(new Color(153, 255, 204));
+			textField_10_2.setBackground(new Color(153, 255, 204));
+			textField_10_3.setBackground(new Color(153, 255, 204));
+		} if (d_10_5.equals("PSAT")) {
+			textField_10_5.setBackground(new Color(153, 255, 204));
+			textField_10_6.setBackground(new Color(153, 255, 204));
+			textField_10_7.setBackground(new Color(153, 255, 204));
+			textField_10_8.setBackground(new Color(153, 255, 204));
+		} if (d_10_10.equals("MEAL")) {
+			textField_10_10.setBackground(new Color(153, 255, 204));
+			textField_10_11.setBackground(new Color(153, 255, 204));
+			textField_10_12.setBackground(new Color(153, 255, 204));
+			textField_10_13.setBackground(new Color(153, 255, 204));
+		} if (d_11_1.equals("NAH")) {
+			textField_11_1.setBackground(new Color(153, 255, 204));
+			textField_11_2.setBackground(new Color(153, 255, 204));
+			textField_11_3.setBackground(new Color(153, 255, 204));
+		} if (d_11_5.equals("MESH")) {
+			textField_11_5.setBackground(new Color(153, 255, 204));
+			textField_11_6.setBackground(new Color(153, 255, 204));
+			textField_11_7.setBackground(new Color(153, 255, 204));
+			textField_11_8.setBackground(new Color(153, 255, 204));
+		} if (d_11_10.equals("BROODS")) {
+			textField_11_10.setBackground(new Color(153, 255, 204));
+			textField_11_11.setBackground(new Color(153, 255, 204));
+			textField_11_12.setBackground(new Color(153, 255, 204));
+			textField_11_13.setBackground(new Color(153, 255, 204));
+			textField_11_14.setBackground(new Color(153, 255, 204));
+			textField_11_15.setBackground(new Color(153, 255, 204));
+		} if (d_12_3.equals("WEEP")) {
+			textField_12_3.setBackground(new Color(153, 255, 204));
+			textField_12_4.setBackground(new Color(153, 255, 204));
+			textField_12_5.setBackground(new Color(153, 255, 204));
+			textField_12_6.setBackground(new Color(153, 255, 204));
+		} if (d_12_8.equals("ERAS")) {
+			textField_12_8.setBackground(new Color(153, 255, 204));
+			textField_12_9.setBackground(new Color(153, 255, 204));
+			textField_12_10.setBackground(new Color(153, 255, 204));
+			textField_12_11.setBackground(new Color(153, 255, 204));
+		} if (d_12_13.equals("TOW")) {
+			textField_12_13.setBackground(new Color(153, 255, 204));
+			textField_12_14.setBackground(new Color(153, 255, 204));
+			textField_12_15.setBackground(new Color(153, 255, 204));
+		} if (d_13_1.equals("SPARETIRES")) {
+			textField_13_1.setBackground(new Color(153, 255, 204));
+			textField_13_2.setBackground(new Color(153, 255, 204));
+			textField_13_3.setBackground(new Color(153, 255, 204));
+			textField_13_4.setBackground(new Color(153, 255, 204));
+			textField_13_5.setBackground(new Color(153, 255, 204));
+			textField_13_6.setBackground(new Color(153, 255, 204));
+			textField_13_7.setBackground(new Color(153, 255, 204));
+			textField_13_8.setBackground(new Color(153, 255, 204));
+			textField_13_9.setBackground(new Color(153, 255, 204));
+			textField_13_10.setBackground(new Color(153, 255, 204));			
+		} if (d_13_12.equals("SHUI")) {
+			textField_13_12.setBackground(new Color(153, 255, 204));
+			textField_13_13.setBackground(new Color(153, 255, 204));
+			textField_13_14.setBackground(new Color(153, 255, 204));
+			textField_13_15.setBackground(new Color(153, 255, 204));
+		} if (d_14_1.equals("TRYST")) {
+			textField_14_1.setBackground(new Color(153, 255, 204));
+			textField_14_2.setBackground(new Color(153, 255, 204));
+			textField_14_3.setBackground(new Color(153, 255, 204));
+			textField_14_4.setBackground(new Color(153, 255, 204));
+			textField_14_5.setBackground(new Color(153, 255, 204));
+		} if (d_14_7.equals("CUES")) {
+			textField_14_7.setBackground(new Color(153, 255, 204));
+			textField_14_8.setBackground(new Color(153, 255, 204));
+			textField_14_9.setBackground(new Color(153, 255, 204));
+			textField_14_10.setBackground(new Color(153, 255, 204));
+		} if (d_14_12.equals("MESS")) {
+			textField_14_12.setBackground(new Color(153, 255, 204));
+			textField_14_13.setBackground(new Color(153, 255, 204));
+			textField_14_14.setBackground(new Color(153, 255, 204));
+			textField_14_15.setBackground(new Color(153, 255, 204));
+		} if (d_15_1.equals("YESES")) {
+			textField_15_1.setBackground(new Color(153, 255, 204));
+			textField_15_2.setBackground(new Color(153, 255, 204));
+			textField_15_3.setBackground(new Color(153, 255, 204));
+			textField_15_4.setBackground(new Color(153, 255, 204));
+			textField_15_5.setBackground(new Color(153, 255, 204));
+		} if (d_15_7.equals("UGLY")) {
+			textField_15_7.setBackground(new Color(153, 255, 204));
+			textField_15_8.setBackground(new Color(153, 255, 204));
+			textField_15_9.setBackground(new Color(153, 255, 204));
+			textField_15_10.setBackground(new Color(153, 255, 204));
+		} if (d_15_12.equals("USES")) {
+			textField_15_12.setBackground(new Color(153, 255, 204));
+			textField_15_13.setBackground(new Color(153, 255, 204));
+			textField_15_14.setBackground(new Color(153, 255, 204));
+			textField_15_15.setBackground(new Color(153, 255, 204));
+		} else {
+			//JOptionPane.showMessageDialog(null, "Some words are still incorrect.", "INCORRECT WORDS", JOptionPane.WARNING_MESSAGE);
+		}
+	
+			
+	}
+	
+	
+}
