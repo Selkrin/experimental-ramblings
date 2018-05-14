@@ -1,0 +1,1354 @@
+package WordGuess;
+
+//Hangman style game. Made by Michael Clark
+
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+import java.awt.Color;
+import javax.swing.SwingConstants;
+import java.awt.Cursor;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import java.awt.BorderLayout;
+
+public class WordGuess {
+
+	private JFrame frame;
+	private JTextField textfieldWins;
+	private JTextField textfieldLosses;
+	private JTextField txtWord1;
+	private Integer wins = 0;
+	private Integer losses = 0;
+	private JTextField textfieldTries;
+	private Integer tries = 6;
+	private String Category = "Category: ";
+	private ImageIcon defaultimg = new ImageIcon("images\\Animation.png");
+	private ImageIcon winimg = new ImageIcon("images\\Win.gif");
+	private ImageIcon loseimg = new ImageIcon("images\\Lose.gif");
+	private JButton btnA;
+	private JButton btnB;
+	private JButton btnC;
+	private JButton btnD;
+	private JButton btnE;
+	private JButton btnF;
+	private JButton btnG;
+	private JButton btnH;
+	private JButton btnI;
+	private JButton btnJ;
+	private JButton btnK;
+	private JButton btnL;
+	private JButton btnM;
+	private JButton btnN;
+	private JButton btnO;
+	private JButton btnP;
+	private JButton btnQ;
+	private JButton btnR;
+	private JButton btnS;
+	private JButton btnT;
+	private JButton btnU;
+	private JButton btnV;
+	private JButton btnW;
+	private JButton btnX;
+	private JButton btnY;
+	private JButton btnZ;
+	private ImageIcon imgA = new ImageIcon("images\\A.png");
+	private ImageIcon imgB = new ImageIcon("images\\B.png");
+	private ImageIcon imgC = new ImageIcon("images\\C.png");
+	private ImageIcon imgD = new ImageIcon("images\\D.png");
+	private ImageIcon imgE = new ImageIcon("images\\E.png");
+	private ImageIcon imgF = new ImageIcon("images\\F.png");
+	private ImageIcon imgG = new ImageIcon("images\\G.png");
+	private ImageIcon imgH = new ImageIcon("images\\H.png");
+	private ImageIcon imgI = new ImageIcon("images\\I.png");
+	private ImageIcon imgJ = new ImageIcon("images\\J.png");
+	private ImageIcon imgK = new ImageIcon("images\\K.png");
+	private ImageIcon imgL = new ImageIcon("images\\L.png");
+	private ImageIcon imgM = new ImageIcon("images\\M.png");
+	private ImageIcon imgN = new ImageIcon("images\\N.png");
+	private ImageIcon imgO = new ImageIcon("images\\O.png");
+	private ImageIcon imgP = new ImageIcon("images\\P.png");
+	private ImageIcon imgQ = new ImageIcon("images\\Q.png");
+	private ImageIcon imgR = new ImageIcon("images\\R.png");
+	private ImageIcon imgS = new ImageIcon("images\\S.png");
+	private ImageIcon imgT = new ImageIcon("images\\T.png");
+	private ImageIcon imgU = new ImageIcon("images\\U.png");
+	private ImageIcon imgV = new ImageIcon("images\\V.png");
+	private ImageIcon imgW = new ImageIcon("images\\W.png");
+	private ImageIcon imgX = new ImageIcon("images\\X.png");
+	private ImageIcon imgY = new ImageIcon("images\\Y.png");
+	private ImageIcon imgZ = new ImageIcon("images\\Z.png");
+	private JLabel labelimg;
+	private String wordTemp;
+	private char[] word;
+	private char[] wordBlank;
+	private boolean wrongChoice;
+	private String word1;
+	private JTextField txtCategory;
+	private Integer catNum;
+	private JTextField textField_Chars;
+	private Integer chars;
+	private JLabel lblBackgroundimg;
+	
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					WordGuess window = new WordGuess();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public WordGuess() {
+		initialize();
+		gameScore();
+	}
+	
+	private void gameScore() {
+		textfieldWins.setText(String.valueOf(wins));
+		textfieldLosses.setText(String.valueOf(losses));
+		
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame("Word Guess");
+		frame.getContentPane().setBackground(Color.GRAY);
+		frame.setBounds(100, 100, 1400, 822);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null); //Center on Screen
+		frame.getContentPane().setLayout(null);
+		
+		JButton btnNewgame = new JButton("New Game");
+		btnNewgame.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnNewgame.setFocusPainted(false);
+		btnNewgame.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnNewgame.setForeground(Color.WHITE);
+		btnNewgame.setBackground(Color.BLACK);
+		btnNewgame.setToolTipText("Start new game.");
+		btnNewgame.setFont(new Font("EraserDust", Font.PLAIN, 50));
+		btnNewgame.setBounds(1090, 590, 240, 60);
+		btnNewgame.setOpaque(false); //Added to make button Transparent
+		btnNewgame.setContentAreaFilled(false); //Added to make button Transparent
+		btnNewgame.setBorderPainted(false); //Added to make button Transparent
+		frame.getContentPane().add(btnNewgame);
+		
+		JButton btnExit = new JButton("Exit");
+		btnExit.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnExit.setFocusPainted(false);
+		btnExit.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnExit.setToolTipText("Exit game");
+		btnExit.setOpaque(false);
+		btnExit.setForeground(Color.WHITE);
+		btnExit.setFont(new Font("EraserDust", Font.PLAIN, 50));
+		btnExit.setContentAreaFilled(false);
+		btnExit.setBorderPainted(false);
+		btnExit.setBackground(Color.BLACK);
+		btnExit.setBounds(1140, 660, 140, 60);
+		frame.getContentPane().add(btnExit);
+		
+		JLabel lblWins = new JLabel("Wins:");
+		lblWins.setForeground(Color.GREEN);
+		lblWins.setBackground(Color.BLACK);
+		lblWins.setHorizontalTextPosition(SwingConstants.CENTER);
+		lblWins.setFont(new Font("EraserDust", Font.PLAIN, 50));
+		lblWins.setBounds(800, 590, 110, 60);
+		frame.getContentPane().add(lblWins);
+		
+		JLabel lblLosses = new JLabel("Losses:");
+		lblLosses.setHorizontalTextPosition(SwingConstants.CENTER);
+		lblLosses.setForeground(Color.RED);
+		lblLosses.setFont(new Font("EraserDust", Font.PLAIN, 50));
+		lblLosses.setBackground(Color.BLACK);
+		lblLosses.setBounds(770, 660, 170, 60);
+		frame.getContentPane().add(lblLosses);
+		
+		textfieldWins = new JTextField();
+		textfieldWins.setOpaque(false);
+		textfieldWins.setEditable(false);
+		textfieldWins.setAutoscrolls(false);
+		textfieldWins.setHorizontalAlignment(SwingConstants.CENTER);
+		textfieldWins.setText("0");
+		textfieldWins.setBackground(Color.BLACK);
+		textfieldWins.setForeground(Color.GREEN);
+		textfieldWins.setFont(new Font("EraserDust", Font.PLAIN, 50));
+		textfieldWins.setBounds(930, 590, 80, 60);
+		textfieldWins.setBorder(null);
+		frame.getContentPane().add(textfieldWins);
+
+		textfieldLosses = new JTextField();
+		textfieldLosses.setOpaque(false);
+		textfieldLosses.setEditable(false);
+		textfieldLosses.setAutoscrolls(false);
+		textfieldLosses.setHorizontalAlignment(SwingConstants.CENTER);
+		textfieldLosses.setText("0");
+		textfieldLosses.setBackground(Color.BLACK);
+		textfieldLosses.setForeground(Color.RED);
+		textfieldLosses.setFont(new Font("EraserDust", Font.PLAIN, 50));
+		textfieldLosses.setBounds(930, 660, 80, 60);
+		textfieldLosses.setBorder(null);
+		frame.getContentPane().add(textfieldLosses);
+		
+		btnA = new JButton("A");
+		btnA.setEnabled(false);
+		btnA.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnA.setToolTipText("");
+		btnA.setOpaque(false);
+		btnA.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnA.setForeground(Color.WHITE);
+		btnA.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnA.setFocusPainted(false);
+		btnA.setContentAreaFilled(false);
+		btnA.setBorderPainted(false);
+		btnA.setBackground(Color.BLACK);
+		btnA.setBounds(630, 100, 100, 100);
+		frame.getContentPane().add(btnA);
+		
+		btnB = new JButton("B");
+		btnB.setEnabled(false);
+		btnB.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnB.setToolTipText("");
+		btnB.setOpaque(false);
+		btnB.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnB.setForeground(Color.WHITE);
+		btnB.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnB.setFocusPainted(false);
+		btnB.setContentAreaFilled(false);
+		btnB.setBorderPainted(false);
+		btnB.setBackground(Color.BLACK);
+		btnB.setBounds(730, 100, 100, 100);
+		frame.getContentPane().add(btnB);
+		
+		btnC = new JButton("C");
+		btnC.setEnabled(false);
+		btnC.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnC.setToolTipText("");
+		btnC.setOpaque(false);
+		btnC.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnC.setForeground(Color.WHITE);
+		btnC.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnC.setFocusPainted(false);
+		btnC.setContentAreaFilled(false);
+		btnC.setBorderPainted(false);
+		btnC.setBackground(Color.BLACK);
+		btnC.setBounds(830, 100, 100, 100);
+		frame.getContentPane().add(btnC);
+		
+		btnD = new JButton("D");
+		btnD.setEnabled(false);
+		btnD.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnD.setToolTipText("");
+		btnD.setOpaque(false);
+		btnD.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnD.setForeground(Color.WHITE);
+		btnD.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnD.setFocusPainted(false);
+		btnD.setContentAreaFilled(false);
+		btnD.setBorderPainted(false);
+		btnD.setBackground(Color.BLACK);
+		btnD.setBounds(930, 100, 100, 100);
+		frame.getContentPane().add(btnD);
+		
+		btnE = new JButton("E");
+		btnE.setEnabled(false);
+		btnE.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnE.setToolTipText("");
+		btnE.setOpaque(false);
+		btnE.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnE.setForeground(Color.WHITE);
+		btnE.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnE.setFocusPainted(false);
+		btnE.setContentAreaFilled(false);
+		btnE.setBorderPainted(false);
+		btnE.setBackground(Color.BLACK);
+		btnE.setBounds(1030, 100, 100, 100);
+		frame.getContentPane().add(btnE);
+		
+		btnF = new JButton("F");
+		btnF.setEnabled(false);
+		btnF.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnF.setToolTipText("");
+		btnF.setOpaque(false);
+		btnF.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnF.setForeground(Color.WHITE);
+		btnF.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnF.setFocusPainted(false);
+		btnF.setContentAreaFilled(false);
+		btnF.setBorderPainted(false);
+		btnF.setBackground(Color.BLACK);
+		btnF.setBounds(1130, 100, 100, 100);
+		frame.getContentPane().add(btnF);
+		
+		btnG = new JButton("G");
+		btnG.setEnabled(false);
+		btnG.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnG.setToolTipText("");
+		btnG.setOpaque(false);
+		btnG.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnG.setForeground(Color.WHITE);
+		btnG.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnG.setFocusPainted(false);
+		btnG.setContentAreaFilled(false);
+		btnG.setBorderPainted(false);
+		btnG.setBackground(Color.BLACK);
+		btnG.setBounds(1230, 100, 100, 100);
+		frame.getContentPane().add(btnG);
+		
+		btnH = new JButton("H");
+		btnH.setEnabled(false);
+		btnH.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnH.setToolTipText("");
+		btnH.setOpaque(false);
+		btnH.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnH.setForeground(Color.WHITE);
+		btnH.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnH.setFocusPainted(false);
+		btnH.setContentAreaFilled(false);
+		btnH.setBorderPainted(false);
+		btnH.setBackground(Color.BLACK);
+		btnH.setBounds(630, 200, 100, 100);
+		frame.getContentPane().add(btnH);
+		
+		btnI = new JButton("I");
+		btnI.setEnabled(false);
+		btnI.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnI.setToolTipText("");
+		btnI.setOpaque(false);
+		btnI.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnI.setForeground(Color.WHITE);
+		btnI.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnI.setFocusPainted(false);
+		btnI.setContentAreaFilled(false);
+		btnI.setBorderPainted(false);
+		btnI.setBackground(Color.BLACK);
+		btnI.setBounds(730, 200, 100, 100);
+		frame.getContentPane().add(btnI);
+		
+		btnJ = new JButton("J");
+		btnJ.setEnabled(false);
+		btnJ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnJ.setToolTipText("");
+		btnJ.setOpaque(false);
+		btnJ.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnJ.setForeground(Color.WHITE);
+		btnJ.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnJ.setFocusPainted(false);
+		btnJ.setContentAreaFilled(false);
+		btnJ.setBorderPainted(false);
+		btnJ.setBackground(Color.BLACK);
+		btnJ.setBounds(830, 200, 100, 100);
+		frame.getContentPane().add(btnJ);
+		
+		btnK = new JButton("K");
+		btnK.setEnabled(false);
+		btnK.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnK.setToolTipText("");
+		btnK.setOpaque(false);
+		btnK.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnK.setForeground(Color.WHITE);
+		btnK.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnK.setFocusPainted(false);
+		btnK.setContentAreaFilled(false);
+		btnK.setBorderPainted(false);
+		btnK.setBackground(Color.BLACK);
+		btnK.setBounds(930, 200, 100, 100);
+		frame.getContentPane().add(btnK);
+		
+		btnL = new JButton("L");
+		btnL.setEnabled(false);
+		btnL.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnL.setToolTipText("");
+		btnL.setOpaque(false);
+		btnL.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnL.setForeground(Color.WHITE);
+		btnL.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnL.setFocusPainted(false);
+		btnL.setContentAreaFilled(false);
+		btnL.setBorderPainted(false);
+		btnL.setBackground(Color.BLACK);
+		btnL.setBounds(1030, 200, 100, 100);
+		frame.getContentPane().add(btnL);
+		
+		btnM = new JButton("M");
+		btnM.setEnabled(false);
+		btnM.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnM.setToolTipText("");
+		btnM.setOpaque(false);
+		btnM.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnM.setForeground(Color.WHITE);
+		btnM.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnM.setFocusPainted(false);
+		btnM.setContentAreaFilled(false);
+		btnM.setBorderPainted(false);
+		btnM.setBackground(Color.BLACK);
+		btnM.setBounds(1130, 200, 100, 100);
+		frame.getContentPane().add(btnM);
+		
+		btnN = new JButton("N");
+		btnN.setEnabled(false);
+		btnN.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnN.setToolTipText("");
+		btnN.setOpaque(false);
+		btnN.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnN.setForeground(Color.WHITE);
+		btnN.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnN.setFocusPainted(false);
+		btnN.setContentAreaFilled(false);
+		btnN.setBorderPainted(false);
+		btnN.setBackground(Color.BLACK);
+		btnN.setBounds(1230, 200, 100, 100);
+		frame.getContentPane().add(btnN);
+		
+		btnO = new JButton("O");
+		btnO.setEnabled(false);
+		btnO.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnO.setToolTipText("");
+		btnO.setOpaque(false);
+		btnO.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnO.setForeground(Color.WHITE);
+		btnO.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnO.setFocusPainted(false);
+		btnO.setContentAreaFilled(false);
+		btnO.setBorderPainted(false);
+		btnO.setBackground(Color.BLACK);
+		btnO.setBounds(680, 300, 100, 100);
+		frame.getContentPane().add(btnO);
+		
+		btnP = new JButton("P");
+		btnP.setEnabled(false);
+		btnP.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnP.setToolTipText("");
+		btnP.setOpaque(false);
+		btnP.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnP.setForeground(Color.WHITE);
+		btnP.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnP.setFocusPainted(false);
+		btnP.setContentAreaFilled(false);
+		btnP.setBorderPainted(false);
+		btnP.setBackground(Color.BLACK);
+		btnP.setBounds(780, 300, 100, 100);
+		frame.getContentPane().add(btnP);
+		
+		btnQ = new JButton("Q");
+		btnQ.setEnabled(false);
+		btnQ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnQ.setToolTipText("");
+		btnQ.setOpaque(false);
+		btnQ.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnQ.setForeground(Color.WHITE);
+		btnQ.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnQ.setFocusPainted(false);
+		btnQ.setContentAreaFilled(false);
+		btnQ.setBorderPainted(false);
+		btnQ.setBackground(Color.BLACK);
+		btnQ.setBounds(880, 300, 100, 100);
+		frame.getContentPane().add(btnQ);
+		
+		btnR = new JButton("R");
+		btnR.setEnabled(false);
+		btnR.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnR.setToolTipText("");
+		btnR.setOpaque(false);
+		btnR.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnR.setForeground(Color.WHITE);
+		btnR.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnR.setFocusPainted(false);
+		btnR.setContentAreaFilled(false);
+		btnR.setBorderPainted(false);
+		btnR.setBackground(Color.BLACK);
+		btnR.setBounds(980, 300, 100, 100);
+		frame.getContentPane().add(btnR);
+		
+		btnS = new JButton("S");
+		btnS.setEnabled(false);
+		btnS.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnS.setToolTipText("");
+		btnS.setOpaque(false);
+		btnS.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnS.setForeground(Color.WHITE);
+		btnS.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnS.setFocusPainted(false);
+		btnS.setContentAreaFilled(false);
+		btnS.setBorderPainted(false);
+		btnS.setBackground(Color.BLACK);
+		btnS.setBounds(1080, 300, 100, 100);
+		frame.getContentPane().add(btnS);
+		
+		btnT = new JButton("T");
+		btnT.setEnabled(false);
+		btnT.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnT.setToolTipText("");
+		btnT.setOpaque(false);
+		btnT.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnT.setForeground(Color.WHITE);
+		btnT.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnT.setFocusPainted(false);
+		btnT.setContentAreaFilled(false);
+		btnT.setBorderPainted(false);
+		btnT.setBackground(Color.BLACK);
+		btnT.setBounds(1180, 300, 100, 100);
+		frame.getContentPane().add(btnT);
+		
+		btnU = new JButton("U");
+		btnU.setEnabled(false);
+		btnU.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnU.setToolTipText("");
+		btnU.setOpaque(false);
+		btnU.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnU.setForeground(Color.WHITE);
+		btnU.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnU.setFocusPainted(false);
+		btnU.setContentAreaFilled(false);
+		btnU.setBorderPainted(false);
+		btnU.setBackground(Color.BLACK);
+		btnU.setBounds(680, 400, 100, 100);
+		frame.getContentPane().add(btnU);
+		
+		btnV = new JButton("V");
+		btnV.setEnabled(false);
+		btnV.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnV.setToolTipText("");
+		btnV.setOpaque(false);
+		btnV.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnV.setForeground(Color.WHITE);
+		btnV.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnV.setFocusPainted(false);
+		btnV.setContentAreaFilled(false);
+		btnV.setBorderPainted(false);
+		btnV.setBackground(Color.BLACK);
+		btnV.setBounds(780, 400, 100, 100);
+		frame.getContentPane().add(btnV);
+		
+		btnW = new JButton("W");
+		btnW.setEnabled(false);
+		btnW.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnW.setToolTipText("");
+		btnW.setOpaque(false);
+		btnW.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnW.setForeground(Color.WHITE);
+		btnW.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnW.setFocusPainted(false);
+		btnW.setContentAreaFilled(false);
+		btnW.setBorderPainted(false);
+		btnW.setBackground(Color.BLACK);
+		btnW.setBounds(880, 400, 100, 100);
+		frame.getContentPane().add(btnW);
+		
+		btnX = new JButton("X");
+		btnX.setEnabled(false);
+		btnX.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnX.setToolTipText("");
+		btnX.setOpaque(false);
+		btnX.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnX.setForeground(Color.WHITE);
+		btnX.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnX.setFocusPainted(false);
+		btnX.setContentAreaFilled(false);
+		btnX.setBorderPainted(false);
+		btnX.setBackground(Color.BLACK);
+		btnX.setBounds(980, 400, 100, 100);
+		frame.getContentPane().add(btnX);
+		
+		btnY = new JButton("Y");
+		btnY.setEnabled(false);
+		btnY.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnY.setToolTipText("");
+		btnY.setOpaque(false);
+		btnY.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnY.setForeground(Color.WHITE);
+		btnY.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnY.setFocusPainted(false);
+		btnY.setContentAreaFilled(false);
+		btnY.setBorderPainted(false);
+		btnY.setBackground(Color.BLACK);
+		btnY.setBounds(1080, 400, 100, 100);
+		frame.getContentPane().add(btnY);
+		
+		btnZ = new JButton("Z");
+		btnZ.setEnabled(false);
+		btnZ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnZ.setToolTipText("");
+		btnZ.setOpaque(false);
+		btnZ.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnZ.setForeground(Color.WHITE);
+		btnZ.setFont(new Font("EraserDust", Font.PLAIN, 70));
+		btnZ.setFocusPainted(false);
+		btnZ.setContentAreaFilled(false);
+		btnZ.setBorderPainted(false);
+		btnZ.setBackground(Color.BLACK);
+		btnZ.setBounds(1180, 400, 100, 100);
+		frame.getContentPane().add(btnZ);
+		
+		txtWord1 = new JTextField();
+		txtWord1.setOpaque(false);
+		txtWord1.setHorizontalAlignment(SwingConstants.CENTER);
+		txtWord1.setForeground(Color.WHITE);
+		txtWord1.setFont(new Font("EraserDust", Font.PLAIN, 40));
+		txtWord1.setEditable(false);
+		txtWord1.setBorder(null);
+		txtWord1.setBackground(Color.BLACK);
+		txtWord1.setAutoscrolls(false);
+		txtWord1.setBounds(70, 624, 540, 60);
+		frame.getContentPane().add(txtWord1);
+		
+		txtCategory = new JTextField();
+		txtCategory.setBounds(680, 60, 600, 40);
+		frame.getContentPane().add(txtCategory);
+		txtCategory.setText("Category:");
+		txtCategory.setOpaque(false);
+		txtCategory.setHorizontalAlignment(SwingConstants.CENTER);
+		txtCategory.setForeground(Color.CYAN);
+		txtCategory.setFont(new Font("EraserDust", Font.PLAIN, 30));
+		txtCategory.setEditable(false);
+		txtCategory.setBorder(null);
+		txtCategory.setBackground(Color.BLACK);
+		txtCategory.setAutoscrolls(false);
+		
+		JPanel panelimg = new JPanel();
+		panelimg.setOpaque(false);
+		panelimg.setBounds(80, 78, 520, 526);
+		frame.getContentPane().add(panelimg);
+		panelimg.setLayout(new BorderLayout(0, 0));
+		
+		labelimg = new JLabel("");
+		labelimg.setHorizontalAlignment(SwingConstants.CENTER);
+		panelimg.add(labelimg, BorderLayout.CENTER);
+		labelimg.setIcon(defaultimg);
+		
+		textfieldTries = new JTextField();
+		textfieldTries.setOpaque(false);
+		textfieldTries.setHorizontalAlignment(SwingConstants.CENTER);
+		textfieldTries.setForeground(Color.YELLOW);
+		textfieldTries.setFont(new Font("EraserDust", Font.PLAIN, 50));
+		textfieldTries.setEditable(false);
+		textfieldTries.setBorder(null);
+		textfieldTries.setBackground(Color.BLACK);
+		textfieldTries.setAutoscrolls(false);
+		textfieldTries.setBounds(740, 520, 60, 60);
+		frame.getContentPane().add(textfieldTries);
+		
+		JLabel lblTries = new JLabel("Tries:");
+		lblTries.setToolTipText("The number of guess left before you lose.");
+		lblTries.setHorizontalTextPosition(SwingConstants.CENTER);
+		lblTries.setForeground(Color.YELLOW);
+		lblTries.setFont(new Font("EraserDust", Font.PLAIN, 50));
+		lblTries.setBackground(Color.BLACK);
+		lblTries.setBounds(620, 520, 140, 60);
+		frame.getContentPane().add(lblTries);
+		
+		JLabel lblChars = new JLabel("Characters:");
+		lblChars.setToolTipText("The number of Characters in the word.");
+		lblChars.setHorizontalTextPosition(SwingConstants.CENTER);
+		lblChars.setForeground(Color.YELLOW);
+		lblChars.setFont(new Font("EraserDust", Font.PLAIN, 30));
+		lblChars.setBackground(Color.BLACK);
+		lblChars.setBounds(240, 690, 160, 40);
+		frame.getContentPane().add(lblChars);
+		
+		textField_Chars = new JTextField();
+		textField_Chars.setOpaque(false);
+		textField_Chars.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_Chars.setForeground(Color.YELLOW);
+		textField_Chars.setFont(new Font("EraserDust", Font.PLAIN, 30));
+		textField_Chars.setEditable(false);
+		textField_Chars.setBorder(null);
+		textField_Chars.setBackground(Color.BLACK);
+		textField_Chars.setAutoscrolls(false);
+		textField_Chars.setBounds(400, 690, 40, 40);
+		frame.getContentPane().add(textField_Chars);
+		
+		//Background Image
+		JPanel panel_background = new JPanel();
+		panel_background.setBounds(0, -6, 1400, 800);
+		frame.getContentPane().add(panel_background);
+		lblBackgroundimg = new JLabel("");
+		panel_background.add(lblBackgroundimg);
+		ImageIcon background = new ImageIcon("images\\Blackboard.png");
+		lblBackgroundimg.setIcon(background);
+		
+		btnNewgame.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+					frame = new JFrame("New Game");
+					if (JOptionPane.showConfirmDialog(frame, "Are you sure you want to start a New Game?", "Word Guess", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
+						labelimg.setIcon(defaultimg);
+						//Set button back to default
+						btnA.setIcon(null);
+						btnA.setText("A");
+						btnA.setEnabled(true);
+						btnB.setIcon(null);
+						btnB.setText("B");
+						btnB.setEnabled(true);
+						btnC.setIcon(null);
+						btnC.setText("C");
+						btnC.setEnabled(true);
+						btnD.setIcon(null);
+						btnD.setText("D");
+						btnD.setEnabled(true);
+						btnE.setIcon(null);
+						btnE.setText("E");
+						btnE.setEnabled(true);
+						btnF.setIcon(null);
+						btnF.setText("F");
+						btnF.setEnabled(true);
+						btnG.setIcon(null);
+						btnG.setText("G");
+						btnG.setEnabled(true);
+						btnH.setIcon(null);
+						btnH.setText("H");
+						btnH.setEnabled(true);
+						btnI.setIcon(null);
+						btnI.setText("I");
+						btnI.setEnabled(true);
+						btnJ.setIcon(null);
+						btnJ.setText("J");
+						btnJ.setEnabled(true);
+						btnK.setIcon(null);
+						btnK.setText("K");
+						btnK.setEnabled(true);
+						btnL.setIcon(null);
+						btnL.setText("L");
+						btnL.setEnabled(true);
+						btnM.setIcon(null);
+						btnM.setText("M");
+						btnM.setEnabled(true);
+						btnN.setIcon(null);
+						btnN.setText("N");
+						btnN.setEnabled(true);
+						btnO.setIcon(null);
+						btnO.setText("O");
+						btnO.setEnabled(true);
+						btnP.setIcon(null);
+						btnP.setText("P");
+						btnP.setEnabled(true);
+						btnQ.setIcon(null);
+						btnQ.setText("Q");
+						btnQ.setEnabled(true);
+						btnR.setIcon(null);
+						btnR.setText("R");
+						btnR.setEnabled(true);
+						btnS.setIcon(null);
+						btnS.setText("S");
+						btnS.setEnabled(true);
+						btnT.setIcon(null);
+						btnT.setText("T");
+						btnT.setEnabled(true);
+						btnU.setIcon(null);
+						btnU.setText("U");
+						btnU.setEnabled(true);
+						btnV.setIcon(null);
+						btnV.setText("V");
+						btnV.setEnabled(true);
+						btnW.setIcon(null);
+						btnW.setText("W");
+						btnW.setEnabled(true);
+						btnX.setIcon(null);
+						btnX.setText("X");
+						btnX.setEnabled(true);
+						btnY.setIcon(null);
+						btnY.setText("Y");
+						btnY.setEnabled(true);
+						btnZ.setIcon(null);
+						btnZ.setText("Z");
+						btnZ.setEnabled(true);
+						tries = 6;
+						textfieldTries.setText(String.valueOf(tries));
+						//Set new puzzle
+						category();
+						word();
+				
+				}
+			}
+		});
+		
+		btnExit.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				frame = new JFrame("Exit");
+				if (JOptionPane.showConfirmDialog(frame, "Confirm if you want to exit.", "Word Guess", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
+					System.exit(0);
+				}	
+			}
+		});
+		
+		
+		btnA.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				//Turn off button and change to erased image
+				btnA.setText(null);
+				btnA.setIcon(imgA);
+				btnA.setEnabled(false);
+				char ch = 'A';
+				lettercheck(ch);
+			}
+		});
+		
+		btnB.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnB.setText(null);
+				btnB.setIcon(imgB);
+				btnB.setEnabled(false);
+				char ch = 'B';
+				lettercheck(ch);
+			}
+		});
+		
+		btnC.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnC.setText(null);
+				btnC.setIcon(imgC);
+				btnC.setEnabled(false);
+				char ch = 'C';
+				lettercheck(ch);
+			}
+		});
+		
+		btnD.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnD.setText(null);
+				btnD.setIcon(imgD);
+				btnD.setEnabled(false);
+				char ch = 'D';
+				lettercheck(ch);
+			}
+		});
+		
+		btnE.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnE.setText(null);
+				btnE.setIcon(imgE);
+				btnE.setEnabled(false);
+				char ch = 'E';
+				lettercheck(ch);
+			}
+		});
+		
+		btnF.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnF.setText(null);
+				btnF.setIcon(imgF);
+				btnF.setEnabled(false);
+				char ch = 'F';
+				lettercheck(ch);
+			}
+		});
+		
+		btnG.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnG.setText(null);
+				btnG.setIcon(imgG);
+				btnG.setEnabled(false);
+				char ch = 'G';
+				lettercheck(ch);
+			}
+		});
+		
+		btnH.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnH.setText(null);
+				btnH.setIcon(imgH);
+				btnH.setEnabled(false);
+				char ch = 'H';
+				lettercheck(ch);
+			}
+		});
+		
+		btnI.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnI.setText(null);
+				btnI.setIcon(imgI);
+				btnI.setEnabled(false);
+				char ch = 'I';
+				lettercheck(ch);
+			}
+		});
+		
+		btnJ.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnJ.setText(null);
+				btnJ.setIcon(imgJ);
+				btnJ.setEnabled(false);
+				char ch = 'J';
+				lettercheck(ch);
+			}
+		});
+		
+		btnK.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnK.setText(null);
+				btnK.setIcon(imgK);
+				btnK.setEnabled(false);
+				char ch = 'K';
+				lettercheck(ch);
+			}
+		});
+		
+		btnL.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnL.setText(null);
+				btnL.setIcon(imgL);
+				btnL.setEnabled(false);
+				char ch = 'L';
+				lettercheck(ch);
+			}
+		});
+		
+		btnM.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnM.setText(null);
+				btnM.setIcon(imgM);
+				btnM.setEnabled(false);
+				char ch = 'M';
+				lettercheck(ch);
+			}
+		});
+		
+		btnN.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnN.setText(null);
+				btnN.setIcon(imgN);
+				btnN.setEnabled(false);
+				char ch = 'N';
+				lettercheck(ch);
+			}
+		});
+		
+		btnO.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnO.setText(null);
+				btnO.setIcon(imgO);
+				btnO.setEnabled(false);
+				char ch = 'O';
+				lettercheck(ch);
+			}
+		});
+		
+		btnP.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnP.setText(null);
+				btnP.setIcon(imgP);
+				btnP.setEnabled(false);
+				char ch = 'P';
+				lettercheck(ch);
+			}
+		});
+		
+		btnQ.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnQ.setText(null);
+				btnQ.setIcon(imgQ);
+				btnQ.setEnabled(false);
+				char ch = 'Q';
+				lettercheck(ch);
+			}
+		});
+		
+		btnR.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnR.setText(null);
+				btnR.setIcon(imgR);
+				btnR.setEnabled(false);
+				char ch = 'R';
+				lettercheck(ch);
+			}
+		});
+		
+		btnS.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnS.setText(null);
+				btnS.setIcon(imgS);
+				btnS.setEnabled(false);
+				char ch = 'S';
+				lettercheck(ch);
+			}
+		});
+		
+		btnT.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnT.setText(null);
+				btnT.setIcon(imgT);
+				btnT.setEnabled(false);
+				char ch = 'T';
+				lettercheck(ch);
+			}
+		});
+		
+		btnU.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnU.setText(null);
+				btnU.setIcon(imgU);
+				btnU.setEnabled(false);
+				char ch = 'U';
+				lettercheck(ch);
+			}
+		});
+		
+		btnV.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnV.setText(null);
+				btnV.setIcon(imgV);
+				btnV.setEnabled(false);
+				char ch = 'V';
+				lettercheck(ch);
+			}
+		});
+		
+		btnW.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnW.setText(null);
+				btnW.setIcon(imgW);
+				btnW.setEnabled(false);
+				char ch = 'W';
+				lettercheck(ch);
+			}
+		});
+		
+		btnX.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnX.setText(null);
+				btnX.setIcon(imgX);
+				btnX.setEnabled(false);
+				char ch = 'X';
+				lettercheck(ch);
+			}
+		});
+		
+		btnY.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnY.setText(null);
+				btnY.setIcon(imgY);
+				btnY.setEnabled(false);
+				char ch = 'Y';
+				lettercheck(ch);
+			}
+		});
+		
+		btnZ.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				btnZ.setText(null);
+				btnZ.setIcon(imgZ);
+				btnZ.setEnabled(false);
+				char ch = 'Z';
+				lettercheck(ch);
+			}
+		});
+	}
+	
+	private void category() {
+		Random gen = new Random();
+		catNum = gen.nextInt(9);
+		switch (catNum) {
+		case 0:
+			txtCategory.setText(Category + "Countries");
+			break;
+		case 1:
+			txtCategory.setText(Category + "Flowers");
+			break;
+		case 2:
+			txtCategory.setText(Category + "Fruits");
+			break;
+		case 3:
+			txtCategory.setText(Category + "Vegetables");
+			break;
+		case 4:
+			txtCategory.setText(Category + "Dinosaurs");
+			break;
+		case 5:
+			txtCategory.setText(Category + "Animals");
+			break;
+		case 6:
+			txtCategory.setText(Category + "Sports");
+			break;
+		case 7:
+			txtCategory.setText(Category + "Musical Instruments");
+			break;
+		case 8:
+			txtCategory.setText(Category + "Famous Landmarks");
+			break;
+		default: break;
+			
+		}
+	}
+	
+	
+	
+	private void lettercheck(char ch) {
+		wrongChoice = false;
+		//Check for Letter in word, and add the letter to the Blank word
+		for (int i = 0; i < word.length; i++) {
+			if (word[i] == ch) {
+				wordBlank[i] = ch;
+			}			
+		}
+		
+		//Check if the letter is in the word, and if not, set wrongChoice to true
+		for (int i = 0; i < word.length; i++) {
+			if(word[i] == ch && wrongChoice == false){
+				wrongChoice = true; 
+			}
+		}
+		
+		if (wrongChoice == false) {
+			tries--;
+			textfieldTries.setText(String.valueOf(tries));
+			if (tries == 0 ) {
+				loseGame();
+			}
+		}
+		
+		//Send the updated string back to the textField
+		word1 = String.valueOf(wordBlank);
+		txtWord1.setText(word1);
+		//System.out.println("word1 - " + word1 + " / wordTemp - " + wordTemp);
+		//String check = txtWord1.getText();
+		if (word1.equals(wordTemp)) {
+			winGame();
+		}
+	}
+	
+	private void winGame () {
+		btnA.setEnabled(false);
+		btnB.setEnabled(false);
+		btnC.setEnabled(false);
+		btnD.setEnabled(false);
+		btnE.setEnabled(false);
+		btnF.setEnabled(false);
+		btnG.setEnabled(false);
+		btnH.setEnabled(false);
+		btnI.setEnabled(false);
+		btnJ.setEnabled(false);
+		btnK.setEnabled(false);
+		btnL.setEnabled(false);
+		btnM.setEnabled(false);
+		btnN.setEnabled(false);
+		btnO.setEnabled(false);
+		btnP.setEnabled(false);
+		btnQ.setEnabled(false);
+		btnR.setEnabled(false);
+		btnS.setEnabled(false);
+		btnT.setEnabled(false);
+		btnU.setEnabled(false);
+		btnV.setEnabled(false);
+		btnW.setEnabled(false);
+		btnX.setEnabled(false);
+		btnY.setEnabled(false);
+		btnZ.setEnabled(false);
+		labelimg.setIcon(winimg);
+		wins++;
+		textfieldWins.setText(String.valueOf(wins));	
+	}
+
+	private void loseGame () {
+		btnA.setEnabled(false);
+		btnB.setEnabled(false);
+		btnC.setEnabled(false);
+		btnD.setEnabled(false);
+		btnE.setEnabled(false);
+		btnF.setEnabled(false);
+		btnG.setEnabled(false);
+		btnH.setEnabled(false);
+		btnI.setEnabled(false);
+		btnJ.setEnabled(false);
+		btnK.setEnabled(false);
+		btnL.setEnabled(false);
+		btnM.setEnabled(false);
+		btnN.setEnabled(false);
+		btnO.setEnabled(false);
+		btnP.setEnabled(false);
+		btnQ.setEnabled(false);
+		btnR.setEnabled(false);
+		btnS.setEnabled(false);
+		btnT.setEnabled(false);
+		btnU.setEnabled(false);
+		btnV.setEnabled(false);
+		btnW.setEnabled(false);
+		btnX.setEnabled(false);
+		btnY.setEnabled(false);
+		btnZ.setEnabled(false);
+		labelimg.setIcon(loseimg);
+		losses++;
+		textfieldLosses.setText(String.valueOf(losses));
+	}
+	
+	private void word() {
+		Random gen = new Random();
+		//Choose a word from the list of words
+		String[] wordList0 = {"AUSTRALIA","AUSTRIA","BELGIUM","BRAZIL","CANADA","CHILE","CHINA","CZECH_REPUBLIC","EGYPT","FRANCE","GERMANY","HONG_KONG","INDIA","INDONESIA","ISRAEL","ITALY","JAPAN","MALAYSIA","MEXICO","MONGOLIA","NETHERLANDS","NIGERIA","NORWAY","PAKISTAN","PERU","POLAND","RUSSIA","SINGAPORE","SOUTH_KOREA","SPAIN","SWEDEN","SWITZERLAND","TAIWAN","THAILAND","TURKEY","UKRAINE","UNITED_KINGDOM","UNITED_STATES","VENEZUELA","VIETNAM"};
+		String[] wordList1 = {"ACACIA","AMARANTH","AMARYLLIS","ASTER","AZALEA","BLUEBELL","BRYONY","CAMELLIA","CHRYSANTHIA","CLOVER","DAFFODIL","DAHLIA","DAISY","DELPHINA","GARDENIA","HEATHER","HIBISCUS","HYACINTH","IRIS","JACINTA","JASMINE","JONQUIL","LEILANI","LILAC","LILY","LOTUS","MAGNOLIA","MARIGOLD","ORCHID","PEONY","PETAL","PETUNIA","POPPY","PRIMROSE","ROSE","TIGERLILLY","TULIP","VIOLET","YASMIN","ZINNIA"};
+		String[] wordList2 = {"APPLE","APRICOT","AVOCADO","BANANA","BLACK_CHERRY","BLACKBERRY","BLUEBERRY","CANTALOUPE","COCONUT","CRANBERRY","DATES","DRAGON_FRUIT","FIG","GOLDEN_APPLE","GRAPEFRUIT","GREEN_GRAPES","HONEYDEW","KIWIFRUIT","LEMON","LIME","MANDARIN_ORANGE","MANGO","NAVEL_ORANGE","NECTARINE","ORANGE","PAPAYA","PASSION_FRUIT","PEACH","PEAR","PINEAPPLE","PLUMB","POMEGRANATE","RASPBERRY","RED_GRAPES","SOUR_CHERRY","STAR_FRUIT","STRAWBERRIES","TANGELO","TANGERINE","WATERMELON"};
+		String[] wordList3 = {"ARTICHOKE","ARUGULA","ASPARAGUS","BEAN_SPROUTS","BEET","BELL_PEPPER","BLACK_BEANS","BLACK_PEPPER","BROCCOLI","BRUSSEL_SPROUTS","CABBAGE","CARROT","CAULIFLOWER","CELERIAC","CELERY","CHICK_PEAS","CHINESE_CABBAGE","CUCUMBER","EGGPLANT","GINGER","GREEN_BEAN","GREEN_BELL_PEPPER","KALE","KIDNEY_BEANS","LEEK","LENTIL","LIMA_BEAN","MOMORDICA_CHARANTIA","OKRA","ONION","PARSNIP","PEAS","RADISH","RUTABAGA","SPAGHETTI_SQUASH","SPINACH","TURNIP","YAM","YELLOW_BELL_PEPPER","ZUCCHINI"};
+		String[] wordList4 = {"ACROCANTHOSAURUS","ADAMANTISAURUS","ADASAURUS","AEOLOSAURUS","AGATHAUMAS","AGILISARUS","ALAMOSAURUS","ALBERTACERATOPS","ALBERTONYKUS","ALLOSAURUS","ANKYLOSAURUS","APATOSAURUS","ARCHAEOPTERYX","ARGENTINOSAURUS","BRACHIOSAURUS","CARCHARODONTOSAURUS","CARNOTAURUS","COELOPHYSIS","COMPSOGNATHUS","DEINONUCHUS","DIMETRODON","DIPLODOCUS","GALLIMIMUS","GIGANOTOSAURUS","GIGANTORAPTOR","IGUANODON","LAMBEOSAURUS","MEGALOSAURUS","MICRORAPTOR","ORNITHOMIMUS","OVIRAPTOR","PARASAUROLOPHUS","RAPTOR","SPINOSAURUS","STEGOSAURUS","TITANOSAURUS","TRICERATOPS","TYRANNOSAURUS_REX","UTAHRAPTOR","VELOCIRAPTOR"};
+		String[] wordList5 = {"ALLIGATOR","BLACK_BEAR","BROWN_BEAR","CAMEL","CAT","CHEETAH","CHICKEN","COW","CROCODILE","DEER","DOG","EAGLE","ELK","FOX","GAZELL","GIRRAFE","GOAT","GORRILLA","HAMSTER","HAWK","HEDGEHOG","HIPPO","HORSE","LION","MOOSE","OPOSSUM","PANDA","PANTHER","PIG","RABBIT","RACCOON","RHINO","SNAKE","SQUIRREL","TIGER","TORTOSE","TURKEY","WOLF","WOOD_PECKER","ZEBRA"};
+		String[] wordList6 = {"AEROBICS","ARCHERY","ARM_WRESTLING","BADMINTON","BASEBALL","BASKETBALL","BEACH_VOLLEYBALL","BICYCLING","BILLIARDS","BOBSLEDDING","BOWLING","BOXING","CRICKET","CROQUET","FENCING","FOOTBALL","GOLF","GYMNASTICS","ICE_HOCKEY","ICE_SKATING","JAVELIN_TOSS","KAYAKING","KICK_BOXING","MOUNTAIN_BIKING","POWER_LIFTING","RACQUETBALL","RIVER_RAFTING","ROCK_CLIMBING","ROLLER_SKATING","ROLLERBLADING","RUGBY","SKATEBOARDING","SKIING","SOCCER","SOFTBALL","SURFING","SWIMMING","TARGET_SHOOTING","TENNIS","VOLLEYBALL"};
+		String[] wordList7 = {"ACOUSTIC_GUITAR","BAGPIPES","BASS_DRUM","BASSOON","BONGOS","CELLO","CLARINET","CONCERT_BELLS","CORNET","CYMBALS","DIDGERIDOO","ELECTRIC_GUITAR","ENGLISH_HORN","FLUTE","FRENCH_HORN","GLOKENSPIEL","GONG","HARMONICA","HARP","HARPSICHORD","LUTE","LYRE","MANDOLIN","OBOE","OCARINA","ORGAN","PIANO","PICCOLO","SAXOPHONE","SNARE_DRUM","STRING_BASS","TIMPANI","TRIANGLE","TROMBONE","TRUMPET","TUBA","UKELELE","VIOLA","VIOLIN","XYLOPHONE"};
+		String[] wordList8 = {"ACROPOLIS","ARC_DE_TRIOMPHE","BERLIN_WALL","BIG_BEN","BROOKLYN_BRIDGE","BUCKINGHAM_PALACE","CHRIST_THE_REDEEMER","COLOSSEUM","EDINBURGH_CASTLE","EIFFEL_TOWER","EMPIRE_STATE_BUILDING","GOLDEN_GATE_BRIDGE","GREAT_WALL_OF_CHINA","HOLLYWOOD_SIGN","KILIMANJARO","LEANING_TOWER_OF_PISA","LOUVRE_MUSEUM","MACHU_PICCHU","MATTERHORN","MOUNT_EVEREST","MOUNT_RUSHMORE","NIAGARA_FALLS","NOTRE_DAME","POMPEII","PYRAMIDS_OF_GIZA","ROCK_OF_GIBRALTAR","SAGRADA_FAMILIA","STATUE_OF_LIBERTY","STONEHENGE","SYDNEY_OPERA_HOUSE","TAJ_MAHAL","THE_FORBIDDEN_CITY","THE_GRAND_CANYON","THE_GREAT_SPHINX","TIMES_SQUARE","TOKYO_TOWER","TOWER_BRIDGE","TREVI_FOUNTAIN","VERSAILLES","VICTORIA_FALLS"};
+		char[] blanks = {'_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_'};
+		
+		if (catNum == 0) {
+		int wordnum = gen.nextInt(40);
+    	wordTemp = (wordList0[wordnum]); //Choose random word from list
+    	word = wordTemp.toCharArray();
+    	wordBlank = wordTemp.toCharArray();
+    	//Set string to blank
+    	for (int i = 0; i < word.length; i++) {
+    		wordBlank[i] = blanks[i];        		
+    	}
+    	word1 = String.valueOf(wordBlank);
+    	txtWord1.setText(word1);
+    	chars = word.length;
+    	textField_Chars.setText(Integer.toString(chars));
+		} else if (catNum == 1) {
+			int wordnum = gen.nextInt(40);
+	    	wordTemp = (wordList1[wordnum]);
+	    	word = wordTemp.toCharArray();
+	    	wordBlank = wordTemp.toCharArray();
+	    	//Set string to blank
+	    	for (int i = 0; i < word.length; i++) {
+	    		wordBlank[i] = blanks[i];        		
+	   	}
+	    	word1 = String.valueOf(wordBlank);
+	    	txtWord1.setText(word1);
+	    	chars = word.length;
+	    	textField_Chars.setText(Integer.toString(chars));
+		} else if (catNum == 2) {
+			int wordnum = gen.nextInt(40);
+	    	wordTemp = (wordList2[wordnum]);
+	    	word = wordTemp.toCharArray();
+	    	wordBlank = wordTemp.toCharArray();
+	    	//Set string to blank
+	    	for (int i = 0; i < word.length; i++) {
+	    		wordBlank[i] = blanks[i];        		
+    	}
+        	word1 = String.valueOf(wordBlank);
+        	txtWord1.setText(word1);
+        	chars = word.length;
+        	textField_Chars.setText(Integer.toString(chars));
+		} else if (catNum == 3) {
+			int wordnum = gen.nextInt(40);
+	    	wordTemp = (wordList3[wordnum]);
+	    	word = wordTemp.toCharArray();
+	    	wordBlank = wordTemp.toCharArray();
+	    	//Set string to blank
+	    	for (int i = 0; i < word.length; i++) {
+	    		wordBlank[i] = blanks[i];        		
+    	}
+        	word1 = String.valueOf(wordBlank);
+        	txtWord1.setText(word1);
+        	chars = word.length;
+        	textField_Chars.setText(Integer.toString(chars));
+		} else if (catNum == 4) {
+			int wordnum = gen.nextInt(40);
+	    	wordTemp = (wordList4[wordnum]);
+	    	word = wordTemp.toCharArray();
+	    	wordBlank = wordTemp.toCharArray();
+	    	//Set string to blank
+	    	for (int i = 0; i < word.length; i++) {
+	    		wordBlank[i] = blanks[i];        		
+    	}
+        	word1 = String.valueOf(wordBlank);
+        	txtWord1.setText(word1);
+        	chars = word.length;
+        	textField_Chars.setText(Integer.toString(chars));
+		} else if (catNum == 5) {
+			int wordnum = gen.nextInt(40);
+	    	wordTemp = (wordList5[wordnum]);
+	    	word = wordTemp.toCharArray();
+	    	wordBlank = wordTemp.toCharArray();
+	    	//Set string to blank
+	    	for (int i = 0; i < word.length; i++) {
+	    		wordBlank[i] = blanks[i];        		
+    	}
+        	word1 = String.valueOf(wordBlank);
+        	txtWord1.setText(word1);
+        	chars = word.length;
+        	textField_Chars.setText(Integer.toString(chars));
+		} else if (catNum == 6) {
+			int wordnum = gen.nextInt(40);
+			wordTemp = (wordList6[wordnum]);
+			word = wordTemp.toCharArray();
+			wordBlank = wordTemp.toCharArray();
+			//Set string to blank
+			for (int i = 0; i < word.length; i++) {
+				wordBlank[i] = blanks[i];        		
+		}
+			word1 = String.valueOf(wordBlank);
+			txtWord1.setText(word1);
+	    	chars = word.length;
+	    	textField_Chars.setText(Integer.toString(chars));
+		} else if (catNum == 7) {
+			int wordnum = gen.nextInt(40);
+			wordTemp = (wordList7[wordnum]);
+			word = wordTemp.toCharArray();
+			wordBlank = wordTemp.toCharArray();
+			//Set string to blank
+			for (int i = 0; i < word.length; i++) {
+				wordBlank[i] = blanks[i];        		
+		}
+			word1 = String.valueOf(wordBlank);
+			txtWord1.setText(word1);
+	    	chars = word.length;
+	    	textField_Chars.setText(Integer.toString(chars));
+		} else if (catNum == 8) {
+			int wordnum = gen.nextInt(40);
+			wordTemp = (wordList8[wordnum]);
+			word = wordTemp.toCharArray();
+			wordBlank = wordTemp.toCharArray();
+			//Set string to blank
+			for (int i = 0; i < word.length; i++) {
+				wordBlank[i] = blanks[i];        		
+		}
+			word1 = String.valueOf(wordBlank);
+			txtWord1.setText(word1);
+	    	chars = word.length;
+	    	textField_Chars.setText(Integer.toString(chars));
+		}
+
+	}
+}
