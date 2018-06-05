@@ -1,0 +1,65 @@
+/*
+ * User: Michael
+ * Date: 6/1/2018
+ */
+using System;
+
+namespace NumberGuess
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			bool replay = true;
+			while (replay == true) { //Added loop to restart the game
+			int tries = 1;
+			Random gen = new Random();
+			int number = gen.Next(1,100); //Generate a Random Number between 1 and 100
+			
+			try {
+			Console.WriteLine("Guess the Number Game!\nYou have 6 tries to guess the correct number.\nBetween 1 to 100.");
+			Console.WriteLine("Press any key to continue...");
+			Console.ReadKey(true);
+			//Console.WriteLine(number);
+			
+			Console.WriteLine("Ok, here we go. Make your first guess.");
+			int guess = Convert.ToInt32(Console.ReadLine()); //Convert String to Int
+			
+			while (tries < 6) {
+				if (guess == number) {
+					Console.WriteLine("CONGRATULATIONS! You have guessed correctly!");
+					break;
+				} else if (guess < number) {
+					tries++;
+					Console.WriteLine("TOO LOW!\nPlease try again. Guess number " + tries + ".");
+					guess = Convert.ToInt32(Console.ReadLine());
+				} else if (guess > number) {
+					tries++;
+					Console.WriteLine("TOO HIGH!\nPlease try again. Guess number " + tries + ".");
+					guess = Convert.ToInt32(Console.ReadLine());
+				}
+			}
+			if (guess == number && tries == 6) {
+				Console.WriteLine("CONGRATULATIONS! You have guessed correctly!");
+			}
+			
+			if (guess != number && tries <= 6) {
+				Console.WriteLine("I'm sorry, but you did not guess the number within 6 tries.\nThe correct number was " + number + ". Please, try again.");
+			}
+			Console.Write("Do you want to replay? Y or N");
+			string restart = Console.ReadLine();
+			if ((restart == "Y") || (restart == "y")) {
+				replay = true;
+			} else {
+				replay = false;
+			}
+
+			} catch (Exception ex){
+				Console.WriteLine("Only Integers are accepted input. Please, run the program again.");
+				Console.WriteLine("Press any key to Restart.");
+			Console.ReadKey(true);
+			}
+			}
+			}
+	}
+}
