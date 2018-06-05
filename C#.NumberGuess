@@ -17,7 +17,7 @@ namespace NumberGuess
 			int number = gen.Next(1,100); //Generate a Random Number between 1 and 100
 			
 			try {
-			Console.WriteLine("Guess the Number Game!\nYou have 6 tries to guess the correct number.\nBetween 1 to 100.");
+			Console.WriteLine("\nGuess the Number Game!\nYou have 6 tries to guess the correct number.\nBetween 1 to 100.");
 			Console.WriteLine("Press any key to continue...");
 			Console.ReadKey(true);
 			//Console.WriteLine(number);
