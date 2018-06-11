@@ -1,0 +1,550 @@
+/*
+ * User: Michael
+ * Date: 6/10/2018
+ */
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Linq;
+
+namespace WordGuess
+{
+	/// <summary>
+	/// Description of MainForm.
+	/// </summary>
+	public partial class MainForm : Form
+	{
+		private int wins = 0;
+		private int losses = 0;
+		private int tries = 6;
+		private string category = "Category: ";
+		private string wordTemp;
+		private char[] word;
+		private char[] wordBlank;
+		private string word1;
+		private int catNum;
+		private int chars;
+		
+		private void gameScore() {
+			string winsNum = ("Wins: " + wins);
+			string lossesNum = ("Losses: " + losses);
+			lblWins.Text = winsNum;
+			lblLosses.Text = lossesNum;
+		}
+		
+		public MainForm()
+		{
+			//
+			// The InitializeComponent() call is required for Windows Forms designer support.
+			//
+			InitializeComponent();
+			
+			
+			btnNewgame.Click += (sender, args) => {
+				DialogResult dr = MessageBox.Show("Are you sure you want to start a New Game?", "Word Guess", MessageBoxButtons.YesNo, MessageBoxIcon.Information); //Confirmation window
+				
+				if (dr == DialogResult.Yes) {
+					animation.Image = Properties.Resources.Animation; //Changes Picture Box Image back to my Default Image
+					//Set Buttons back to Default
+					btnA.Image = null;	btnA.Text = "A";	btnA.Enabled = true;
+					btnB.Image = null;	btnB.Text = "B";	btnB.Enabled = true;
+					btnC.Image = null;	btnC.Text = "C";	btnC.Enabled = true;
+					btnD.Image = null;	btnD.Text = "D";	btnD.Enabled = true;
+					btnE.Image = null;	btnE.Text = "E";	btnE.Enabled = true;
+					btnF.Image = null;	btnF.Text = "F";	btnF.Enabled = true;					
+					btnG.Image = null;	btnG.Text = "G";	btnG.Enabled = true;
+					btnH.Image = null;	btnH.Text = "H";	btnH.Enabled = true;
+					btnI.Image = null;	btnI.Text = "I";	btnI.Enabled = true;
+					btnJ.Image = null;	btnJ.Text = "J";	btnJ.Enabled = true;
+					btnK.Image = null;	btnK.Text = "K";	btnK.Enabled = true;
+					btnL.Image = null;	btnL.Text = "L";	btnL.Enabled = true;
+					btnM.Image = null;	btnM.Text = "M";	btnM.Enabled = true;
+					btnN.Image = null;	btnN.Text = "N";	btnN.Enabled = true;
+					btnO.Image = null;	btnO.Text = "O";	btnO.Enabled = true;
+					btnP.Image = null;	btnP.Text = "P";	btnP.Enabled = true;
+					btnQ.Image = null;	btnQ.Text = "Q";	btnQ.Enabled = true;
+					btnR.Image = null;	btnR.Text = "R";	btnR.Enabled = true;
+					btnS.Image = null;	btnS.Text = "S";	btnS.Enabled = true;
+					btnT.Image = null;	btnT.Text = "T";	btnT.Enabled = true;
+					btnU.Image = null;	btnU.Text = "U";	btnU.Enabled = true;
+					btnV.Image = null;	btnV.Text = "V";	btnV.Enabled = true;
+					btnW.Image = null;	btnW.Text = "W";	btnW.Enabled = true;
+					btnX.Image = null;	btnX.Text = "X";	btnX.Enabled = true;
+					btnY.Image = null;	btnY.Text = "Y";	btnY.Enabled = true;
+					btnZ.Image = null;	btnZ.Text = "Z";	btnZ.Enabled = true;
+					//Reset Tries
+					tries = 6;
+					lblTries.Text = ("Tries: " + tries);
+					//Set new puzzle
+					categorys();
+					wordGen();
+			}
+			};
+			
+			btnExit.Click += (sender, args) => {
+				DialogResult dr = MessageBox.Show("Confirm if you want to Exit.", "Word Guess", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+		    if (dr == DialogResult.Yes) {
+		    	Close();
+		    }
+			};
+			
+			btnA.Click += (sender, args) => {
+				btnA.Image = Properties.Resources.A;
+				btnA.Text = null;
+				btnA.Enabled = false;
+				char ch = 'A';
+				lettercheck(ch);
+			};
+			btnB.Click += (sender, args) => {
+				btnB.Image = Properties.Resources.B;
+				btnB.Text = null;
+				btnB.Enabled = false;
+				char ch = 'B';
+				lettercheck(ch);
+			};
+			btnC.Click += (sender, args) => {
+				btnC.Image = Properties.Resources.C;
+				btnC.Text = null;
+				btnC.Enabled = false;
+				char ch = 'C';
+				lettercheck(ch);
+			};
+			btnD.Click += (sender, args) => {
+				btnD.Image = Properties.Resources.D;
+				btnD.Text = null;
+				btnD.Enabled = false;
+				char ch = 'D';
+				lettercheck(ch);
+			};
+			btnE.Click += (sender, args) => {
+				btnE.Image = Properties.Resources.E;
+				btnE.Text = null;
+				btnE.Enabled = false;
+				char ch = 'E';
+				lettercheck(ch);
+			};
+			btnF.Click += (sender, args) => {
+				btnF.Image = Properties.Resources.F;
+				btnF.Text = null;
+				btnF.Enabled = false;
+				char ch = 'F';
+				lettercheck(ch);
+			};
+			btnG.Click += (sender, args) => {
+				btnG.Image = Properties.Resources.G;
+				btnG.Text = null;
+				btnG.Enabled = false;
+				char ch = 'G';
+				lettercheck(ch);
+			};
+			btnH.Click += (sender, args) => {
+				btnH.Image = Properties.Resources.H;
+				btnH.Text = null;
+				btnH.Enabled = false;
+				char ch = 'H';
+				lettercheck(ch);
+			};
+			btnI.Click += (sender, args) => {
+				btnI.Image = Properties.Resources.I;
+				btnI.Text = null;
+				btnI.Enabled = false;
+				char ch = 'I';
+				lettercheck(ch);
+			};
+			btnJ.Click += (sender, args) => {
+				btnJ.Image = Properties.Resources.J;
+				btnJ.Text = null;
+				btnJ.Enabled = false;
+				char ch = 'J';
+				lettercheck(ch);
+			};
+			btnK.Click += (sender, args) => {
+				btnK.Image = Properties.Resources.K;
+				btnK.Text = null;
+				btnK.Enabled = false;
+				char ch = 'K';
+				lettercheck(ch);
+			};
+			btnL.Click += (sender, args) => {
+				btnL.Image = Properties.Resources.L;
+				btnL.Text = null;
+				btnL.Enabled = false;
+				char ch = 'L';
+				lettercheck(ch);
+			};
+			btnM.Click += (sender, args) => {
+				btnM.Image = Properties.Resources.M;
+				btnM.Text = null;
+				btnM.Enabled = false;
+				char ch = 'M';
+				lettercheck(ch);
+			};
+			btnN.Click += (sender, args) => {
+				btnN.Image = Properties.Resources.N;
+				btnN.Text = null;
+				btnN.Enabled = false;
+				char ch = 'N';
+				lettercheck(ch);
+			};
+			btnO.Click += (sender, args) => {
+				btnO.Image = Properties.Resources.O;
+				btnO.Text = null;
+				btnO.Enabled = false;
+				char ch = 'O';
+				lettercheck(ch);
+			};
+			btnP.Click += (sender, args) => {
+				btnP.Image = Properties.Resources.P;
+				btnP.Text = null;
+				btnP.Enabled = false;
+				char ch = 'P';
+				lettercheck(ch);
+			};
+			btnQ.Click += (sender, args) => {
+				btnQ.Image = Properties.Resources.Q;
+				btnQ.Text = null;
+				btnQ.Enabled = false;
+				char ch = 'Q';
+				lettercheck(ch);
+			};
+			btnR.Click += (sender, args) => {
+				btnR.Image = Properties.Resources.R;
+				btnR.Text = null;
+				btnR.Enabled = false;
+				char ch = 'R';
+				lettercheck(ch);
+			};
+			btnS.Click += (sender, args) => {
+				btnS.Image = Properties.Resources.S;
+				btnS.Text = null;
+				btnS.Enabled = false;
+				char ch = 'S';
+				lettercheck(ch);
+			};
+			btnT.Click += (sender, args) => {
+				btnT.Image = Properties.Resources.T;
+				btnT.Text = null;
+				btnT.Enabled = false;
+				char ch = 'T';
+				lettercheck(ch);
+			};
+			btnU.Click += (sender, args) => {
+				btnU.Image = Properties.Resources.U;
+				btnU.Text = null;
+				btnU.Enabled = false;
+				char ch = 'U';
+				lettercheck(ch);
+			};
+			btnV.Click += (sender, args) => {
+				btnV.Image = Properties.Resources.V;
+				btnV.Text = null;
+				btnV.Enabled = false;
+				char ch = 'V';
+				lettercheck(ch);
+			};
+			btnW.Click += (sender, args) => {
+				btnW.Image = Properties.Resources.W;
+				btnW.Text = null;
+				btnW.Enabled = false;
+				char ch = 'W';
+				lettercheck(ch);
+			};
+			btnX.Click += (sender, args) => {
+				btnX.Image = Properties.Resources.X;
+				btnX.Text = null;
+				btnX.Enabled = false;
+				char ch = 'X';
+				lettercheck(ch);
+			};
+			btnY.Click += (sender, args) => {
+				btnY.Image = Properties.Resources.Y;
+				btnY.Text = null;
+				btnY.Enabled = false;
+				char ch = 'Y';
+				lettercheck(ch);
+			};
+			btnZ.Click += (sender, args) => {
+				btnZ.Image = Properties.Resources.Z;
+				btnZ.Text = null;
+				btnZ.Enabled = false;
+				char ch = 'Z';
+				lettercheck(ch);
+			};
+
+		}
+		
+		private void categorys() {
+		Random gen = new Random();
+		catNum = gen.Next(0,8);
+		switch (catNum) {
+		case 0:
+			lblCategory.Text = (category + "Countries");
+			break;
+		case 1:
+			lblCategory.Text = (category + "Flowers");
+			break;
+		case 2:
+			lblCategory.Text = (category + "Fruits");
+			break;
+		case 3:
+			lblCategory.Text = (category + "Vegetables");
+			break;
+		case 4:
+			lblCategory.Text = (category + "Dinosaurs");
+			break;
+		case 5:
+			lblCategory.Text = (category + "Animals");
+			break;
+		case 6:
+			lblCategory.Text = (category + "Sports");
+			break;
+		case 7:
+			lblCategory.Text = (category + "Musical Instruments");
+			break;
+		case 8:
+			lblCategory.Text = (category + "Famous Landmarks");
+			break;
+		default: break;
+			
+		}
+	}
+		
+		private void lettercheck(char ch) {
+		//Check for Letter in word, and add the letter to the Blank word
+		if (word.Contains(ch)){
+			var foundIndexes = new List<int>();
+				for (int i = 0; i < word.Length; i++) {
+       			 	if (word[i] == ch)
+           			foundIndexes.Add(i);
+     			}
+			foreach (int pos in foundIndexes) {
+					wordBlank[pos] = ch;
+				}
+		} else {
+			tries--;
+			lblTries.Text = ("Tries :" + tries);
+			if (tries == 0 ) {
+				loseGame();
+			}
+		}
+
+		word1 = new string(wordBlank);
+		if (word1 == wordTemp) {
+			winGame();
+		}
+		lblWords.Text = (word1);
+	}
+		
+		private void winGame (){
+			btnA.Enabled = false;
+			btnB.Enabled = false;
+			btnC.Enabled = false;
+			btnD.Enabled = false;
+			btnE.Enabled = false;
+			btnF.Enabled = false;
+			btnG.Enabled = false;
+			btnH.Enabled = false;
+			btnI.Enabled = false;
+			btnJ.Enabled = false;
+			btnK.Enabled = false;
+			btnL.Enabled = false;
+			btnM.Enabled = false;
+			btnN.Enabled = false;
+			btnO.Enabled = false;
+			btnP.Enabled = false;
+			btnQ.Enabled = false;
+			btnR.Enabled = false;
+			btnS.Enabled = false;
+			btnT.Enabled = false;
+			btnU.Enabled = false;
+			btnV.Enabled = false;
+			btnW.Enabled = false;
+			btnX.Enabled = false;
+			btnY.Enabled = false;
+			btnZ.Enabled = false;
+			animation.Image = Properties.Resources.Win;
+			wins++;
+			lblWins.Text = ("Wins: " + wins);
+		}
+		
+		private void loseGame(){
+						btnA.Enabled = false;
+			btnB.Enabled = false;
+			btnC.Enabled = false;
+			btnD.Enabled = false;
+			btnE.Enabled = false;
+			btnF.Enabled = false;
+			btnG.Enabled = false;
+			btnH.Enabled = false;
+			btnI.Enabled = false;
+			btnJ.Enabled = false;
+			btnK.Enabled = false;
+			btnL.Enabled = false;
+			btnM.Enabled = false;
+			btnN.Enabled = false;
+			btnO.Enabled = false;
+			btnP.Enabled = false;
+			btnQ.Enabled = false;
+			btnR.Enabled = false;
+			btnS.Enabled = false;
+			btnT.Enabled = false;
+			btnU.Enabled = false;
+			btnV.Enabled = false;
+			btnW.Enabled = false;
+			btnX.Enabled = false;
+			btnY.Enabled = false;
+			btnZ.Enabled = false;
+			animation.Image = Properties.Resources.Lose;
+			losses++;
+			lblLosses.Text = ("Losses: " + losses);
+		}
+		
+		private void wordGen() {
+		Random gen = new Random();
+		//Choose a word from the list of words
+		String[] wordList0 = {"AUSTRALIA","AUSTRIA","BELGIUM","BRAZIL","CANADA","CHILE","CHINA","CZECH_REPUBLIC","EGYPT","FRANCE","GERMANY","HONG_KONG","INDIA","INDONESIA","ISRAEL","ITALY","JAPAN","MALAYSIA","MEXICO","MONGOLIA","NETHERLANDS","NIGERIA","NORWAY","PAKISTAN","PERU","POLAND","RUSSIA","SINGAPORE","SOUTH_KOREA","SPAIN","SWEDEN","SWITZERLAND","TAIWAN","THAILAND","TURKEY","UKRAINE","UNITED_KINGDOM","UNITED_STATES","VENEZUELA","VIETNAM"};
+		String[] wordList1 = {"ACACIA","AMARANTH","AMARYLLIS","ASTER","AZALEA","BLUEBELL","BRYONY","CAMELLIA","CHRYSANTHIA","CLOVER","DAFFODIL","DAHLIA","DAISY","DELPHINA","GARDENIA","HEATHER","HIBISCUS","HYACINTH","IRIS","JACINTA","JASMINE","JONQUIL","LEILANI","LILAC","LILY","LOTUS","MAGNOLIA","MARIGOLD","ORCHID","PEONY","PETAL","PETUNIA","POPPY","PRIMROSE","ROSE","TIGERLILLY","TULIP","VIOLET","YASMIN","ZINNIA"};
+		String[] wordList2 = {"APPLE","APRICOT","AVOCADO","BANANA","BLACK_CHERRY","BLACKBERRY","BLUEBERRY","CANTALOUPE","COCONUT","CRANBERRY","DATES","DRAGON_FRUIT","FIG","GOLDEN_APPLE","GRAPEFRUIT","GREEN_GRAPES","HONEYDEW","KIWIFRUIT","LEMON","LIME","MANDARIN_ORANGE","MANGO","NAVEL_ORANGE","NECTARINE","ORANGE","PAPAYA","PASSION_FRUIT","PEACH","PEAR","PINEAPPLE","PLUMB","POMEGRANATE","RASPBERRY","RED_GRAPES","SOUR_CHERRY","STAR_FRUIT","STRAWBERRIES","TANGELO","TANGERINE","WATERMELON"};
+		String[] wordList3 = {"ARTICHOKE","ARUGULA","ASPARAGUS","BEAN_SPROUTS","BEET","BELL_PEPPER","BLACK_BEANS","BLACK_PEPPER","BROCCOLI","BRUSSEL_SPROUTS","CABBAGE","CARROT","CAULIFLOWER","CELERIAC","CELERY","CHICK_PEAS","CHINESE_CABBAGE","CUCUMBER","EGGPLANT","GINGER","GREEN_BEAN","GREEN_BELL_PEPPER","KALE","KIDNEY_BEANS","LEEK","LENTIL","LIMA_BEAN","MOMORDICA_CHARANTIA","OKRA","ONION","PARSNIP","PEAS","RADISH","RUTABAGA","SPAGHETTI_SQUASH","SPINACH","TURNIP","YAM","YELLOW_BELL_PEPPER","ZUCCHINI"};
+		String[] wordList4 = {"ACROCANTHOSAURUS","ADAMANTISAURUS","ADASAURUS","AEOLOSAURUS","AGATHAUMAS","AGILISARUS","ALAMOSAURUS","ALBERTACERATOPS","ALBERTONYKUS","ALLOSAURUS","ANKYLOSAURUS","APATOSAURUS","ARCHAEOPTERYX","ARGENTINOSAURUS","BRACHIOSAURUS","CARCHARODONTOSAURUS","CARNOTAURUS","COELOPHYSIS","COMPSOGNATHUS","DEINONUCHUS","DIMETRODON","DIPLODOCUS","GALLIMIMUS","GIGANOTOSAURUS","GIGANTORAPTOR","IGUANODON","LAMBEOSAURUS","MEGALOSAURUS","MICRORAPTOR","ORNITHOMIMUS","OVIRAPTOR","PARASAUROLOPHUS","RAPTOR","SPINOSAURUS","STEGOSAURUS","TITANOSAURUS","TRICERATOPS","TYRANNOSAURUS_REX","UTAHRAPTOR","VELOCIRAPTOR"};
+		String[] wordList5 = {"ALLIGATOR","BLACK_BEAR","BROWN_BEAR","CAMEL","CAT","CHEETAH","CHICKEN","COW","CROCODILE","DEER","DOG","EAGLE","ELK","FOX","GAZELL","GIRRAFE","GOAT","GORRILLA","HAMSTER","HAWK","HEDGEHOG","HIPPO","HORSE","LION","MOOSE","OPOSSUM","PANDA","PANTHER","PIG","RABBIT","RACCOON","RHINO","SNAKE","SQUIRREL","TIGER","TORTOSE","TURKEY","WOLF","WOOD_PECKER","ZEBRA"};
+		String[] wordList6 = {"AEROBICS","ARCHERY","ARM_WRESTLING","BADMINTON","BASEBALL","BASKETBALL","BEACH_VOLLEYBALL","BICYCLING","BILLIARDS","BOBSLEDDING","BOWLING","BOXING","CRICKET","CROQUET","FENCING","FOOTBALL","GOLF","GYMNASTICS","ICE_HOCKEY","ICE_SKATING","JAVELIN_TOSS","KAYAKING","KICK_BOXING","MOUNTAIN_BIKING","POWER_LIFTING","RACQUETBALL","RIVER_RAFTING","ROCK_CLIMBING","ROLLER_SKATING","ROLLERBLADING","RUGBY","SKATEBOARDING","SKIING","SOCCER","SOFTBALL","SURFING","SWIMMING","TARGET_SHOOTING","TENNIS","VOLLEYBALL"};
+		String[] wordList7 = {"ACOUSTIC_GUITAR","BAGPIPES","BASS_DRUM","BASSOON","BONGOS","CELLO","CLARINET","CONCERT_BELLS","CORNET","CYMBALS","DIDGERIDOO","ELECTRIC_GUITAR","ENGLISH_HORN","FLUTE","FRENCH_HORN","GLOKENSPIEL","GONG","HARMONICA","HARP","HARPSICHORD","LUTE","LYRE","MANDOLIN","OBOE","OCARINA","ORGAN","PIANO","PICCOLO","SAXOPHONE","SNARE_DRUM","STRING_BASS","TIMPANI","TRIANGLE","TROMBONE","TRUMPET","TUBA","UKELELE","VIOLA","VIOLIN","XYLOPHONE"};
+		String[] wordList8 = {"ACROPOLIS","ARC_DE_TRIOMPHE","BERLIN_WALL","BIG_BEN","BROOKLYN_BRIDGE","BUCKINGHAM_PALACE","CHRIST_THE_REDEEMER","COLOSSEUM","EDINBURGH_CASTLE","EIFFEL_TOWER","EMPIRE_STATE_BUILDING","GOLDEN_GATE_BRIDGE","GREAT_WALL_OF_CHINA","HOLLYWOOD_SIGN","KILIMANJARO","LEANING_TOWER_OF_PISA","LOUVRE_MUSEUM","MACHU_PICCHU","MATTERHORN","MOUNT_EVEREST","MOUNT_RUSHMORE","NIAGARA_FALLS","NOTRE_DAME","POMPEII","PYRAMIDS_OF_GIZA","ROCK_OF_GIBRALTAR","SAGRADA_FAMILIA","STATUE_OF_LIBERTY","STONEHENGE","SYDNEY_OPERA_HOUSE","TAJ_MAHAL","THE_FORBIDDEN_CITY","THE_GRAND_CANYON","THE_GREAT_SPHINX","TIMES_SQUARE","TOKYO_TOWER","TOWER_BRIDGE","TREVI_FOUNTAIN","VERSAILLES","VICTORIA_FALLS"};
+		char[] blanks = {'_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_'};
+		
+		if (catNum == 0) {
+		int wordNum = gen.Next(1,40); //Generate a Random Number between 1 and 40	
+		wordTemp = (wordList0[wordNum]); //Choose random word from list
+		word = wordTemp.ToCharArray();
+		wordBlank = wordTemp.ToCharArray();
+    	//Set string to blank
+    	for (int i = 0; i < word.Length; i++) {
+    		wordBlank[i] = blanks[i];
+    	}
+    	word1 = new string(wordBlank);
+    	lblWords.Text = word1;
+    	chars = word.Length;
+    	lblChars.Text = ("Characters: " + chars);
+    	
+		} else if (catNum == 1) {
+		int wordNum = gen.Next(1,40);
+		wordTemp = (wordList1[wordNum]);
+		word = wordTemp.ToCharArray();
+		wordBlank = wordTemp.ToCharArray();
+    	//Set string to blank
+    	for (int i = 0; i < word.Length; i++) {
+    		wordBlank[i] = blanks[i];
+    	}
+    	word1 = new string(wordBlank);
+    	lblWords.Text = word1;
+    	chars = word.Length;
+    	lblChars.Text = ("Characters: " + chars);
+    	
+    	} else if (catNum == 2) {
+		int wordNum = gen.Next(1,40);
+		wordTemp = (wordList2[wordNum]);
+		word = wordTemp.ToCharArray();
+		wordBlank = wordTemp.ToCharArray();
+    	//Set string to blank
+    	for (int i = 0; i < word.Length; i++) {
+    		wordBlank[i] = blanks[i];
+    	}
+    	word1 = new string(wordBlank);
+    	lblWords.Text = word1;
+    	chars = word.Length;
+    	lblChars.Text = ("Characters: " + chars);
+    	
+    	} else if (catNum == 3) {
+		int wordNum = gen.Next(1,40);
+		wordTemp = (wordList3[wordNum]);
+		word = wordTemp.ToCharArray();
+		wordBlank = wordTemp.ToCharArray();
+    	//Set string to blank
+    	for (int i = 0; i < word.Length; i++) {
+    		wordBlank[i] = blanks[i];
+    	}
+    	word1 = new string(wordBlank);
+    	lblWords.Text = word1;
+    	chars = word.Length;
+    	lblChars.Text = ("Characters: " + chars);
+    	
+    	} else if (catNum == 4) {
+		int wordNum = gen.Next(1,40);
+		wordTemp = (wordList4[wordNum]);
+		word = wordTemp.ToCharArray();
+		wordBlank = wordTemp.ToCharArray();
+    	//Set string to blank
+    	for (int i = 0; i < word.Length; i++) {
+    		wordBlank[i] = blanks[i];
+    	}
+    	word1 = new string(wordBlank);
+    	lblWords.Text = word1;
+    	chars = word.Length;
+    	lblChars.Text = ("Characters: " + chars);
+    	
+    	} else if (catNum == 5) {
+		int wordNum = gen.Next(1,40);
+		wordTemp = (wordList5[wordNum]);
+		word = wordTemp.ToCharArray();
+		wordBlank = wordTemp.ToCharArray();
+    	//Set string to blank
+    	for (int i = 0; i < word.Length; i++) {
+    		wordBlank[i] = blanks[i];
+    	}
+    	word1 = new string(wordBlank);
+    	lblWords.Text = word1;
+    	chars = word.Length;
+    	lblChars.Text = ("Characters: " + chars);
+    	
+    	} else if (catNum == 6) {
+		int wordNum = gen.Next(1,40);
+		wordTemp = (wordList6[wordNum]);
+		word = wordTemp.ToCharArray();
+		wordBlank = wordTemp.ToCharArray();
+    	//Set string to blank
+    	for (int i = 0; i < word.Length; i++) {
+    		wordBlank[i] = blanks[i];
+    	}
+    	word1 = new string(wordBlank);
+    	lblWords.Text = word1;
+    	chars = word.Length;
+    	lblChars.Text = ("Characters: " + chars);
+    	
+		} else if (catNum == 7) {
+		int wordNum = gen.Next(1,40);
+		wordTemp = (wordList7[wordNum]);
+		word = wordTemp.ToCharArray();
+		wordBlank = wordTemp.ToCharArray();
+    	//Set string to blank
+    	for (int i = 0; i < word.Length; i++) {
+    		wordBlank[i] = blanks[i];
+    	}
+    	word1 = new string(wordBlank);
+    	lblWords.Text = word1;
+    	chars = word.Length;
+    	lblChars.Text = ("Characters: " + chars);
+    	
+    	} else if (catNum == 8) {
+		int wordNum = gen.Next(1,40);
+		wordTemp = (wordList8[wordNum]);
+		word = wordTemp.ToCharArray();
+		wordBlank = wordTemp.ToCharArray();
+    	//Set string to blank
+    	for (int i = 0; i < word.Length; i++) {
+    		wordBlank[i] = blanks[i];
+    	}
+    	word1 = new string(wordBlank);
+    	lblWords.Text = word1;
+    	chars = word.Length;
+    	lblChars.Text = ("Characters: " + chars);
+		}
+   		}
+		
+		
+		
+	
+	}
+}
