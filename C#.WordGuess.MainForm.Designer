@@ -1,0 +1,600 @@
+/*
+ * User: Michael
+ * Date: 6/10/2018
+ */
+namespace WordGuess
+{
+	partial class MainForm
+	{
+		/// <summary>
+		/// Designer variable used to keep track of non-visual components.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
+		private System.Windows.Forms.Button btnExit;
+		private System.Windows.Forms.Button btnNewgame;
+		private System.Windows.Forms.Label lblWins;
+		private System.Windows.Forms.Label lblLosses;
+		private System.Windows.Forms.Label lblTries;
+		private System.Windows.Forms.Label lblWords;
+		private System.Windows.Forms.Label lblChars;
+		private System.Windows.Forms.PictureBox animation;
+		private System.Windows.Forms.Label lblCategory;
+		private System.Windows.Forms.Button btnA;
+		private System.Windows.Forms.Button btnB;
+		private System.Windows.Forms.Button btnC;
+		private System.Windows.Forms.Button btnD;
+		private System.Windows.Forms.Button btnE;
+		private System.Windows.Forms.Button btnF;
+		private System.Windows.Forms.Button btnG;
+		private System.Windows.Forms.Button btnN;
+		private System.Windows.Forms.Button btnM;
+		private System.Windows.Forms.Button btnL;
+		private System.Windows.Forms.Button btnK;
+		private System.Windows.Forms.Button btnJ;
+		private System.Windows.Forms.Button btnI;
+		private System.Windows.Forms.Button btnH;
+		private System.Windows.Forms.Button btnT;
+		private System.Windows.Forms.Button btnS;
+		private System.Windows.Forms.Button btnR;
+		private System.Windows.Forms.Button btnQ;
+		private System.Windows.Forms.Button btnP;
+		private System.Windows.Forms.Button btnO;
+		private System.Windows.Forms.Button btnZ;
+		private System.Windows.Forms.Button btnY;
+		private System.Windows.Forms.Button btnX;
+		private System.Windows.Forms.Button btnW;
+		private System.Windows.Forms.Button btnV;
+		private System.Windows.Forms.Button btnU;
+		
+		/// <summary>
+		/// Disposes resources used by the form.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing) {
+				if (components != null) {
+					components.Dispose();
+				}
+			}
+			base.Dispose(disposing);
+		}
+		
+		/// <summary>
+		/// This method is required for Windows Forms designer support.
+		/// Do not change the method contents inside the source code editor. The Forms designer might
+		/// not be able to load this method if it was changed manually.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+			this.btnExit = new System.Windows.Forms.Button();
+			this.btnNewgame = new System.Windows.Forms.Button();
+			this.lblWins = new System.Windows.Forms.Label();
+			this.lblLosses = new System.Windows.Forms.Label();
+			this.lblTries = new System.Windows.Forms.Label();
+			this.lblWords = new System.Windows.Forms.Label();
+			this.lblChars = new System.Windows.Forms.Label();
+			this.animation = new System.Windows.Forms.PictureBox();
+			this.lblCategory = new System.Windows.Forms.Label();
+			this.btnA = new System.Windows.Forms.Button();
+			this.btnB = new System.Windows.Forms.Button();
+			this.btnC = new System.Windows.Forms.Button();
+			this.btnD = new System.Windows.Forms.Button();
+			this.btnE = new System.Windows.Forms.Button();
+			this.btnF = new System.Windows.Forms.Button();
+			this.btnG = new System.Windows.Forms.Button();
+			this.btnN = new System.Windows.Forms.Button();
+			this.btnM = new System.Windows.Forms.Button();
+			this.btnL = new System.Windows.Forms.Button();
+			this.btnK = new System.Windows.Forms.Button();
+			this.btnJ = new System.Windows.Forms.Button();
+			this.btnI = new System.Windows.Forms.Button();
+			this.btnH = new System.Windows.Forms.Button();
+			this.btnT = new System.Windows.Forms.Button();
+			this.btnS = new System.Windows.Forms.Button();
+			this.btnR = new System.Windows.Forms.Button();
+			this.btnQ = new System.Windows.Forms.Button();
+			this.btnP = new System.Windows.Forms.Button();
+			this.btnO = new System.Windows.Forms.Button();
+			this.btnZ = new System.Windows.Forms.Button();
+			this.btnY = new System.Windows.Forms.Button();
+			this.btnX = new System.Windows.Forms.Button();
+			this.btnW = new System.Windows.Forms.Button();
+			this.btnV = new System.Windows.Forms.Button();
+			this.btnU = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.animation)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// btnExit
+			// 
+			resources.ApplyResources(this.btnExit, "btnExit");
+			this.btnExit.BackColor = System.Drawing.Color.Transparent;
+			this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnExit.FlatAppearance.BorderSize = 0;
+			this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnExit.ForeColor = System.Drawing.Color.White;
+			this.btnExit.Name = "btnExit";
+			this.btnExit.TabStop = false;
+			this.btnExit.UseMnemonic = false;
+			this.btnExit.UseVisualStyleBackColor = false;
+			// 
+			// btnNewgame
+			// 
+			resources.ApplyResources(this.btnNewgame, "btnNewgame");
+			this.btnNewgame.BackColor = System.Drawing.Color.Transparent;
+			this.btnNewgame.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnNewgame.FlatAppearance.BorderSize = 0;
+			this.btnNewgame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnNewgame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnNewgame.ForeColor = System.Drawing.Color.White;
+			this.btnNewgame.Name = "btnNewgame";
+			this.btnNewgame.TabStop = false;
+			this.btnNewgame.UseMnemonic = false;
+			this.btnNewgame.UseVisualStyleBackColor = false;
+			// 
+			// lblWins
+			// 
+			this.lblWins.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.lblWins, "lblWins");
+			this.lblWins.ForeColor = System.Drawing.Color.Lime;
+			this.lblWins.Name = "lblWins";
+			// 
+			// lblLosses
+			// 
+			this.lblLosses.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.lblLosses, "lblLosses");
+			this.lblLosses.ForeColor = System.Drawing.Color.Red;
+			this.lblLosses.Name = "lblLosses";
+			// 
+			// lblTries
+			// 
+			this.lblTries.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.lblTries, "lblTries");
+			this.lblTries.ForeColor = System.Drawing.Color.Yellow;
+			this.lblTries.Name = "lblTries";
+			// 
+			// lblWords
+			// 
+			this.lblWords.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.lblWords, "lblWords");
+			this.lblWords.ForeColor = System.Drawing.Color.White;
+			this.lblWords.Name = "lblWords";
+			// 
+			// lblChars
+			// 
+			this.lblChars.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.lblChars, "lblChars");
+			this.lblChars.ForeColor = System.Drawing.Color.Yellow;
+			this.lblChars.Name = "lblChars";
+			// 
+			// animation
+			// 
+			this.animation.BackgroundImage = global::WordGuess.Properties.Resources.Animation;
+			resources.ApplyResources(this.animation, "animation");
+			this.animation.InitialImage = global::WordGuess.Properties.Resources.Animation;
+			this.animation.Name = "animation";
+			this.animation.TabStop = false;
+			// 
+			// lblCategory
+			// 
+			this.lblCategory.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.lblCategory, "lblCategory");
+			this.lblCategory.ForeColor = System.Drawing.Color.Cyan;
+			this.lblCategory.Name = "lblCategory";
+			// 
+			// btnA
+			// 
+			resources.ApplyResources(this.btnA, "btnA");
+			this.btnA.BackColor = System.Drawing.Color.Transparent;
+			this.btnA.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnA.FlatAppearance.BorderSize = 0;
+			this.btnA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnA.ForeColor = System.Drawing.Color.White;
+			this.btnA.Name = "btnA";
+			this.btnA.TabStop = false;
+			this.btnA.UseMnemonic = false;
+			this.btnA.UseVisualStyleBackColor = false;
+			// 
+			// btnB
+			// 
+			resources.ApplyResources(this.btnB, "btnB");
+			this.btnB.BackColor = System.Drawing.Color.Transparent;
+			this.btnB.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnB.FlatAppearance.BorderSize = 0;
+			this.btnB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnB.ForeColor = System.Drawing.Color.White;
+			this.btnB.Name = "btnB";
+			this.btnB.TabStop = false;
+			this.btnB.UseMnemonic = false;
+			this.btnB.UseVisualStyleBackColor = false;
+			// 
+			// btnC
+			// 
+			resources.ApplyResources(this.btnC, "btnC");
+			this.btnC.BackColor = System.Drawing.Color.Transparent;
+			this.btnC.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnC.FlatAppearance.BorderSize = 0;
+			this.btnC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnC.ForeColor = System.Drawing.Color.White;
+			this.btnC.Name = "btnC";
+			this.btnC.TabStop = false;
+			this.btnC.UseMnemonic = false;
+			this.btnC.UseVisualStyleBackColor = false;
+			// 
+			// btnD
+			// 
+			resources.ApplyResources(this.btnD, "btnD");
+			this.btnD.BackColor = System.Drawing.Color.Transparent;
+			this.btnD.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnD.FlatAppearance.BorderSize = 0;
+			this.btnD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnD.ForeColor = System.Drawing.Color.White;
+			this.btnD.Name = "btnD";
+			this.btnD.TabStop = false;
+			this.btnD.UseMnemonic = false;
+			this.btnD.UseVisualStyleBackColor = false;
+			// 
+			// btnE
+			// 
+			resources.ApplyResources(this.btnE, "btnE");
+			this.btnE.BackColor = System.Drawing.Color.Transparent;
+			this.btnE.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnE.FlatAppearance.BorderSize = 0;
+			this.btnE.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnE.ForeColor = System.Drawing.Color.White;
+			this.btnE.Name = "btnE";
+			this.btnE.TabStop = false;
+			this.btnE.UseMnemonic = false;
+			this.btnE.UseVisualStyleBackColor = false;
+			// 
+			// btnF
+			// 
+			resources.ApplyResources(this.btnF, "btnF");
+			this.btnF.BackColor = System.Drawing.Color.Transparent;
+			this.btnF.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnF.FlatAppearance.BorderSize = 0;
+			this.btnF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnF.ForeColor = System.Drawing.Color.White;
+			this.btnF.Name = "btnF";
+			this.btnF.TabStop = false;
+			this.btnF.UseMnemonic = false;
+			this.btnF.UseVisualStyleBackColor = false;
+			// 
+			// btnG
+			// 
+			resources.ApplyResources(this.btnG, "btnG");
+			this.btnG.BackColor = System.Drawing.Color.Transparent;
+			this.btnG.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnG.FlatAppearance.BorderSize = 0;
+			this.btnG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnG.ForeColor = System.Drawing.Color.White;
+			this.btnG.Name = "btnG";
+			this.btnG.TabStop = false;
+			this.btnG.UseMnemonic = false;
+			this.btnG.UseVisualStyleBackColor = false;
+			// 
+			// btnN
+			// 
+			resources.ApplyResources(this.btnN, "btnN");
+			this.btnN.BackColor = System.Drawing.Color.Transparent;
+			this.btnN.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnN.FlatAppearance.BorderSize = 0;
+			this.btnN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnN.ForeColor = System.Drawing.Color.White;
+			this.btnN.Name = "btnN";
+			this.btnN.TabStop = false;
+			this.btnN.UseMnemonic = false;
+			this.btnN.UseVisualStyleBackColor = false;
+			// 
+			// btnM
+			// 
+			resources.ApplyResources(this.btnM, "btnM");
+			this.btnM.BackColor = System.Drawing.Color.Transparent;
+			this.btnM.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnM.FlatAppearance.BorderSize = 0;
+			this.btnM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnM.ForeColor = System.Drawing.Color.White;
+			this.btnM.Name = "btnM";
+			this.btnM.TabStop = false;
+			this.btnM.UseMnemonic = false;
+			this.btnM.UseVisualStyleBackColor = false;
+			// 
+			// btnL
+			// 
+			resources.ApplyResources(this.btnL, "btnL");
+			this.btnL.BackColor = System.Drawing.Color.Transparent;
+			this.btnL.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnL.FlatAppearance.BorderSize = 0;
+			this.btnL.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnL.ForeColor = System.Drawing.Color.White;
+			this.btnL.Name = "btnL";
+			this.btnL.TabStop = false;
+			this.btnL.UseMnemonic = false;
+			this.btnL.UseVisualStyleBackColor = false;
+			// 
+			// btnK
+			// 
+			resources.ApplyResources(this.btnK, "btnK");
+			this.btnK.BackColor = System.Drawing.Color.Transparent;
+			this.btnK.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnK.FlatAppearance.BorderSize = 0;
+			this.btnK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnK.ForeColor = System.Drawing.Color.White;
+			this.btnK.Name = "btnK";
+			this.btnK.TabStop = false;
+			this.btnK.UseMnemonic = false;
+			this.btnK.UseVisualStyleBackColor = false;
+			// 
+			// btnJ
+			// 
+			resources.ApplyResources(this.btnJ, "btnJ");
+			this.btnJ.BackColor = System.Drawing.Color.Transparent;
+			this.btnJ.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnJ.FlatAppearance.BorderSize = 0;
+			this.btnJ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnJ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnJ.ForeColor = System.Drawing.Color.White;
+			this.btnJ.Name = "btnJ";
+			this.btnJ.TabStop = false;
+			this.btnJ.UseMnemonic = false;
+			this.btnJ.UseVisualStyleBackColor = false;
+			// 
+			// btnI
+			// 
+			resources.ApplyResources(this.btnI, "btnI");
+			this.btnI.BackColor = System.Drawing.Color.Transparent;
+			this.btnI.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnI.FlatAppearance.BorderSize = 0;
+			this.btnI.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnI.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnI.ForeColor = System.Drawing.Color.White;
+			this.btnI.Name = "btnI";
+			this.btnI.TabStop = false;
+			this.btnI.UseMnemonic = false;
+			this.btnI.UseVisualStyleBackColor = false;
+			// 
+			// btnH
+			// 
+			resources.ApplyResources(this.btnH, "btnH");
+			this.btnH.BackColor = System.Drawing.Color.Transparent;
+			this.btnH.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnH.FlatAppearance.BorderSize = 0;
+			this.btnH.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnH.ForeColor = System.Drawing.Color.White;
+			this.btnH.Name = "btnH";
+			this.btnH.TabStop = false;
+			this.btnH.UseMnemonic = false;
+			this.btnH.UseVisualStyleBackColor = false;
+			// 
+			// btnT
+			// 
+			resources.ApplyResources(this.btnT, "btnT");
+			this.btnT.BackColor = System.Drawing.Color.Transparent;
+			this.btnT.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnT.FlatAppearance.BorderSize = 0;
+			this.btnT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnT.ForeColor = System.Drawing.Color.White;
+			this.btnT.Name = "btnT";
+			this.btnT.TabStop = false;
+			this.btnT.UseMnemonic = false;
+			this.btnT.UseVisualStyleBackColor = false;
+			// 
+			// btnS
+			// 
+			resources.ApplyResources(this.btnS, "btnS");
+			this.btnS.BackColor = System.Drawing.Color.Transparent;
+			this.btnS.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnS.FlatAppearance.BorderSize = 0;
+			this.btnS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnS.ForeColor = System.Drawing.Color.White;
+			this.btnS.Name = "btnS";
+			this.btnS.TabStop = false;
+			this.btnS.UseMnemonic = false;
+			this.btnS.UseVisualStyleBackColor = false;
+			// 
+			// btnR
+			// 
+			resources.ApplyResources(this.btnR, "btnR");
+			this.btnR.BackColor = System.Drawing.Color.Transparent;
+			this.btnR.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnR.FlatAppearance.BorderSize = 0;
+			this.btnR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnR.ForeColor = System.Drawing.Color.White;
+			this.btnR.Name = "btnR";
+			this.btnR.TabStop = false;
+			this.btnR.UseMnemonic = false;
+			this.btnR.UseVisualStyleBackColor = false;
+			// 
+			// btnQ
+			// 
+			resources.ApplyResources(this.btnQ, "btnQ");
+			this.btnQ.BackColor = System.Drawing.Color.Transparent;
+			this.btnQ.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnQ.FlatAppearance.BorderSize = 0;
+			this.btnQ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnQ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnQ.ForeColor = System.Drawing.Color.White;
+			this.btnQ.Name = "btnQ";
+			this.btnQ.TabStop = false;
+			this.btnQ.UseMnemonic = false;
+			this.btnQ.UseVisualStyleBackColor = false;
+			// 
+			// btnP
+			// 
+			resources.ApplyResources(this.btnP, "btnP");
+			this.btnP.BackColor = System.Drawing.Color.Transparent;
+			this.btnP.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnP.FlatAppearance.BorderSize = 0;
+			this.btnP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnP.ForeColor = System.Drawing.Color.White;
+			this.btnP.Name = "btnP";
+			this.btnP.TabStop = false;
+			this.btnP.UseMnemonic = false;
+			this.btnP.UseVisualStyleBackColor = false;
+			// 
+			// btnO
+			// 
+			resources.ApplyResources(this.btnO, "btnO");
+			this.btnO.BackColor = System.Drawing.Color.Transparent;
+			this.btnO.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnO.FlatAppearance.BorderSize = 0;
+			this.btnO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnO.ForeColor = System.Drawing.Color.White;
+			this.btnO.Name = "btnO";
+			this.btnO.TabStop = false;
+			this.btnO.UseMnemonic = false;
+			this.btnO.UseVisualStyleBackColor = false;
+			// 
+			// btnZ
+			// 
+			resources.ApplyResources(this.btnZ, "btnZ");
+			this.btnZ.BackColor = System.Drawing.Color.Transparent;
+			this.btnZ.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnZ.FlatAppearance.BorderSize = 0;
+			this.btnZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnZ.ForeColor = System.Drawing.Color.White;
+			this.btnZ.Name = "btnZ";
+			this.btnZ.TabStop = false;
+			this.btnZ.UseMnemonic = false;
+			this.btnZ.UseVisualStyleBackColor = false;
+			// 
+			// btnY
+			// 
+			resources.ApplyResources(this.btnY, "btnY");
+			this.btnY.BackColor = System.Drawing.Color.Transparent;
+			this.btnY.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnY.FlatAppearance.BorderSize = 0;
+			this.btnY.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnY.ForeColor = System.Drawing.Color.White;
+			this.btnY.Name = "btnY";
+			this.btnY.TabStop = false;
+			this.btnY.UseMnemonic = false;
+			this.btnY.UseVisualStyleBackColor = false;
+			// 
+			// btnX
+			// 
+			resources.ApplyResources(this.btnX, "btnX");
+			this.btnX.BackColor = System.Drawing.Color.Transparent;
+			this.btnX.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnX.FlatAppearance.BorderSize = 0;
+			this.btnX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnX.ForeColor = System.Drawing.Color.White;
+			this.btnX.Name = "btnX";
+			this.btnX.TabStop = false;
+			this.btnX.UseMnemonic = false;
+			this.btnX.UseVisualStyleBackColor = false;
+			// 
+			// btnW
+			// 
+			resources.ApplyResources(this.btnW, "btnW");
+			this.btnW.BackColor = System.Drawing.Color.Transparent;
+			this.btnW.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnW.FlatAppearance.BorderSize = 0;
+			this.btnW.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnW.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnW.ForeColor = System.Drawing.Color.White;
+			this.btnW.Name = "btnW";
+			this.btnW.TabStop = false;
+			this.btnW.UseMnemonic = false;
+			this.btnW.UseVisualStyleBackColor = false;
+			// 
+			// btnV
+			// 
+			resources.ApplyResources(this.btnV, "btnV");
+			this.btnV.BackColor = System.Drawing.Color.Transparent;
+			this.btnV.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnV.FlatAppearance.BorderSize = 0;
+			this.btnV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnV.ForeColor = System.Drawing.Color.White;
+			this.btnV.Name = "btnV";
+			this.btnV.TabStop = false;
+			this.btnV.UseMnemonic = false;
+			this.btnV.UseVisualStyleBackColor = false;
+			// 
+			// btnU
+			// 
+			resources.ApplyResources(this.btnU, "btnU");
+			this.btnU.BackColor = System.Drawing.Color.Transparent;
+			this.btnU.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnU.FlatAppearance.BorderSize = 0;
+			this.btnU.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnU.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnU.ForeColor = System.Drawing.Color.White;
+			this.btnU.Name = "btnU";
+			this.btnU.TabStop = false;
+			this.btnU.UseMnemonic = false;
+			this.btnU.UseVisualStyleBackColor = false;
+			// 
+			// MainForm
+			// 
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.BackgroundImage = global::WordGuess.Properties.Resources.Blackboard;
+			resources.ApplyResources(this, "$this");
+			this.Controls.Add(this.btnZ);
+			this.Controls.Add(this.btnY);
+			this.Controls.Add(this.btnX);
+			this.Controls.Add(this.btnW);
+			this.Controls.Add(this.btnV);
+			this.Controls.Add(this.btnU);
+			this.Controls.Add(this.btnT);
+			this.Controls.Add(this.btnS);
+			this.Controls.Add(this.btnR);
+			this.Controls.Add(this.btnQ);
+			this.Controls.Add(this.btnP);
+			this.Controls.Add(this.btnO);
+			this.Controls.Add(this.btnN);
+			this.Controls.Add(this.btnM);
+			this.Controls.Add(this.btnL);
+			this.Controls.Add(this.btnK);
+			this.Controls.Add(this.btnJ);
+			this.Controls.Add(this.btnI);
+			this.Controls.Add(this.btnH);
+			this.Controls.Add(this.btnG);
+			this.Controls.Add(this.btnF);
+			this.Controls.Add(this.btnE);
+			this.Controls.Add(this.btnD);
+			this.Controls.Add(this.btnC);
+			this.Controls.Add(this.btnB);
+			this.Controls.Add(this.btnA);
+			this.Controls.Add(this.lblCategory);
+			this.Controls.Add(this.animation);
+			this.Controls.Add(this.lblChars);
+			this.Controls.Add(this.lblWords);
+			this.Controls.Add(this.lblTries);
+			this.Controls.Add(this.lblLosses);
+			this.Controls.Add(this.lblWins);
+			this.Controls.Add(this.btnNewgame);
+			this.Controls.Add(this.btnExit);
+			this.DoubleBuffered = true;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+			this.Name = "MainForm";
+			((System.ComponentModel.ISupportInitialize)(this.animation)).EndInit();
+			this.ResumeLayout(false);
+
+		}
+	}
+}
