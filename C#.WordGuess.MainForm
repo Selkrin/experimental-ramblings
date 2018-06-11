@@ -40,7 +40,6 @@ namespace WordGuess
 			//
 			InitializeComponent();
 			
-			
 			btnNewgame.Click += (sender, args) => {
 				DialogResult dr = MessageBox.Show("Are you sure you want to start a New Game?", "Word Guess", MessageBoxButtons.YesNo, MessageBoxIcon.Information); //Confirmation window
 				
