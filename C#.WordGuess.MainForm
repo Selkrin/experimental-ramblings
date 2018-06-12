@@ -45,6 +45,7 @@ namespace WordGuess
 				
 				if (dr == DialogResult.Yes) {
 					animation.Image = Properties.Resources.Animation; //Changes Picture Box Image back to my Default Image
+					lblWords.ForeColor = System.Drawing.Color.White;
 					//Set Buttons back to Default
 					btnA.Image = null;	btnA.Text = "A";	btnA.Enabled = true;
 					btnB.Image = null;	btnB.Text = "B";	btnB.Enabled = true;
@@ -318,9 +319,11 @@ namespace WordGuess
        			 	if (word[i] == ch)
            			foundIndexes.Add(i);
      			}
-			foreach (int pos in foundIndexes) {
+				foreach (int pos in foundIndexes) {
 					wordBlank[pos] = ch;
 				}
+			word1 = new string(wordBlank);
+			lblWords.Text = (word1);
 		} else {
 			tries--;
 			lblTries.Text = ("Tries :" + tries);
@@ -328,12 +331,11 @@ namespace WordGuess
 				loseGame();
 			}
 		}
-
-		word1 = new string(wordBlank);
 		if (word1 == wordTemp) {
 			winGame();
+			word1 = new string(wordBlank);
+			lblWords.Text = (word1);
 		}
-		lblWords.Text = (word1);
 	}
 		
 		private void winGame (){
@@ -369,7 +371,7 @@ namespace WordGuess
 		}
 		
 		private void loseGame(){
-						btnA.Enabled = false;
+			btnA.Enabled = false;
 			btnB.Enabled = false;
 			btnC.Enabled = false;
 			btnD.Enabled = false;
@@ -396,6 +398,9 @@ namespace WordGuess
 			btnY.Enabled = false;
 			btnZ.Enabled = false;
 			animation.Image = Properties.Resources.Lose;
+			lblWords.ForeColor = System.Drawing.Color.Red;
+			string wordLose = String.Concat(word);
+			lblWords.Text = (wordLose);
 			losses++;
 			lblLosses.Text = ("Losses: " + losses);
 		}
@@ -541,9 +546,5 @@ namespace WordGuess
     	lblChars.Text = ("Characters: " + chars);
 		}
    		}
-		
-		
-		
-	
 	}
 }
