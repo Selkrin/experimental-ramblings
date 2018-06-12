@@ -551,9 +551,9 @@ namespace WordGuess
 			// MainForm
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			resources.ApplyResources(this, "$this");
 			this.BackColor = System.Drawing.SystemColors.ControlDark;
 			this.BackgroundImage = global::WordGuess.Properties.Resources.Blackboard;
-			resources.ApplyResources(this, "$this");
 			this.Controls.Add(this.btnZ);
 			this.Controls.Add(this.btnY);
 			this.Controls.Add(this.btnX);
@@ -591,6 +591,7 @@ namespace WordGuess
 			this.Controls.Add(this.btnExit);
 			this.DoubleBuffered = true;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+			this.MaximizeBox = false;
 			this.Name = "MainForm";
 			((System.ComponentModel.ISupportInitialize)(this.animation)).EndInit();
 			this.ResumeLayout(false);
